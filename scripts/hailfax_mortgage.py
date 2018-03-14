@@ -15,10 +15,11 @@ warnings.simplefilter(action='ignore')
 
 
 class Hailfax:
-    def __init__(self, url, eprice, dprice):
+    def __init__(self, url, pvalue, dvalue, term):
         self.url = url
-        self.eprice = eprice
-        self.dprice = dprice
+        self.pvalue = pvalue
+        self.dvalue = dvalue
+        self.term = term
 
     def start_driver(self):
         self.driver = webdriver.Firefox()
@@ -38,48 +39,22 @@ class Hailfax:
         select.select_by_value('1')
         how_much_cost = self.driver.find_element_by_xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/div/div/div[2]/form/div/div[1]/div/div[2]/div[2]/div[1]/span")
         how_much_cost.click()
-        self.driver.find_element_by_xpath('//*[@id="test-error-stepper"]').send_keys("10")
-        #property_value.send_keys("90000")
+        #self.driver.find_element_by_xpath('//*[@id="test-error-stepper"]').send_keys("90000") #property value
+        self.driver.find_element_by_name("valueOfprop").send_keys("90000")#self.pvalue[1])
+        self.driver.find_element_by_name("depositAmount").send_keys("18000")#self.dvalue[1])
+        select = Select(self.driver.find_element_by_name("mortgageTerm"))
+        select.select_by_value("10")#self.term)
+        self.driver.find_element_by_class_name("button button-primary show-mortgages button-full-width ajax").click()
 
 
-#         select = Select(self.driver.find_element_by_id("propertyKind"))
-#         #time.sleep(1)
-#         select.select_by_visible_text("Single Family Home")
-#         #time.sleep(1)
-#         select = Select(self.driver.find_element_by_id("propertyUse"))
-#         select.select_by_value("P")
-#         #time.sleep(1)
-#         inutelement = self.driver.find_element_by_id("propCity")
-#         inutelement.send_keys('New York')
-#         #time.sleep(1)
-#         select = Select(self.driver.find_element_by_id("propState"))
-#         select.select_by_value("NY")
-#         #time.sleep(1)
-#         select = Select(self.driver.find_element_by_id("propCounty"))
-#         select.select_by_value("36061")
-#         #time.sleep(1)
-#         inutelement = self.driver.find_element_by_id("purchPrice")
-#         inutelement.send_keys(self.eprice[1])
-#         #time.sleep(1)
-#         inutelement = self.driver.find_element_by_id("desiredLoanAmount")
-#         inutelement.send_keys(self.dprice[1])
-#         #time.sleep(1)
-#         self.driver.find_element_by_id("creditScoreGoodLabel").click()
-#         self.driver.find_element_by_id("submit-purchase").click()
-#         time.sleep(15)
-#
-#
-#     def get_current_url(self):
-#         return self.driver.current_url
-#
-#     def save_page(self):
-#         page = self.driver.page_source
-#         with open("citi_mortgage_"+self.eprice[0]+".html", 'w')as file:
-#             file.write(page)
-#
-#     def unhide(self):
-#         pass
-#
+    def get_current_url(self):
+        return self.driver.current_url
+
+    def save_page(self):
+        page = self.driver.page_source
+        with open("hailfax_mortgage_"+self.dvalue[0]+"_"+self.term+".html", 'w')as file:
+            file.write(page)
+
 # class ExtractInfo(Citi_mortgage):
 #
 #     def __init__(self, page,tab, eprice, dprice):
@@ -125,17 +100,21 @@ class Hailfax:
 if __name__ == "__main__":
     print("Starting scraping")
 
-    expected_price = [('case1','120000'),('case2','360000'),('case3','600000')]
-    desired_price = [('case1','100000'),('case2','300000'),('case3','500000')]
+    property_values = [('case1','90000'),('case2','270000'),('case3','450000')]
+    deposite_values = [('case1','18000'),('case2','54000'),('case3','90000')]
     url = "https://www.halifax.co.uk/mortgages/mortgage-calculator/calculator/"
-    #for i in range(len(expected_price)):
-    obj = Hailfax(url, expected_price[0], desired_price[0])
+    obj = Hailfax(url, property_values[0], deposite_values[0], 10)
     obj.start_driver()
     obj.get_url()
     obj.fillform()
-    #obj.save_page()
-    obj.close_driver()
-    #time.sleep(5)
+    # for i in range(len(expected_price)):
+    #     for term in [10,15,25,30]:
+    #         obj = Hailfax(url, pvalue[i], dvalue[i], term)
+    #         obj.start_driver()
+    #         obj.get_url()
+    #         obj.fillform()
+    #         #obj.save_page()
+    #         obj.close_driver()
 
 #     tab1 = ['header-3 rate-card-panel-header-white', 'row rate-card-panel-items tb-hide']
 #     for i in range(len(expected_price)):

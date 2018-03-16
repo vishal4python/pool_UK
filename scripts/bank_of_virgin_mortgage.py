@@ -6,7 +6,7 @@ from datetime import datetime
 today = datetime.now()
 import re
 from maks_lib import output_path
-path = output_path+"Consolidate_Virgin_Data_Mortgage_"+str(today.strftime('%m_%d_%Y'))+'.csv'
+path = output_path+"Consolidate_Virgin_Data_Mortgage_"+str(today.strftime('%Y_%m_%d'))+'.csv'
 table = []
 # term = "25"
 # property_value = "90000"

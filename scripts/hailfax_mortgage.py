@@ -1,11 +1,13 @@
 from selenium import webdriver
 from selenium.webdriver.support.ui import Select
 from bs4 import  BeautifulSoup as bs
+import numpy as np
 import pandas as pd
 import time
 import warnings
 import datetime
 import os
+import glob
 from maks_lib import output_path
 import re
 
@@ -75,31 +77,59 @@ class ExtractInfo:
             text = re.findall(r'^[0-9].*%',j.text)
             if text:
                 text = text[0]
-                #file.write(text)
                 f_term = re.search(r'\d{1,}', text).group()
                 interest_type = re.search(r'[A-Z]\w{3,}', text).group()
                 t_in = text+","+f_term +","+interest_type
                 file.write(t_in)
             rate = re.findall(r'[0-9].[0-9]{2,3}%',j.text)
             if rate:
-                rate = ","+rate[0]+","+rate[1] +","+self.term +","+self.dvalue+'\n'
+                mortgage_loan = str(int(self.pvalue[1]) - int(self.dvalue[1]))
+                rate = ","+rate[0]+","+rate[1] +","+self.term +","+mortgage_loan+'\n'
                 file.write(rate)
 
         file.close()
-        time.sleep(1)
+        time.sleep(3)
 
 
 def removeexistingfile():
     tfile = "test.txt"
     if os.path.exists(tfile):
         os.remove(tfile)
+    time.sleep(1)
+def removehtml():
+    htmls = glob.glob("hailfax_*.html")
+    for html in htmls:
+        os.remove(html)
+
+
 
 def pandaper():
     dataset = pd.read_table('test.txt',sep=',',delimiter=None, header=None)
-    dataset.columns = ['Bank_Product_Name', 'Fixed_Term', 'Interest_Type', "Interest", "APRC","Term",
+    dataset.columns = ['Bank_Product_Name', 'Fixed_Term', 'Interest_Type', "Interest", "APRC","Term (Y)",
                        'Mortgage_loan']
     print(dataset)
-
+    dataset['Date'] = now.strftime("%m-%d-%Y")
+    dataset['Bank_Native_Country'] = "UK"
+    dataset['State'] = "London"
+    dataset['Bank_Name'] = "Halifax Bank"
+    dataset['Bank_Local_Currency'] = "GBP"
+    dataset['Bank_Type'] = "Bank"
+    dataset['Bank_Product'] ='Mortgages'
+    dataset['Bank_Product_Type'] = "Mortgages"
+    dataset['Min_Loan_Amount'] = np.nan
+    dataset['Bank_Offer_Feature'] = "Offline"
+    dataset['Mortgage_Down_Payment'] = "20%"
+    dataset['Mortgage_Category'] = "New Purchase"
+    dataset['Mortgage_Reason'] = "Primary Residence"
+    dataset['Mortgage_Pymt_Mode'] = "Principle + Interest#TODO" #TODO
+    dataset['Bank_Product_Code'] = np.nan
+    columns = ['Date','Bank_Native_Country','State','Bank_Name','Bank_Local_Currency','Bank_Type','Bank_Product',
+               'Bank_Product_Type','Bank_Product_Name','Min_Loan_Amount','Bank_Offer_Feature','Term (Y)','Interest_Type',
+               'Interest','APRC','Mortgage_Loan_Amt','Mortgage_Down_Payment','Mortgage_Category','Mortgage_Reason',
+               'Mortgage_Pymt_Mode','Fixed_Rate_Term','Bank_Product_Code'
+               ]
+    df = dataset.reindex(columns=columns)
+    df.to_csv(output_path + "Consolidate_Halifax_Data_Deposit_Mortgage_{}.csv".format(now.strftime("%m_%d_%Y")), index=False)
 
 if __name__ == "__main__":
     print("Scraping inprogress ...")
@@ -119,49 +149,10 @@ if __name__ == "__main__":
     tab1 = ['heading','rate']
     for i in range(len(property_values)):
         for term in ["10","15","25","30"]:
-            wpage = open("hailfax_mortgage_"+deposite_values[i][1]+"_"+term+".html",'r')
-            extract = ExtractInfo(wpage, tab1, term, property_values[i], deposite_values[i])
-            extract.findtables_tab1()
+            #wpage = open("hailfax_mortgage_"+deposite_values[i][1]+"_"+term+".html",'r')
+            with open("hailfax_mortgage_"+deposite_values[i][1]+"_"+term+".html",'r') as wpage:
+                extract = ExtractInfo(wpage, tab1, term, property_values[i], deposite_values[i])
+                extract.findtables_tab1()
     pandaper()
-
-
-
-#     df1 = pd.read_csv("Citi_Mortgage_case1.csv")
-#     df2 = pd.read_csv("Citi_Mortgage_case2.csv")
-#     df3 = pd.read_csv("Citi_Mortgage_case3.csv")
-#     df = pd.concat([df1, df2, df3])
-#     df['Date'] = now.strftime("%m-%d-%Y")
-#     df['Bank_Name'] = "CITIGROUP INC"
-#     df['Bank_Product'] = "Mortgage"
-#     df['Bank_Product_Type'] = "Mortgage"
-#     df["Bank_Offer_Feature"] = "Offline"
-#     df['Mortgage_Down_Payment'] = "20%"
-#     df['Min_Credit_Score_Mortagage'] = "720+"
-#
-#
-#  #   for val, row in df.iterrows():
-# #        if "ARM" in row["Product_Term"]:
-# #            df.ix[val,"Product_Term"] = "30 Year"
-#     dff = df.reindex(columns=["Date", "Bank_Name" , "Bank_Product" ,
-#                               'Bank_Product_Type', 'Bank_Offer_Feature' ,
-#                               'Bank_Product_Name' , 'Product_Term' , 'Balance',
-#                               'Product_Interest','Product_Apy',
-#                               'Mortgage_Down_Payment','Mortgage_Loan',
-#                               'Min_Credit_Score_Mortagage', 'Mortgage_Apr','Loan_Type'])
-#
-#     dff_consolidate = df.reindex(columns=["Date", "Bank_Name", "Bank_Product",
-#                               'Bank_Product_Type', 'Bank_Offer_Feature',
-#                               'Bank_Product_Name', 'Product_Term', 'Balance',
-#                               'Product_Interest', 'Product_Apy',
-#                               'Mortgage_Down_Payment', 'Mortgage_Loan',
-#                               'Min_Credit_Score_Mortagage', 'Mortgage_Apr'])
-#
-#     dff.to_csv(output_path + "CITI_Data_Mortgage_{}.csv".format(now.strftime("%m_%d_%Y")), index=False)
-#     dff_consolidate.to_csv(output_path + "Consolidate_CITI_Data_Mortgage_{}.csv".format(now.strftime("%m_%d_%Y")), index=False)
-#
-    # for rm in range(len(property_values)):
-    #     for term in ["10","15","25","30"]:
-    #         os.remove("hailfax_mortgage_"+property_values[rm][1]+"_"+term+".html")
-            #os.remove("hailfax_mortgage_"+expected_price[rm][1]+'_'term+".csv")
-
-    print("Finished Scraping ")
+    removehtml()
+    print("\n Finished !! ")

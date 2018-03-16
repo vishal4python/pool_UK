@@ -8,8 +8,8 @@ import datetime
 import numpy as np
 from maks_lib import output_path
 
-to_day = datetime.datetime.now().strftime("%m-%d-%Y")
-locationPath = output_path+'Consolidate_RBS_Data_Deposits'+str(to_day)+'.csv'
+to_day = datetime.datetime.now()
+locationPath = output_path+'Consolidate_RBS_Data_Deposits_'+str(to_day.strftime("%Y-%m-%d"))+'.csv'
 table = []
 table_headers = ["Bank_Product_Type", "Bank_Product_Name", "Balance", "Bank_Offer_Feature", "Term in Months", "Interest_Type", "Interest", "AER"]
 # table.append(table_headers)
@@ -23,6 +23,7 @@ headers = table_data.find("div", attrs={"class":"comparison-header-main-table"})
 columnheaders = headers.find_all("div", attrs={"role":"columnheader"})
 product_names_dict = dict()
 product_names = [columnheader.find('h4').text for columnheader in columnheaders]
+print(product_names)
 main_table = table_data.find("div", attrs={"class":"comparison-content-main-table"})
 content_tables = main_table.find_all("div", attrs={"class":re.compile('comparison-content-table comparison-is-accordian')})
 royalBankData = []
@@ -158,18 +159,18 @@ for year in years:
                 aer = re.sub('[^0-9.%]','',aer[-1])
             else:
                 aer = None
-            table.append(['Term Deposits', product_names[0]+' '+sub_year_heading, text[0], 'offline', year_heading, fts_variable, inter[-1], aer])
+            table.append(['Term Deposits', product_names[3]+' '+sub_year_heading, text[0], 'offline', year_heading, fts_variable, inter[-1], aer])
 
 headers = {"user-agent":"Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36"}
 every_day = requests.get("https://www.beta.rbs.co.uk/personal/current_accounts_in_england_wales.html",headers=headers, verify=False)
-print(every_day.content)
+# print(every_day.content)
 every_day_jsoup = BeautifulSoup(every_day.content, 'lxml')
 everyDay = every_day_jsoup.find("div", attrs={"id":"everyday"}).find('h2').text
 table.append(['Savings', everyDay, None, 'offline', None, None, None, None])
 print(tabulate(table))
 df = pd.DataFrame(table,columns=table_headers)
-print(df)
-df.loc[:, 'Date'] = to_day
+# print(df)
+df.loc[:, 'Date'] = to_day.strftime("%m-%d-%Y")
 df.loc[:, 'Bank_Native_Country'] = 'UK'
 df.loc[:, 'State'] = 'London'
 df.loc[:, 'Bank_Name'] = 'Royal Bank Of Scotland'

@@ -1,5 +1,4 @@
 from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import Select
 from bs4 import  BeautifulSoup as bs
 import pandas as pd
@@ -62,67 +61,71 @@ class Hailfax:
 
 class ExtractInfo:
 
-    def __init__(self, page,tab):
+    def __init__(self, page,tab, term, pvalue, dvalue):
         self.page = page
         self.tab = tab
-        # self.eprice = eprice
-        # self.dprice = dprice
+        self.term = term
+        self.pvalue = pvalue
+        self.dvalue = dvalue
 
     def findtables_tab1(self):
         soup = bs(self.page, "html.parser")
-        file = open("test.txt",'w')
-        header = []
+        file = open("test.txt",'a')
         for j in soup.find_all('div', {'class':["heading","rate"]}):
             text = re.findall(r'^[0-9].*%',j.text)
             if text:
                 text = text[0]
-                file.write(text)
+                #file.write(text)
+                f_term = re.search(r'\d{1,}', text).group()
+                interest_type = re.search(r'[A-Z]\w{3,}', text).group()
+                t_in = text+","+f_term +","+interest_type
+                file.write(t_in)
             rate = re.findall(r'[0-9].[0-9]{2,3}%',j.text)
             if rate:
-                rate = ","+rate[0]+","+rate[1] + '\n'
+                rate = ","+rate[0]+","+rate[1] +","+self.term +","+self.dvalue+'\n'
                 file.write(rate)
+
         file.close()
-        time.sleep(3)
-        dataset = pd.read_table('test.txt',sep=',',delimiter=None, header=None)
-        print(dataset)
-        dataset['Expected_Price'] = self.eprice[1]
-        dataset['Mortgage_Loan'] = self.dprice
-        dataset["Product_Term"] = dataset.iloc[:,0].str.replace("Year Fixed","")
-        # for i in range(0, len(dataset)):
-        #     if "Libor ARM" in dataset.ix[i]['Product_Term']:
-        #         dataset.ix[i]['Product_Term'] = 30
-        #
-        # loan_type = pd.DataFrame(dataset.iloc[:,0].str.split(" ").tolist())
-        # dataset["Loan_Type"] = loan_type.iloc[:,2].str.replace("ARM","Variable")
-        #
-        # dataset.columns = ['Bank_Product_Name','Product_Interest','Mortgage_Apr',"Mortgage_Loan","Product_Term",'Loan_Type']
-        # #print(dataset)
-        # dataset.to_csv("Citi_Mortgage_"+self.eprice[0]+".csv",index=False)
+        time.sleep(1)
+
+
+def removeexistingfile():
+    tfile = "test.txt"
+    if os.path.exists(tfile):
+        os.remove(tfile)
+
+def pandaper():
+    dataset = pd.read_table('test.txt',sep=',',delimiter=None, header=None)
+    dataset.columns = ['Bank_Product_Name', 'Fixed_Term', 'Interest_Type', "Interest", "APRC","Term",
+                       'Mortgage_loan']
+    print(dataset)
 
 
 if __name__ == "__main__":
-    print("Starting scraping")
+    print("Scraping inprogress ...")
     property_values = [('case1','90000'),('case2','270000'),('case3','450000')]
     deposite_values = [('case1','18000'),('case2','54000'),('case3','90000')]
     url = "https://www.halifax.co.uk/mortgages/mortgage-calculator/calculator/"
-    # obj = Hailfax(url, property_values[0], deposite_values[0], 10)
-    # obj.start_driver()
-    # obj.get_url()
-    # obj.fillform()
-    # for i in range(len(property_values)):
-    #     for term in ["10","15","25","30"]:
-    #         obj = Hailfax(url, property_values[i], deposite_values[i], term)
-    #         obj.start_driver()
-    #         obj.get_url()
-    #         obj.fillform()
-    #         obj.save_page()
-    #         obj.close_driver()
+    for i in range(len(property_values)):
+        for term in ["10","15","25","30"]:
+            obj = Hailfax(url, property_values[i], deposite_values[i], term)
+            obj.start_driver()
+            obj.get_url()
+            obj.fillform()
+            obj.save_page()
+            obj.close_driver()
 
-    tab1 = ['heading']
-    #for i in range(len(expected_price)):
-    #extract = ExtractInfo(open("citi_mortgage_"+expected_price[i][0]+".html",'r'),tab1, expected_price[i], desired_price[i][1])
-    extract = ExtractInfo(open("hailfax_mortgage_18000_10.html",'r'), tab1)
-    extract.findtables_tab1()
+    removeexistingfile()
+    tab1 = ['heading','rate']
+    for i in range(len(property_values)):
+        for term in ["10","15","25","30"]:
+            wpage = open("hailfax_mortgage_"+deposite_values[i][1]+"_"+term+".html",'r')
+            extract = ExtractInfo(wpage, tab1, term, property_values[i], deposite_values[i])
+            extract.findtables_tab1()
+    pandaper()
+
+
+
 #     df1 = pd.read_csv("Citi_Mortgage_case1.csv")
 #     df2 = pd.read_csv("Citi_Mortgage_case2.csv")
 #     df3 = pd.read_csv("Citi_Mortgage_case3.csv")

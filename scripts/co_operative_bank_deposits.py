@@ -6,8 +6,8 @@ from tabulate import  tabulate
 import re
 import pandas as pd
 from maks_lib import output_path
-today = datetime.datetime.now().strftime('%d-%m-%Y')
-path = output_path+"Consolidate_COOB_Data_Deposits_"+str(today)+'.csv'
+today = datetime.datetime.now()
+path = output_path+"Consolidate_ CoOp_Data_Deposits_"+str(today.strftime('%Y_%m_%d'))+'.csv'
 # ptah = "Consolidate_COOB_Data_Deposits_"+str(today)+'.csv'
 table = []
 order = ["Date", "Bank_Native_Country", "State", "Bank_Name", "Bank_Local_Currency", "Bank_Type", "Bank_Product", "Bank_Product_Type", "Bank_Product_Name",
@@ -48,7 +48,7 @@ if len(headings)!=0:
                     britannia_data = [td.text for td in tds]
                     # print(britannia_data)
                     if len(britannia_data)>4:
-                        print(britannia_data)
+                        # print(britannia_data)
                         britannia_data = britannia_data[1:]
                     if len(britannia_data) == 4:
 
@@ -56,7 +56,7 @@ if len(headings)!=0:
                             float(britannia_data[1].strip('%'))
 
                             if "annually" in britannia_data[-1].lower() or 'year' in britannia_data[-1].lower():
-                                print(britannia_data[-1])
+                                # print(britannia_data[-1])
                                 terms_in_month = re.findall('\d.?yr',britannia_sub_heading)
                                 if len(terms_in_month)>=1:
                                     terms_in_month = re.sub('[^0-9]','',terms_in_month[0])
@@ -89,7 +89,7 @@ if len(headings)!=0:
                             pass
 
 
-        print("============================================================")
+        # print("============================================================")
 
     print('----------------------------------------------------------------------')
     #The Co-operative Bank
@@ -101,7 +101,7 @@ if len(headings)!=0:
     if results_items_2 is not None:
         for results_item_2 in results_items_2:
             co_operative_sub_heading = results_item_2.find("h5").text
-            print(co_operative_sub_heading)
+            # print(co_operative_sub_heading)
             co_operative_table = results_item_2.find("table")
             trs = co_operative_table.find_all("tr")
             for tr in trs:
@@ -144,12 +144,26 @@ if len(headings)!=0:
                     except Exception as e:
                         print(e)
 
-        print("============================================================")
+        # print("============================================================")
 
 
+
+
+try:
+    current_account = requests.get("https://www.co-operativebank.co.uk/currentaccounts/compare-current-accounts")
+    current_account = BeautifulSoup(current_account.content, "lxml")
+    current_trs = current_account.find("tbody", attrs={"class":"js-comp-table-tbody"}).find_all("tr")
+    cc = [tr.find("a", attrs={"class":"u-epsilon u-text-thin"}).text for tr in current_trs]
+    # print(cc)
+    for c in cc:
+        table.append(["Savings", c, None, None, None, None,None, None, None])
+except Exception as e:
+    print(e)
 print(tabulate(table))
+
+
 df = pd.DataFrame(table, columns=table_headers)
-df.loc[:,"Date"] = today
+df.loc[:,"Date"] = today.strftime('%m-%d-%Y')
 df.loc[:,"Bank_Native_Country"] = "UK"
 df.loc[:,"State"] = "London"
 df.loc[:,"Bank_Name"] = "The Co-operative Bank"
@@ -163,3 +177,4 @@ df.to_csv(path, index=False)
 
 # df = pd.read_html(str(tables))
 # print(df)
+

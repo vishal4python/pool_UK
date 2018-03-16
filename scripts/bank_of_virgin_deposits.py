@@ -9,9 +9,9 @@ from tabulate import tabulate
 import re
 import pandas as pd
 import datetime
-today = datetime.datetime.now().strftime('%m-%d-%Y')
+today = datetime.datetime.now()
 from maks_lib import output_path
-path = output_path+"Consolidate_Virgin_Data_Deposit_"+today+".csv"
+path = output_path+"Consolidate_Virgin_Data_Deposit_"+today.strftime('%Y_%m_%d')+".csv"
 # path = "Consolidate_Virgin_Data_Deposit_"+today+".csv"
 order = ["Date", "Bank_Native_Country", "State", "Bank_Name", "Bank_Local_Currency", "Bank_Type", "Bank_Product", "Bank_Product_Type", "Bank_Product_Name", "Balance", "Bank_Offer_Feature", "Term in Months", "Interest_Type", "Interest", "AER", "Bank_Product_Code"]
 table = []
@@ -53,7 +53,7 @@ for div in divs:
 
                     #                     if right_div is not None:
                     are = right_div.text
-                    print(are)
+                    # print(are)
                     iare = re.findall('\d.*%', are)
                     if iare is not None:
                         interest = iare[-1]
@@ -71,17 +71,45 @@ for div in divs:
                         interest_type = "Fixed"
                     else:
                         interest_type = "Variable"
-                    a = ["Savings", re.sub('[\n,\r]', '', product_name), minimum_balance.replace("Â£1 â€“ Â",''), Bank_Offer_Feature, term_in_months,
+                    a = ["Savings", re.sub('[\n,\r]', '', product_name), minimum_balance, Bank_Offer_Feature, term_in_months,
                          interest_type, interest, IARE]
                     #                     print(a)
                     table.append(a)
 
         except Exception as e:
             print(e)
+try:
+    interserCharges = requests.get("https://uk.virginmoney.com/virgin/current-account/questions-and-answers/#charges", headers=headers)
+    interserCharges = BeautifulSoup(interserCharges.content,"lxml")
+    charges = interserCharges.find("article", attrs={"id":"charges"})
+    charges_account = charges.find("h3").text
+    charges_account = charges_account.split('\n')[0]
+    charges_amount = charges.find("p").text
+    charges_amount = re.findall('£\d.*\d',charges_amount)
+    if len(charges_amount)>=1:
+        charges_amount = charges_amount[0]
+    # print(charges_amount)
+    charges_rates = charges.find("table").find("tbody").find_all("tr")[0].find_all("td")
+    charge_interest = charges_rates[0].text
+    charge_interest = charge_interest[:charge_interest.index('%')+1]
+    # print(charge_interest)
+    charge_aer = charges_rates[1].text
+    charge_aer = charge_aer[:charge_aer.index('%')+1]
+    # print(charge_aer)
+
+    charge_type = charges.find("table").text
+    if "variable" in charge_type:
+        charge_type = "Variable"
+    else:
+        charge_type = "Fixed"
+    b = ["Savings", charges_account, charges_amount, "Bank_Offer_Feature", None,charge_type, charge_interest, charge_aer]
+    table.append(b)
+except Exception as e:
+    print(e)
 
 print(tabulate(table))
 df = pd.DataFrame(table, columns=table_headers)
-df.loc[:, 'Date'] = today
+df.loc[:, 'Date'] = today.strftime('%m-%d-%Y')
 df.loc[:, 'Bank_Native_Country'] = 'UK'
 df.loc[:, 'State'] = 'London'
 df.loc[:, 'Bank_Name'] = 'Virgin Money Plc'
@@ -89,6 +117,6 @@ df.loc[:, 'Bank_Local_Currency'] = 'GBP'
 df.loc[:, 'Bank_Type'] = 'Bank'
 df.loc[:, 'Bank_Product'] = 'Deposits'
 df.loc[:, 'Bank_Product_Code'] = None
-print(df)
+# print(df)
 df = df[order]
 df.to_csv(path,index=False)

@@ -9,7 +9,7 @@ import numpy as np
 from maks_lib import output_path
 
 to_day = datetime.datetime.now()
-locationPath = output_path+'Consolidate_RBS_Data_Deposits_'+str(to_day.strftime("%Y-%m-%d"))+'.csv'
+locationPath = output_path+'Consolidate_RBS_Data_Deposits_'+str(to_day.strftime("%Y_%m_%d"))+'.csv'
 table = []
 table_headers = ["Bank_Product_Type", "Bank_Product_Name", "Balance", "Bank_Offer_Feature", "Term in Months", "Interest_Type", "Interest", "AER"]
 # table.append(table_headers)

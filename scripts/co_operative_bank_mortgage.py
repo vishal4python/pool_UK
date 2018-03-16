@@ -14,7 +14,7 @@ from datetime import datetime
 today = datetime.now()
 from maks_lib import output_path
 
-path = output_path+"Consolidate_coOp_Data_Mortgage"+today.strftime('%m_%d_%Y')+".csv"
+path = output_path+"Consolidate_ CoOp_Data_Mortgage"+today.strftime('%Y_%m_%d')+".csv"
 # path = "Consolidate_coOp_Data_Mortgage"+today.strftime('%m_%d_%Y')+".csv"
 table = []
 table_headers = ["Bank_Product_Name", "Min_Loan_Amount", "Term (Y)", "Interest_Type", "Interest", "APRC", "Mortgage_Loan_Amt", "Fixed_Rate_Term","Mortgage_Down_Payment"]

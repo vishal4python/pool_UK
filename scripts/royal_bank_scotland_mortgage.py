@@ -11,7 +11,7 @@ import pandas as pd
 import datetime
 from maks_lib import output_path
 today = datetime.datetime.now()
-path = output_path+"Consolidate_RBS_Data_Mortgage_"+str(today.strftime('%m_%d_%Y'))+'.csv'
+path = output_path+"Consolidate_RBS_Data_Mortgage_"+str(today.strftime('%Y_%m_%d'))+'.csv'
 driver = webdriver.Firefox()
 from tabulate import tabulate
 table = []
@@ -21,7 +21,7 @@ driver.get("https://personal.rbs.co.uk/personal/mortgages/mortgage-calculators/m
 time.sleep(2)
 driver.find_element_by_xpath('/html/body/div[5]/div/a').click()
 # driver.find_element_by_css_selector("#mortgageFinder_mortgage-term").send_keys("20")
-cases = [[90000,25000],[270000,54000], [450000,90000]]
+cases = [[90000,18000],[270000,54000], [450000,90000]]
 for case in cases:
     terms = [10,15,20,30]
     for term in terms:

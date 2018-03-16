@@ -105,10 +105,10 @@ def removehtml():
 
 def pandaper():
     dataset = pd.read_table('test.txt',sep=',',delimiter=None, header=None)
-    dataset.columns = ['Bank_Product_Name', 'Fixed_Term', 'Interest_Type', "Interest", "APRC","Term (Y)",
-                       'Mortgage_loan']
+    dataset.columns = ['Bank_Product_Name', 'Fixed_Rate_Term', 'Interest_Type', "Interest", "APRC", "Term (Y)",
+                       'Mortgage_Loan_Amt']
     print(dataset)
-    dataset['Date'] = now.strftime("%m-%d-%Y")
+    dataset['Date'] = now.strftime("%Y-%m-%d")
     dataset['Bank_Native_Country'] = "UK"
     dataset['State'] = "London"
     dataset['Bank_Name'] = "Halifax Bank"
@@ -121,7 +121,7 @@ def pandaper():
     dataset['Mortgage_Down_Payment'] = "20%"
     dataset['Mortgage_Category'] = "New Purchase"
     dataset['Mortgage_Reason'] = "Primary Residence"
-    dataset['Mortgage_Pymt_Mode'] = "Principle + Interest#TODO" #TODO
+    dataset['Mortgage_Pymt_Mode'] = "Principal + Interest"
     dataset['Bank_Product_Code'] = np.nan
     columns = ['Date','Bank_Native_Country','State','Bank_Name','Bank_Local_Currency','Bank_Type','Bank_Product',
                'Bank_Product_Type','Bank_Product_Name','Min_Loan_Amount','Bank_Offer_Feature','Term (Y)','Interest_Type',
@@ -129,7 +129,7 @@ def pandaper():
                'Mortgage_Pymt_Mode','Fixed_Rate_Term','Bank_Product_Code'
                ]
     df = dataset.reindex(columns=columns)
-    df.to_csv(output_path + "Consolidate_Halifax_Data_Deposit_Mortgage_{}.csv".format(now.strftime("%m_%d_%Y")), index=False)
+    df.to_csv(output_path + "Consolidate_Halifax_Data_Mortgage_{}.csv".format(now.strftime("%m_%d_%Y")), index=False)
 
 if __name__ == "__main__":
     print("Scraping inprogress ...")

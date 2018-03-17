@@ -8,7 +8,7 @@ import pandas as pd
 from maks_lib import output_path
 today = datetime.datetime.now()
 path = output_path+"Consolidate_ CoOp_Data_Deposits_"+str(today.strftime('%Y_%m_%d'))+'.csv'
-# ptah = "Consolidate_COOB_Data_Deposits_"+str(today)+'.csv'
+# path = "Consolidate_COOB_Data_Deposits_"+str(today.strftime('%Y_%m_%d'))+'.csv'
 table = []
 order = ["Date", "Bank_Native_Country", "State", "Bank_Name", "Bank_Local_Currency", "Bank_Type", "Bank_Product", "Bank_Product_Type", "Bank_Product_Name",
          "Min_Opening_Bal", "Balance", "Bank_Offer_Feature", "Term in Months", "Interest_Type", "Interest", "AER"]
@@ -59,7 +59,7 @@ if len(headings)!=0:
                                 # print(britannia_data[-1])
                                 terms_in_month = re.findall('\d.?yr',britannia_sub_heading)
                                 if len(terms_in_month)>=1:
-                                    terms_in_month = re.sub('[^0-9]','',terms_in_month[0])
+                                    terms_in_month = int(re.sub('[^0-9]','',terms_in_month[0]))*12
                                 else:
                                     terms_in_month = None
                                 if 'Online' in britannia_sub_heading:
@@ -117,11 +117,11 @@ if len(headings)!=0:
                         if "annually" in co_operative_data[-1].lower() or 'year' in co_operative_data[-1].lower():
                             terms_in_month = re.findall('\d.?yr', co_operative_sub_heading)
                             if len(terms_in_month) >= 1:
-                                terms_in_month = re.sub('[^0-9]', '', terms_in_month[0])
+                                terms_in_month = int(re.sub('[^0-9]', '', terms_in_month[0]))*12
                             else:
                                 terms_in_month = None
 
-                            if 'Online' in co_operative_sub_heading:
+                            if 'online' in co_operative_sub_heading.lower():
                                 Bank_Offer_Feature = "Online"
                             else:
                                 Bank_Offer_Feature = "Offline"
@@ -138,7 +138,7 @@ if len(headings)!=0:
                                 opening_balance = None
                                 balance = co_operative_data[0]
                             # print(trs[1])
-                            a = ['Savings', co_operative_bank_heading.strip() + ' ' + co_operative_sub_heading.strip(),opening_balance, balance,
+                            a = ["Savins", co_operative_bank_heading.strip() + ' ' + co_operative_sub_heading.strip(),opening_balance, balance,
                                  Bank_Offer_Feature, terms_in_month, Interest_Type, co_operative_data[1], co_operative_data[2]]
                             table.append(a)
                     except Exception as e:
@@ -156,13 +156,25 @@ try:
     cc = [tr.find("a", attrs={"class":"u-epsilon u-text-thin"}).text for tr in current_trs]
     # print(cc)
     for c in cc:
-        table.append(["Savings", c, None, None, None, None,None, None, None])
+        table.append(["Current", c, None, None, "Offline", None,None, None, None])
 except Exception as e:
     print(e)
 print(tabulate(table))
 
+def Change_bank_product_name(x):
+    if "fixed" in str(x).lower():
+        return "Term Deposits"
+    elif "variable" in str(x).lower():
+        return "Savings"
+    else:
+        return 'Current'
 
 df = pd.DataFrame(table, columns=table_headers)
+df['Balance'] = df['Balance'].apply(lambda x: re.sub('[^0-9.]', '', str(x)) if len(re.sub('[^0-9.]', '', str(x)))!=0 else None)
+df['Min_Opening_Bal'] = df['Min_Opening_Bal'].apply(lambda x: re.sub('[^0-9.]', '', str(x)) if len(re.sub('[^0-9.]', '', str(x)))!=0 else None)
+df['Interest'] = df['Interest'].apply(lambda x: re.sub('[^0-9.]', '', str(x)) if len(re.sub('[^0-9.]', '', str(x)))!=0 else None)
+df['AER'] = df['AER'].apply(lambda x: re.sub('[^0-9.]', '', str(x)) if len(re.sub('[^0-9.]', '', str(x)))!=0 else None)
+df['Bank_Product_Type'] = df['Interest_Type'].apply(Change_bank_product_name)
 df.loc[:,"Date"] = today.strftime('%m-%d-%Y')
 df.loc[:,"Bank_Native_Country"] = "UK"
 df.loc[:,"State"] = "London"

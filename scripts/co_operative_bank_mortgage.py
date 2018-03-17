@@ -3,9 +3,8 @@ Created on 14-Mar-2018
 
 @author: sairam
 '''
-import time
+
 import pandas as pd
-start = time.time()
 import requests
 from bs4 import BeautifulSoup
 import re
@@ -30,9 +29,9 @@ resp = requests.get("https://www.co-operativebank.co.uk/mortgages/existing-custo
 
 jsoup = BeautifulSoup(resp.content, "html.parser")
 divs = jsoup.find_all("div", attrs={"class": re.compile("c-rate-card js-rate-card js-rate-card-ret"), "identifier":re.compile("\d?yrfixopt")})
-print(len(divs))
+# print(len(divs))
 for div in divs:
-    print("-".center(100, '-'))
+#     print("-".center(100, '-'))
     try:
         #         print(div)
         Bank_Product_Name = div.find("mark", attrs={"method-type":"MortgagesText"}).text
@@ -56,7 +55,7 @@ for div in divs:
             term = re.sub('[^0-9]','',term[0])
         else:
             term = None
-        a = [Bank_Product_Name, Min_Loan_Amount, None, Interest_Type, Interest, APRC, None,term, Mortgage_Down_Payment]
+        a = [Bank_Product_Name, Min_Loan_Amount, None, Interest_Type, Interest, APRC, None,term, 100-float(re.sub('[^0-9.]','',Mortgage_Down_Payment))]
         table.append(a)
     except Exception as e:
         print(e)
@@ -65,10 +64,10 @@ lifes = jsoup.find_all("div", attrs={"class": re.compile("c-rate-card js-rate-ca
 for life in lifes:
     try:
         Bank_Product_Name = life.find("mark", attrs={"method-type":"MortgagesText"}).text
-        print(Bank_Product_Name)
+#         print(Bank_Product_Name)
 
         Interest = life.find("mark", attrs={"data-crc-property":"Initial Rate Ret"}).text
-        print(Interest)
+#         print(Interest)
 
         if "variable" in Interest:
             Interest_Type = "Variable"
@@ -102,10 +101,9 @@ df['Bank_Type'] = 'Bank'
 df['Bank_Product'] = 'Mortgages'
 df['Bank_Product_Type'] = 'Mortgages'
 df['Bank_Offer_Feature'] = "Offline"
-df['Mortgage_Category'] = 'New Purchase'
+df['Mortgage_Category'] = 'Existing Customers '
 df['Mortgage_Reason'] = 'Primary Residence'
-df['Mortgage_Pymt_Mode'] = 'Principle + Interest'
+df['Mortgage_Pymt_Mode'] = 'Principal + Interest'
 df['Bank_Product_Code'] = None
-print(time.time()-start)
 df = df[order]
 df.to_csv(path,index=False)

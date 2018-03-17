@@ -1,3 +1,4 @@
+#-*- coding:utf-8 -*-
 '''
 Created on 13-Mar-2018
 
@@ -12,7 +13,7 @@ import datetime
 today = datetime.datetime.now()
 from maks_lib import output_path
 path = output_path+"Consolidate_Virgin_Data_Deposit_"+today.strftime('%Y_%m_%d')+".csv"
-# path = "Consolidate_Virgin_Data_Deposit_"+today+".csv"
+# path = "Consolidate_Virgin_Data_Deposit_"+str(today.strftime('%Y_%m_%d'))+".csv"
 order = ["Date", "Bank_Native_Country", "State", "Bank_Name", "Bank_Local_Currency", "Bank_Type", "Bank_Product", "Bank_Product_Type", "Bank_Product_Name", "Balance", "Bank_Offer_Feature", "Term in Months", "Interest_Type", "Interest", "AER", "Bank_Product_Code"]
 table = []
 headers = {
@@ -21,44 +22,32 @@ table_headers = ["Bank_Product_Type", "Bank_Product_Name", "Balance", "Bank_Offe
                  "Interest_Type", "Interest", "AER"]
 # table.append(table_headers)
 resp = requests.get("https://uk.virginmoney.com/savings/find/results/", headers=headers)
-# print(resp.content)
 jsoup = BeautifulSoup(resp.content, "html.parser")
 fas_result = jsoup.find("div", attrs={"id": "FAS_results"})
 divs = fas_result.find_all("div", attrs={"class": re.compile('toggle-content toggle-content--hidden')})
-# print(len(divs))
 for div in divs:
-    #     print("-".center(100,'-'))
     sections = div.find_all("section", attrs={"class": re.compile('section__primary ')})
     for scetion in sections:
-        #     print(div)
         try:
-            #             print("-".center(100,'='))
             product_name = scetion.find("h3", attrs={"class": re.compile("beta center")}).text.strip()
-            #             print(product_name)
             if product_name is not None:
                 left_div = scetion.find("div", attrs={"class": "savings-features center cf "})
                 right_div = scetion.find("div", attrs={"class": "margin-bottom-30 center center__left savings-rate"})
                 if left_div is not None and right_div is not None:
 
                     interest_rate_type = scetion.find("p", attrs={"class": re.compile('delta')}).text
-                    #                 print(interest_rate_type.text)
                     div_table = left_div.find("table")
                     trs = div_table.find_all("tr")
                     Bank_Offer_Feature = trs[1].find("td", attrs={"class": "right-text"}).text.strip()
                     minimum_balance = trs[3].find("td", attrs={"class": "right-text"}).text.strip()
-                    #                     print(Bank_Offer_Feature)
-                    #                     print(minimum_balance)
                     interest = None
                     IARE = None
 
-                    #                     if right_div is not None:
                     are = right_div.text
-                    # print(are)
                     iare = re.findall('\d.*%', are)
                     if iare is not None:
                         interest = iare[-1]
                         IARE = iare[0]
-                    # print(are)
                     term_in_months = re.findall('\d.*Year', product_name)
                     if len(term_in_months) != 0:
                         term_in_months = re.findall('\d', term_in_months[0])[0]
@@ -71,9 +60,16 @@ for div in divs:
                         interest_type = "Fixed"
                     else:
                         interest_type = "Variable"
+                    checks = ["Man", "Charity", "Double", "Young"]
+                    check_found = False
+                    for check in checks:
+                        if check in product_name:
+                            check_found =True
+                            break
+                    if check_found:
+                        continue
                     a = ["Savings", re.sub('[\n,\r]', '', product_name), minimum_balance, Bank_Offer_Feature, term_in_months,
                          interest_type, interest, IARE]
-                    #                     print(a)
                     table.append(a)
 
         except Exception as e:
@@ -88,27 +84,36 @@ try:
     charges_amount = re.findall('£\d.*\d',charges_amount)
     if len(charges_amount)>=1:
         charges_amount = charges_amount[0]
-    # print(charges_amount)
     charges_rates = charges.find("table").find("tbody").find_all("tr")[0].find_all("td")
     charge_interest = charges_rates[0].text
     charge_interest = charge_interest[:charge_interest.index('%')+1]
-    # print(charge_interest)
     charge_aer = charges_rates[1].text
     charge_aer = charge_aer[:charge_aer.index('%')+1]
-    # print(charge_aer)
 
     charge_type = charges.find("table").text
     if "variable" in charge_type:
         charge_type = "Variable"
     else:
         charge_type = "Fixed"
-    b = ["Savings", charges_account, charges_amount, "Bank_Offer_Feature", None,charge_type, charge_interest, charge_aer]
+    b = ["Current", charges_account, charges_amount, "Variable", None,charge_type, charge_interest, charge_aer]
     table.append(b)
 except Exception as e:
     print(e)
 
-print(tabulate(table))
+def Change_bank_product_name(x):
+    if "fixed" in str(x).lower():
+        return "Term Deposits"
+    elif "current" in str(x).lower():
+        return "Current"
+    else:
+        return 'Savings'
+
+# print(tabulate(table))
 df = pd.DataFrame(table, columns=table_headers)
+df["Balance"] = df["Balance"].apply(lambda x : re.sub('[^0-9-,]','',x.replace('–','-')).strip('-')+' ')
+df['Bank_Offer_Feature'] = df["Bank_Offer_Feature"].apply(lambda x : x if "online" in x.lower() else "Offline")
+df["Term in Months"] = df["Term in Months"].apply(lambda x: int(x)*12 if len(re.sub('[^0-9-]','',str(x))) !=0  else None)
+df['Bank_Product_Type'] = df['Bank_Product_Name'].apply(Change_bank_product_name)
 df.loc[:, 'Date'] = today.strftime('%m-%d-%Y')
 df.loc[:, 'Bank_Native_Country'] = 'UK'
 df.loc[:, 'State'] = 'London'
@@ -117,6 +122,6 @@ df.loc[:, 'Bank_Local_Currency'] = 'GBP'
 df.loc[:, 'Bank_Type'] = 'Bank'
 df.loc[:, 'Bank_Product'] = 'Deposits'
 df.loc[:, 'Bank_Product_Code'] = None
-# print(df)
 df = df[order]
 df.to_csv(path,index=False)
+print(df)

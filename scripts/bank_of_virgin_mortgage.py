@@ -58,7 +58,7 @@ def virgin_mortgage(property_value, deposit, term):
             Interest_Type = "Fixed"
         else:
             Interest_Type = "Variable"
-        a = [Bank_Product_Name.strip('\n'), None, term, Interest_Type, interest_rate, aprc, int(deposit)-int(term),years]
+        a = [Bank_Product_Name.strip('\n'), None, term, Interest_Type, re.sub('[^0-9.%]', '', interest_rate), re.sub('[^0-9.%]', '', aprc), int(property_value)-int(deposit),years]
         table.append(a)
     # break
 terms = ["10","15","25","30"]
@@ -81,7 +81,7 @@ df["Bank_Offer_Feature"] = "Offline"
 df["Mortgage_Down_Payment"] = "20%"
 df["Mortgage_Category"] = "New Purchase"
 df["Mortgage_Reason"] = "Primary Residence"
-df["Mortgage_Pymt_Mode"] = "Principle + Interest"
+df["Mortgage_Pymt_Mode"] = "Principal + Interest"
 df["Bank_Product_Code"] = None
 df = df[order]
 df.to_csv(path, index=False)

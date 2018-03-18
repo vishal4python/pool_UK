@@ -57,9 +57,14 @@ columns = ['Date','Bank_Native_Country','State','Bank_Name','Bank_Local_Currency
            'Interest','AER','Bank_Product_Code'
            ]
 
-dff = df.reindex(columns=columns)
+
+dff = df.reindex(columns=columns) #Re-Indexing
 dff.iloc[0:2,7] = "Savings"
 dff.iloc[2:5,7] = "Fixed Term"
 dff.iloc[5:9,7] = "Savings"
-dff.to_csv(output_path + "Halifax_Data_Deposit_{}.csv".format(now.strftime("%m_%d_%Y")), index=False)
+dff["Bank_Product_Type"] = dff.iloc[:,7].str.replace("Fixed Term","Term Deposits")
+dff["Balance"] = dff.iloc[:,9].str.replace("£","")
+
+# Writing to CSV
+#dff.to_csv(output_path + "Halifax_Data_Deposit_{}.csv".format(now.strftime("%m_%d_%Y")), index=False)
 dff.to_csv(output_path + "Consolidate_Halifax_Data_Deposit_{}.csv".format(now.strftime("%m_%d_%Y")), index=False)

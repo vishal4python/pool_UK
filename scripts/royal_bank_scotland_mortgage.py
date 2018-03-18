@@ -12,6 +12,7 @@ import datetime
 from maks_lib import output_path
 today = datetime.datetime.now()
 path = output_path+"Consolidate_RBS_Data_Mortgage_"+str(today.strftime('%Y_%m_%d'))+'.csv'
+# path = "Consolidate_RBS_Data_Mortgage_"+str(today.strftime('%Y_%m_%d'))+'.csv'
 driver = webdriver.Firefox()
 from tabulate import tabulate
 table = []
@@ -68,15 +69,15 @@ for case in cases:
                     Interest_Type = "Fixed"
                 else:
                     Interest_Type = "Variable"
-                a = [Bank_Product_Name, Min_Loan_Amount, term, Interest_Type, Interest, "APRC", "Mortgage_Loan_Amt", frt, ltv]
+                a = [Bank_Product_Name, Min_Loan_Amount, term, Interest_Type, Interest, None, case[0]-case[1], frt, 100-int(re.sub('[^0-9.]','',ltv))]
                 table.append(a)
             except:
                 pass
     # break
 
-print(tabulate(table))
+# print(tabulate(table))
 df = pd.DataFrame(table, columns=table_headers)
-
+df['Min_Loan_Amount'] = df['Min_Loan_Amount'].apply(lambda x : re.sub('[^0-9.]','',str(x))if len(re.sub('[^0-9.]','',str(x)))!=0 else None) 
 df["Date"] = today.strftime('%m-%d-%Y')
 df["Bank_Native_Country"] = "UK"
 df["State"] = "London"
@@ -88,7 +89,7 @@ df["Bank_Product_Type"] = "Mortgages"
 df["Bank_Offer_Feature"] = "Offline"
 df["Mortgage_Category"] = "New Purchase"
 df["Mortgage_Reason"] = "Primary Residence"
-df["Mortgage_Pymt_Mode"] = "Principle + Interest"
+df["Mortgage_Pymt_Mode"] = "Principal + Interest"
 df["Bank_Product_Code"] = None
 
 df = df[order]

@@ -5,11 +5,12 @@ import re
 from tabulate import tabulate
 import pandas as pd
 import datetime
-import numpy as np
+# import numpy as np
 from maks_lib import output_path
 
 to_day = datetime.datetime.now()
 locationPath = output_path+'Consolidate_RBS_Data_Deposits_'+str(to_day.strftime("%Y_%m_%d"))+'.csv'
+# locationPath = 'Consolidate_RBS_Data_Deposits_'+str(to_day.strftime("%Y_%m_%d"))+'.csv'
 table = []
 table_headers = ["Bank_Product_Type", "Bank_Product_Name", "Balance", "Bank_Offer_Feature", "Term in Months", "Interest_Type", "Interest", "AER"]
 # table.append(table_headers)
@@ -60,7 +61,7 @@ for li in lis:
             is_aer = re.sub('[^0-9.%]', '', is_aer[-1])
         else:
             is_aer = None
-        table.append(['Savings', product_names[0], text[0], 'offline', None, variable, inter[-1], is_aer])
+        table.append(['Savings', product_names[0], text[0], 'Offline', None, variable, inter[-1], is_aer])
 
 #INSTANT ACCESS ISA
 # print("INSTANT ACCESS ISA".center(100,'-'))
@@ -86,7 +87,7 @@ for li in lis:
             iaisa_aer = re.sub('[^0-9.%]', '', iaisa_aer[-1])
         else:
             iaisa_aer = None
-        table.append(['Savings', product_names[1], text[0], 'offline', None, lis_variable, inter[-1], iaisa_aer])
+        table.append(['Savings', product_names[1], text[0], 'Offline', None, lis_variable, inter[-1], iaisa_aer])
 
 # FIXED RATE ISA
 # print("FIXED RATE ISA".center(100,'-'))
@@ -123,7 +124,7 @@ for year in years:
                 _frisa_aer = re.sub('[^0-9.%]','',frisa_aer[-1])
             else:
                 _frisa_aer = None
-            table.append(['Savings', product_names[2]+' '+sub_frisa_heading, text[0], 'offline', frisa_heading, frias_variable, inter[-1], _frisa_aer])
+            table.append(['Savings', product_names[2]+' '+sub_frisa_heading, text[0], 'Offline', frisa_heading, frias_variable, inter[-1], _frisa_aer])
 
 # FIXED TERM SAVINGS
 # print("FIXED TERM SAVINGS".center(100,'-'))
@@ -159,17 +160,28 @@ for year in years:
                 aer = re.sub('[^0-9.%]','',aer[-1])
             else:
                 aer = None
-            table.append(['Term Deposits', product_names[3]+' '+sub_year_heading, text[0], 'offline', year_heading, fts_variable, inter[-1], aer])
+            table.append(['Term Deposits', product_names[3]+' '+sub_year_heading, text[0], 'Offline', year_heading, fts_variable, re.sub('[^0-9.%]','',inter[-1]), aer])
 
 headers = {"user-agent":"Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36"}
 every_day = requests.get("https://www.beta.rbs.co.uk/personal/current_accounts_in_england_wales.html",headers=headers, verify=False)
 # print(every_day.content)
 every_day_jsoup = BeautifulSoup(every_day.content, 'lxml')
 everyDay = every_day_jsoup.find("div", attrs={"id":"everyday"}).find('h2').text
-table.append(['Savings', everyDay, None, 'offline', None, None, None, None])
-print(tabulate(table))
+table.append(['Current', everyDay, None, 'Offline', None, None, None, None])
+# print(tabulate(table))
 df = pd.DataFrame(table,columns=table_headers)
-# print(df)
+def Change_bank_product_name(x):
+    if "fixed" in str(x).lower():
+        return "Term Deposits"
+    elif "current" in str(x).lower():
+        return "Current"
+    elif "everyday" in str(x).lower():
+        return "Current"
+    else:
+        return 'Savings'
+       
+df['Bank_Product_Type'] = df['Bank_Product_Name'].apply(Change_bank_product_name)
+df['Balance']= df['Balance'].apply(lambda x : re.sub('[^0-9-]','', str(x).replace('and','-')) if len(str(x))!=0 else x)
 df.loc[:, 'Date'] = to_day.strftime("%m-%d-%Y")
 df.loc[:, 'Bank_Native_Country'] = 'UK'
 df.loc[:, 'State'] = 'London'
@@ -183,3 +195,4 @@ df.loc[:, 'Bank_Product_Code'] = None
 order = ["Date", "Bank_Native_Country", "State", "Bank_Name", "Bank_Local_Currency", "Bank_Type", "Bank_Product", "Bank_Product_Type", "Bank_Product_Name", "Balance", "Bank_Offer_Feature", "Term in Months", "Interest_Type", "Interest", "AER", "Bank_Product_Code"]
 df = df[order]
 df.to_csv(locationPath, index=False)
+print(df)

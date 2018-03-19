@@ -1,6 +1,0 @@
-Date,Bank_Native_Country,State,Bank_Name,Bank_Local_Currency,Bank_Type,Bank_Product,Bank_Product_Type,Bank_Product_Name,Balance,Bank_Offer_Feature,Term in Months,Interest_Type,Interest,AER,Bank_Product_Code
-03-16-2018,UK,London,Bank of Scotland ,GBP,Bank,Deposits,Savings,Access Cash ISA,1+,Offline,,Variable,0.35000000000000003%,0.35000000000000003%,
-03-16-2018,UK,London,Bank of Scotland ,GBP,Bank,Deposits,Savings,Access Saver,1+,Offline,,Variable,0.2%,0.2%,
-03-16-2018,UK,London,Bank of Scotland ,GBP,Bank,Deposits,Term Deposits,Fixed Cash ISA – 2 Year,1+,Offline,24.0,Variable,0.5%,0.5%,
-03-16-2018,UK,London,Bank of Scotland ,GBP,Bank,Deposits,Term Deposits,Fixed Rate Bond – 1 Year,1+,Offline,12.0,Variable,0.4%,0.4%,
-03-16-2018,UK,London,Bank of Scotland ,GBP,Bank,Deposits,Savings,Monthly Saver,1+,Offline,,Variable,2.5%,2.5%,

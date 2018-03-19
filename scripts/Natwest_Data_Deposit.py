@@ -83,5 +83,8 @@ df['Bank_Type'] = 'Bank'
 df['Bank_Product'] = 'Deposits'
 df['Bank_Product_Type'] = df['Interest_Type'].apply(checkBankProductType)
 df['Bank_Product_Code'] =   np.nan
-df.to_csv(path)
+order = ['Date', 'Bank_Native_Country', 'State', 'Bank_Name', 'Bank_Local_Currency', 'Bank_Type', 'Bank_Product', 'Bank_Product_Type', 'Bank_Product_Name',
+         'Balance', 'Bank_Offer_Feature', 'Term in Months', 'Interest_Type', 'Interest', 'AER', 'Bank_Product_Code']
+
+df.to_csv(path,index=False)
 print(df)

@@ -12,7 +12,7 @@ table = []
 table_headers = ["Bank_Product_Name", "Min_Loan_Amount", "Term (Y)", "Interest_Type", "Interest", "APRC", "Mortgage_Loan_Amt"]
 # table.append(table_headers)
 browser = webdriver.Firefox()
-def lollydBank(properties, deposit,year , elNumber):
+def lloydBank(properties, deposit,year , elNumber):
     browser.get("https://www.lloydsbank.com/mortgages/mortgage-calculator.asp")
     browser.find_element_by_css_selector("#existing-customer > label:nth-child(4) > span:nth-child(1)").click()
     browser.find_element_by_css_selector("#existing-current-account-customer > label:nth-child(4) > span:nth-child(1)").click()
@@ -75,15 +75,10 @@ terms = [[10,11],[15,16],[20,21],[25,26],[30,31]]
 cases = [[90000,18000], [270000, 54000], [450000, 90000]]
 for term in terms:
     for case in cases:
-        lollydBank(case[0], case[1], term[0], term[1])
+        lloydBank(case[0], case[1], term[0], term[1])
 
 browser.close()
 print(tabulate(table))
-
-
-
-
-
 
 order= ["Date","Bank_Native_Country","State","Bank_Name","Bank_Local_Currency","Bank_Type","Bank_Product","Bank_Product_Type","Bank_Product_Name","Min_Loan_Amount","Bank_Offer_Feature","Term (Y)","Interest_Type","Interest","APRC","Mortgage_Loan_Amt","Mortgage_Down_Payment","Mortgage_Category","Mortgage_Reason","Mortgage_Pymt_Mode","Fixed_Rate_Term","Bank_Product_Code"]
 column = ["Bank_Product_Name","Min_Loan_Amount","Term (Y)","Interest_Type","Interest","APRC","Mortgage_Loan_Amt"]
@@ -107,15 +102,7 @@ df["Mortgage_Pymt_Mode"] = "Principal + Interest"
 df["Bank_Product_Code"] = None
 df["Fixed_Rate_Term"] = df["Bank_Product_Name"].apply(lambda x : re.match('\d\d?', str(x)).group(0))
 
-
-
-
-
 print(df)
 
 df = df[order]
-
 df.to_csv(output_path + "Consolidate_Lloyds_Mortgage_{}.csv".format(now.strftime("%m_%d_%Y")), index=False)
-
-
-

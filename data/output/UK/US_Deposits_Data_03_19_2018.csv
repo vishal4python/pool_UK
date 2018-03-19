@@ -1,0 +1,52 @@
+Date,Bank_Native_Country,State,Bank_Name,Ticker,Bank_Local_Currency,Bank_Type,Bank_Product,Bank_Product_Type,Bank_Product_Code,Bank_Product_Name,Minm_Balance,Maxm_Balance,Bank_Offer_Feature,Term in Months,Interest_Type,Interest,AER
+ 2018-03-19,UK,London,Bank of Scotland,PVT,GBP,Bank,Deposits,Savings,,Access Saver,,,Offline,12.0,Variable,0.20% ,0.20% 
+ 2018-03-19,UK,London,Bank of Scotland,PVT,GBP,Bank,Deposits,Savings,,Monthly Saver,,,Offline,,Fixed,2.50% ,2.50% 
+ 2018-03-19,UK,London,Bank of Scotland,PVT,GBP,Bank,Deposits,Savings,,Access Cash ISA,,,Offline,12.0,Variable,0.35%  ,0.35%  
+ 2018-03-19,UK,London,Bank of Scotland,PVT,GBP,Bank,Deposits,Savings,,Fixed Cash ISA,,,Offline,24.0,Fixed,0.50%  ,0.50%  
+ 2018-03-19,UK,London,Bank of Scotland,PVT,GBP,Bank,Deposits,Term Savings,,Fixed Rate Bond,,,Offline,12.0,Fixed,0.40% ,0.40% 
+ 2018-03-19,UK,London,Bank of Scotland,PVT,GBP,Bank,Deposits,Classic Account,,Classic Account,1,"5,000",Offline,,Variable,1.98%,2%
+ 2018-03-19,UK,London,Halifax,PVT,GBP,Bank,Deposits,Savings,,ISA Saver Variable,1,,Offline,12.0,Variable,0.35%,0.35%
+ 2018-03-19,UK,London,Halifax,PVT,GBP,Bank,Deposits,Savings,,Everyday Saver,1,,Offline,12.0,Variable,0.20%,0.20%
+ 2018-03-19,UK,London,Halifax,PVT,GBP,Bank,Deposits,Term Deposits,,ISA Saver Fixed,500,,Offline,12.0,Fixed,0.50%,0.50%
+ 2018-03-19,UK,London,Halifax,PVT,GBP,Bank,Deposits,Term Deposits,,Fixed Saver,500,,Offline,12.0,Fixed,0.45%,0.45%
+ 2018-03-19,UK,London,Halifax,PVT,GBP,Bank,Deposits,Term Deposits,,Regular Saver,25,250,Offline,,Fixed,2.50%,2.50%
+ 2018-03-19,UK,London,Halifax,PVT,GBP,Bank,Deposits,Savings,,Help to Buy: ISA,"1,000",,Offline,,Variable,2.00%,2.00%
+ 2018-03-19,UK,London,Halifax,PVT,GBP,Bank,Deposits,Savings,,ISA Saver Fixed,500,,Offline,12.0,Fixed,0.50%,0.50%
+ 2018-03-19,UK,London,Halifax,PVT,GBP,Bank,Deposits,Savings,,ISA Saver Variable,1,,Offline,12.0,Variable,0.35%,0.35%
+ 2018-03-19,UK,London,Halifax,PVT,GBP,Bank,Deposits,Savings,,Junior Cash ISA,1,,Offline,,Variable,3.00%,3.00%
+ 2018-03-19,UK,London,Royal Bank Of Scotland,RBS,GBP,Bank,Deposits,Savings,,Instant Saver,1,24999,Offline,,Variable,0.10%,
+ 2018-03-19,UK,London,Royal Bank Of Scotland,RBS,GBP,Bank,Deposits,Savings,,Instant Saver,25000,99999,Offline,,Variable,0.20%,
+ 2018-03-19,UK,London,Royal Bank Of Scotland,RBS,GBP,Bank,Deposits,Savings,,Instant Saver,100000,,Offline,,Variable,0.25%,
+ 2018-03-19,UK,London,Royal Bank Of Scotland,RBS,GBP,Bank,Deposits,Savings,,Instant Access ISA,1,24999,Offline,,Variable,0.25%,
+ 2018-03-19,UK,London,Royal Bank Of Scotland,RBS,GBP,Bank,Deposits,Savings,,Instant Access ISA,25000,,Offline,,Variable,0.75%,
+ 2018-03-19,UK,London,Royal Bank Of Scotland,RBS,GBP,Bank,Deposits,Term Deposits,,Fixed Rate ISA 1 year fixed,1000,24999,Offline,12.0,Fixed,1.00%,
+ 2018-03-19,UK,London,Royal Bank Of Scotland,RBS,GBP,Bank,Deposits,Term Deposits,,Fixed Rate ISA 1 year fixed,25000,,Offline,12.0,Fixed,1.10%,
+ 2018-03-19,UK,London,Royal Bank Of Scotland,RBS,GBP,Bank,Deposits,Term Deposits,,Fixed Rate ISA 2 year fixed,1000,24999,Offline,24.0,Fixed,1.15%,
+ 2018-03-19,UK,London,Royal Bank Of Scotland,RBS,GBP,Bank,Deposits,Term Deposits,,Fixed Rate ISA 2 year fixed,25000,,Offline,24.0,Fixed,1.25%,
+ 2018-03-19,UK,London,Royal Bank Of Scotland,RBS,GBP,Bank,Deposits,Term Deposits,,Fixed Term Savings Account 1 year fixed,5000,49999,Offline,12.0,Fixed,0.90%,0.90%
+ 2018-03-19,UK,London,Royal Bank Of Scotland,RBS,GBP,Bank,Deposits,Term Deposits,,Fixed Term Savings Account 1 year fixed,50000,500000,Offline,12.0,Fixed,0.95%,0.95%
+ 2018-03-19,UK,London,Royal Bank Of Scotland,RBS,GBP,Bank,Deposits,Term Deposits,,Fixed Term Savings Account 2 year fixed,5000,49999,Offline,24.0,Fixed,1.00%,1.00%
+ 2018-03-19,UK,London,Royal Bank Of Scotland,RBS,GBP,Bank,Deposits,Term Deposits,,Fixed Term Savings Account 2 year fixed,50000,500000,Offline,24.0,Fixed,1.05%,1.06%
+ 2018-03-19,UK,London,Royal Bank Of Scotland,RBS,GBP,Bank,Deposits,Current,,An everyday bank account ,,,Offline,,,,
+ 2018-03-19,UK,London,Virgin Money Plc,VM,GBP,Bank,Deposits,Savings,,Easy Access Cash E-ISA,1,,Online,,Variable,1.21%,1.21%
+ 2018-03-19,UK,London,Virgin Money Plc,VM,GBP,Bank,Deposits,Term Deposits,,1 Year Fixed Rate Cash E-ISA,1,,Online,12.0,Fixed,1.50%,1.50%
+ 2018-03-19,UK,London,Virgin Money Plc,VM,GBP,Bank,Deposits,Term Deposits,,2 Year Fixed Rate Cash E-ISA,1,,Online,24.0,Fixed,1.66%,1.66%
+ 2018-03-19,UK,London,Virgin Money Plc,VM,GBP,Bank,Deposits,Term Deposits,,3 Year Fixed Rate Cash E-ISA,1,,Online,36.0,Fixed,2.00%,2.00%
+ 2018-03-19,UK,London,Virgin Money Plc,VM,GBP,Bank,Deposits,Term Deposits,,5 Year Fixed Rate Cash E-ISA,1,,Online,60.0,Fixed,2.15%,2.15%
+ 2018-03-19,UK,London,Virgin Money Plc,VM,GBP,Bank,Deposits,Savings,,Help to Buy: ISA,1,,Online,,Variable,2.25%,2.25%
+ 2018-03-19,UK,London,Virgin Money Plc,VM,GBP,Bank,Deposits,Savings,,Easy Access Cash ISA,1,,Offline,,Variable,1.21%,1.21%
+ 2018-03-19,UK,London,Virgin Money Plc,VM,GBP,Bank,Deposits,Term Deposits,,1 Year Fixed Rate Cash ISA,1,,Offline,12.0,Fixed,1.50%,1.50%
+ 2018-03-19,UK,London,Virgin Money Plc,VM,GBP,Bank,Deposits,Term Deposits,,2 Year Fixed Rate Cash ISA,1,,Offline,24.0,Fixed,1.66%,1.66%
+ 2018-03-19,UK,London,Virgin Money Plc,VM,GBP,Bank,Deposits,Term Deposits,,3 Year Fixed Rate Cash ISA,1,,Offline,36.0,Fixed,2.00%,2.00%
+ 2018-03-19,UK,London,Virgin Money Plc,VM,GBP,Bank,Deposits,Term Deposits,,5 Year Fixed Rate Cash ISA,1,,Offline,60.0,Fixed,2.15%,2.15%
+ 2018-03-19,UK,London,Virgin Money Plc,VM,GBP,Bank,Deposits,Savings,,Regular E-Saver,1,"3,500",Online,,Fixed,2.25%,2.25%
+ 2018-03-19,UK,London,Virgin Money Plc,VM,GBP,Bank,Deposits,Savings,,Saving to Buy,1,"30,000",Online,,Variable,0.75%,0.75%
+ 2018-03-19,UK,London,Virgin Money Plc,VM,GBP,Bank,Deposits,Savings,,Regular Saver,1,"3,250",Offline,,Fixed,2.25%,2.25%
+ 2018-03-19,UK,London,Virgin Money Plc,VM,GBP,Bank,Deposits,Savings,,Easy Access Saver,1,"250,000",Offline,,Variable,1.01%,1.01%
+ 2018-03-19,UK,London,Virgin Money Plc,VM,GBP,Bank,Deposits,Term Deposits,,1 Year Fixed Rate E-Bond,1,"1,000,000",Online,12.0,Fixed,1.25%,1.25%
+ 2018-03-19,UK,London,Virgin Money Plc,VM,GBP,Bank,Deposits,Term Deposits,,3 Year Fixed Rate E-Bond,1,"1,000,000",Online,36.0,Fixed,1.50%,1.50%
+ 2018-03-19,UK,London,Virgin Money Plc,VM,GBP,Bank,Deposits,Term Deposits,,5 Year Fixed Rate E-Bond,1,"1,000,000",Online,60.0,Fixed,1.75%,1.75%
+ 2018-03-19,UK,London,Virgin Money Plc,VM,GBP,Bank,Deposits,Term Deposits,,1 Year Fixed Rate Bond,1,"1,000,000",Offline,12.0,Fixed,1.25%,1.25%
+ 2018-03-19,UK,London,Virgin Money Plc,VM,GBP,Bank,Deposits,Term Deposits,,3 Year Fixed Rate Bond,1,"1,000,000",Offline,36.0,Fixed,1.50%,1.50%
+ 2018-03-19,UK,London,Virgin Money Plc,VM,GBP,Bank,Deposits,Term Deposits,,5 Year Fixed Rate Bond,1,"1,000,000",Offline,60.0,Fixed,1.75%,1.75%
+ 2018-03-19,UK,London,Virgin Money Plc,VM,GBP,Bank,Deposits,Current,,Essential Current Account,"100,000",,Offline,,Variable,0.75%,0.75%

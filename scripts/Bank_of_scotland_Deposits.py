@@ -127,7 +127,6 @@ column = ["Bank_Product_Name","Interest","AER","Term in Months","Interest_Type",
 df = pd.DataFrame(data_table,columns=column)
 
 df["Date"] = now.strftime('%Y-%m-%d')
-
 df["Bank_Native_Country"] = "UK"
 df["State"] = "London"
 df["Bank_Name"] = "Bank of Scotland"
@@ -136,10 +135,6 @@ df["Bank_Type"] = "Bank"
 df["Bank_Product"] = "Deposits"
 df["Bank_Offer_Feature"] = "Offline"
 df["Bank_Product_Code"] = None
-
-
-
-
 print(df)
 
 df = df[columns]

@@ -1,0 +1,10 @@
+Date,Bank_Native_Country,State,Bank_Name,Bank_Local_Currency,Bank_Type,Bank_Product,Bank_Product_Type,Bank_Product_Name,Balance,Bank_Offer_Feature,Term in Months,Interest_Type,Interest,AER,Bank_Product_Code
+03-19-2018,UK,London,Halifax,GBP,Bank,Deposits,Savings,ISA Saver Variable,1,Offline,12 months,Variable,0.35%,0.35%,
+03-19-2018,UK,London,Halifax,GBP,Bank,Deposits,Savings,Everyday Saver,1,Offline,12 months,Variable,0.20%,0.20%,
+03-19-2018,UK,London,Halifax,GBP,Bank,Deposits,Term Deposits,ISA Saver Fixed,500,Offline,1 year,Fixed,0.50%,0.50%,
+03-19-2018,UK,London,Halifax,GBP,Bank,Deposits,Term Deposits,Fixed Saver,500,Offline,1 year,Fixed,0.45%,0.45%,
+03-19-2018,UK,London,Halifax,GBP,Bank,Deposits,Term Deposits,Regular Saver,25 to 250,Offline,,Fixed,2.50%,2.50%,
+03-19-2018,UK,London,Halifax,GBP,Bank,Deposits,Savings,Help to Buy: ISA,"1,000",Offline,,Variable,2.00%,2.00%,
+03-19-2018,UK,London,Halifax,GBP,Bank,Deposits,Savings,ISA Saver Fixed,500,Offline,1 year,Fixed,0.50%,0.50%,
+03-19-2018,UK,London,Halifax,GBP,Bank,Deposits,Savings,ISA Saver Variable,1,Offline,12 months,Variable,0.35%,0.35%,
+03-19-2018,UK,London,Halifax,GBP,Bank,Deposits,Savings,Junior Cash ISA,1,Offline,,Variable,3.00%,3.00%,

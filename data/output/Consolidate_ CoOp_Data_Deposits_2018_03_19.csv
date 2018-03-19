@@ -1,0 +1,27 @@
+Date,Bank_Native_Country,State,Bank_Name,Bank_Local_Currency,Bank_Type,Bank_Product,Bank_Product_Type,Bank_Product_Name,Min_Opening_Bal,Balance,Bank_Offer_Feature,Term in Months,Interest_Type,Interest,AER
+03-19-2018,UK,London,The Co-operative Bank,GBP,Bank,Deposits,Term Deposits,Britannia 1yr Fixed Rate Bond,,1000.00,Offline,12.0,Fixed,0.65,0.65
+03-19-2018,UK,London,The Co-operative Bank,GBP,Bank,Deposits,Term Deposits,Britannia 2yr Fixed Rate Bond,,1000.00,Offline,24.0,Fixed,0.75,0.75
+03-19-2018,UK,London,The Co-operative Bank,GBP,Bank,Deposits,Term Deposits,Britannia 3yr Fixed Rate Bond,,1000.00,Offline,36.0,Fixed,0.90,0.90
+03-19-2018,UK,London,The Co-operative Bank,GBP,Bank,Deposits,Term Deposits,Britannia Fixed Rate Cash ISA - fixed until 05/04/2019,5000.00,,Offline,,Fixed,0.80,0.80
+03-19-2018,UK,London,The Co-operative Bank,GBP,Bank,Deposits,Term Deposits,Britannia Fixed Rate Cash ISA - fixed until 05/04/2020,5000.00,,Offline,,Fixed,0.90,0.90
+03-19-2018,UK,London,The Co-operative Bank,GBP,Bank,Deposits,Savings,Britannia Additional Allowance ISA,,,Offline,,Variable,0.46,0.46
+03-19-2018,UK,London,The Co-operative Bank,GBP,Bank,Deposits,Savings,Britannia Select Access Saver 8,,1,Offline,,Variable,0.60,0.60
+03-19-2018,UK,London,The Co-operative Bank,GBP,Bank,Deposits,Savings,Britannia Select Access Saver 8,,1,Offline,,Variable,0.10,0.10
+03-19-2018,UK,London,The Co-operative Bank,GBP,Bank,Deposits,Savings,Britannia Cash ISA,,1,Offline,,Variable,0.46,0.46
+03-19-2018,UK,London,The Co-operative Bank,GBP,Bank,Deposits,Savings,Britannia The Co-operative Membership Savings,,1,Offline,,Variable,0.25,0.25
+03-19-2018,UK,London,The Co-operative Bank,GBP,Bank,Deposits,Savings,Britannia Future Fund Account,,5000,Offline,,Variable,0.34,0.34
+03-19-2018,UK,London,The Co-operative Bank,GBP,Bank,Deposits,Savings,Britannia Future Fund Account,,1000,Offline,,Variable,0.34,0.34
+03-19-2018,UK,London,The Co-operative Bank,GBP,Bank,Deposits,Savings,Britannia Future Fund Account,,1,Offline,,Variable,0.34,0.34
+03-19-2018,UK,London,The Co-operative Bank,GBP,Bank,Deposits,Savings,Britannia Online Cash ISA,,1,Online,,Variable,0.56,0.56
+03-19-2018,UK,London,The Co-operative Bank,GBP,Bank,Deposits,Savings,Britannia Online Saver,,1,Online,,Variable,0.56,0.56
+03-19-2018,UK,London,The Co-operative Bank,GBP,Bank,Deposits,Savings,Britannia Smart Saver,,1,Offline,,Variable,0.34,0.34
+03-19-2018,UK,London,The Co-operative Bank,GBP,Bank,Deposits,Savings,The Co-operative Bank Cash ISA,,1,Offline,,Variable,0.46,0.46
+03-19-2018,UK,London,The Co-operative Bank,GBP,Bank,Deposits,Savings,The Co-operative Bank The Co-operative Membership Savings,,1,Offline,,Variable,0.25,0.25
+03-19-2018,UK,London,The Co-operative Bank,GBP,Bank,Deposits,Savings,The Co-operative Bank Future Fund Account,,5000,Offline,,Variable,0.34,0.34
+03-19-2018,UK,London,The Co-operative Bank,GBP,Bank,Deposits,Savings,The Co-operative Bank Future Fund Account,,1000,Offline,,Variable,0.34,0.34
+03-19-2018,UK,London,The Co-operative Bank,GBP,Bank,Deposits,Savings,The Co-operative Bank Future Fund Account,,1,Offline,,Variable,0.34,0.34
+03-19-2018,UK,London,The Co-operative Bank,GBP,Bank,Deposits,Savings,The Co-operative Bank Online Cash ISA,,1,Online,,Variable,0.56,0.56
+03-19-2018,UK,London,The Co-operative Bank,GBP,Bank,Deposits,Savings,The Co-operative Bank Online Saver,,1,Online,,Variable,0.56,0.56
+03-19-2018,UK,London,The Co-operative Bank,GBP,Bank,Deposits,Savings,The Co-operative Bank Smart Saver,,1,Offline,,Variable,0.34,0.34
+03-19-2018,UK,London,The Co-operative Bank,GBP,Bank,Deposits,Current,Current Account,,,Offline,,,,
+03-19-2018,UK,London,The Co-operative Bank,GBP,Bank,Deposits,Current,Cashminder,,,Offline,,,,

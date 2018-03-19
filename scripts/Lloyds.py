@@ -1,3 +1,4 @@
+#-*- coding:utf-8 -*-
 import pandas as pd
 import numpy as np
 import datetime
@@ -71,7 +72,7 @@ df02["Interest"]=df["Unnamed: 3"].values
 df02["Interest"]=(df02["Interest"]*100).astype(str)+'%'
 df02["AER"]=df02["Interest"]
 df02.drop(df02.columns[[1]], axis=1, inplace=True)
-df=pd.DataFrame(df02["Bank_Product_Name"].str.split('–').tolist(),columns=["Int","PY"])
+df=pd.DataFrame(df02["Bank_Product_Name"].str.split('â€“').tolist(),columns=["Int","PY"])
 df02["Term in Months"]=df["PY"].values
 df=pd.DataFrame(df02["Term in Months"].str.split(' ').tolist(),columns=["Int","PY",'f'])
 df02["Term in Months"]=df["PY"].values
@@ -87,7 +88,7 @@ df03["Balance"]=df["Unnamed: 1"].values
 df03["Interest"]=df["Unnamed: 2"].values
 df03["Interest"]=(df03["Interest"]*100).astype(str)+'%'
 df03["AER"]=df03["Interest"]
-df=pd.DataFrame(df03["Bank_Product_Name"].str.split('–').tolist(),columns=["Int","PY"])
+df=pd.DataFrame(df03["Bank_Product_Name"].str.split('â€“').tolist(),columns=["Int","PY"])
 df03["Term in Months"]=df["PY"].values
 df=pd.DataFrame(df03["Term in Months"].str.split(' ').tolist(),columns=["Int","PY",'f'])
 df03["Term in Months"]=df["PY"].values
@@ -126,7 +127,7 @@ df02["Balance"]=df["Unnamed: 1"].values
 df02["Interest"]=df["Unnamed: 2"].values
 df02["Interest"]=(df02["Interest"]*100).astype(str)+'%'
 df02["AER"]=df02["Interest"]
-df=pd.DataFrame(df02["Bank_Product_Name"].str.split('–').tolist(),columns=["Int","PY"])
+df=pd.DataFrame(df02["Bank_Product_Name"].str.split('â€“').tolist(),columns=["Int","PY"])
 df02["Term in Months"]=df["PY"].values
 df=pd.DataFrame(df02["Term in Months"].str.split(' ').tolist(),columns=["Int","PY",'f'])
 df02["Term in Months"]=df["PY"].values
@@ -140,6 +141,10 @@ result_page3['Bank_Product_Type'].fillna("Savings",inplace=True)
 
 frames = [result_page1,result_page2,result_page3]
 result=pd.concat(frames)
+for index in range(len(result.index)):
+    result['Bank_Product_Name'].iloc[index] = result['Bank_Product_Name'].iloc[index].replace("â€“", " - ")
+   
+
 df_final = pd.DataFrame(columns=["Date", "Bank_Native_Country", 'State', "Bank_Name", 'Bank_Local_Currency', 'Bank_Type',
              'Bank_Product', 'Bank_Product_Type', 'Bank_Product_Name',
              'Balance', 'Bank_Offer_Feature', 'Term in Months', 'Interest_Type', 'Interest','AER','Bank_Product_Code'])

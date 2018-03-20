@@ -84,8 +84,8 @@ result2["Bank_Offer_Feature"] = "Offline"
 for index in range(len(result2.index)):
     result2['Interest'].iloc[index] = result2['Interest'].iloc[index].replace("Variable", "").replace("Fixed", "")
     result2['AER'].iloc[index] = result2['AER'].iloc[index].replace("Variable", "").replace("Fixed", "")
-    result2['Min_Opening_Bal'].iloc[index] = result2['Min_Opening_Bal'].iloc[index].replace("¼", "").replace("¼", "")
-    result2['Balance'].iloc[index] = result2['Balance'].iloc[index].replace("¼", "").replace("¼", "")
+    result2['Min_Opening_Bal'].iloc[index] = result2['Min_Opening_Bal'].iloc[index].replace("Â¼", "").replace("Â¼", "")
+    result2['Balance'].iloc[index] = result2['Balance'].iloc[index].replace("Â¼", "").replace("Â¼", "")
 
 frames = [result1, result2]
 result = pd.concat(frames)
@@ -125,4 +125,4 @@ for index in range(len(result.index)):
     else:
         df_final.ix[index, 'Bank_Product_Type'] = "Savings"
 
-df_final.to_csv(output_path+"BoI_Data_Deposit_{}.csv".format(now.strftime("%m_%d_%Y")), index=False)
+df_final.to_csv(output_path+"Consolidate_BankofIreland_Data_Deposit_{}.csv".format(now.strftime("%m_%d_%Y")), index=False)

@@ -26,7 +26,7 @@ products = []
 for i in product_type:
 
     if "Term Savings" in i.text:
-        term="Term Savings"
+        term="Term Deposits"
     elif "savings" in i.text.lower():
         term = "Savings"
     else:
@@ -82,6 +82,8 @@ for tr in trs:
         else:
             year = None
         if not found:
+            print('tds[3]==', tds[0])
+
 
             data_table.append([tds[0].text,gross, aer, year, tds[3].text,products[count],None])
             count = count+1
@@ -116,7 +118,7 @@ try:
     Balance = re.sub("[^0-9-,.]", '', Balance).strip('.')
 
 
-    t = [product_name, AER[1], AER[0], None, "Variable", product_name, Balance]
+    t = [product_name, AER[1], AER[0], None, "Variable", "Current", Balance]
     data_table.append(t)
 except Exception as e:
     print(e)

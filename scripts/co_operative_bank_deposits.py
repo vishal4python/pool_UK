@@ -10,10 +10,11 @@ import numpy as np
 today = datetime.datetime.now()
 path = output_path+"Consolidate_ CoOp_Data_Deposits_"+str(today.strftime('%Y_%m_%d'))+'.csv'
 # path = "Consolidate_COOB_Data_Deposits_"+str(today.strftime('%Y_%m_%d'))+'.csv'
+removedData = ["Additional Allowance"]
 table = []
-order = ["Date", "Bank_Native_Country", "State", "Bank_Name", "Bank_Local_Currency", "Bank_Type", "Bank_Product", "Bank_Product_Type", "Bank_Product_Name",
-         "Min_Opening_Bal", "Balance", "Bank_Offer_Feature", "Term in Months", "Interest_Type", "Interest", "AER", "Bank_Product_Code"]
-table_headers = ["Bank_Product_Type", "Bank_Product_Name", "Min_Opening_Bal", "Balance", "Bank_Offer_Feature", "Term in Months", "Interest_Type", "Interest", "AER"]
+order = ["Date", "Bank_Native_Country", "State", "Bank_Name", "Bank_Local_Currency", "Bank_Type", "Bank_Product", "Bank_Product_Type", "Bank_Product_Name"
+    , "Balance", "Bank_Offer_Feature", "Term in Months", "Interest_Type", "Interest", "AER", "Bank_Product_Code"]
+table_headers = ["Bank_Product_Type", "Bank_Product_Name", "Balance", "Bank_Offer_Feature", "Term in Months", "Interest_Type", "Interest", "AER"]
 # table.append(table_headers)
 
 resp = requests.get("https://www.co-operativebank.co.uk/savings/interest-rates")
@@ -77,14 +78,23 @@ if len(headings)!=0:
 
                                 check_balance_type = britannia_table.text
                                 # print(check_balance_type)
-                                if "opening" in check_balance_type.lower():
-                                    opening_balance = britannia_data[0]
-                                    balance = None
-                                else:
-                                    opening_balance = None
-                                    balance = britannia_data[0]
+
+                                balance = britannia_data[0]
+                                # if "opening" in check_balance_type.lower():
+                                #     opening_balance = britannia_data[0]
+                                #     balance = None
+                                # else:
+                                #     opening_balance = None
+                                #     balance = britannia_data[0]
                                 # print(check_balance_type)
-                                a = ['Savings', britannia_heading.strip()+' '+britannia_sub_heading.strip(), opening_balance, balance, Bank_Offer_Feature, terms_in_month,Interest_Type,britannia_data[1], britannia_data[2] ]
+
+                                test = "Help to Buy: ISA"
+
+                                checkData = True if len([rd for rd in removedData if rd.lower() in britannia_sub_heading.strip().lower()]) != 0 else False
+                                if checkData:
+                                    continue
+
+                                a = ['Savings', britannia_heading.strip()+' '+britannia_sub_heading.strip(), balance, Bank_Offer_Feature, terms_in_month,Interest_Type,britannia_data[1], britannia_data[2] ]
                                 table.append(a)
                         except Exception as e:
                             pass
@@ -132,14 +142,16 @@ if len(headings)!=0:
                             else:
                                 Interest_Type = 'Variable'
                             check_balance_type = co_operative_table.text
-                            if "opening" in check_balance_type.lower():
-                                opening_balance = co_operative_data[0]
-                                balance = None
-                            else:
-                                opening_balance = None
-                                balance = co_operative_data[0]
+                            balance = co_operative_data[0]
+
+                            # if "opening" in check_balance_type.lower():
+                            #     opening_balance = co_operative_data[0]
+                            #     balance = None
+                            # else:
+                            #     opening_balance = None
+                            #     balance = co_operative_data[0]
                             # print(trs[1])
-                            a = ["Savins", co_operative_bank_heading.strip() + ' ' + co_operative_sub_heading.strip(),opening_balance, balance,
+                            a = ["Savins", co_operative_bank_heading.strip() + ' ' + co_operative_sub_heading.strip(), balance,
                                  Bank_Offer_Feature, terms_in_month, Interest_Type, co_operative_data[1], co_operative_data[2]]
                             table.append(a)
                     except Exception as e:
@@ -157,7 +169,7 @@ try:
     cc = [tr.find("a", attrs={"class":"u-epsilon u-text-thin"}).text for tr in current_trs]
     # print(cc)
     for c in cc:
-        table.append(["Current", c, None, None, "Offline", None,None, None, None])
+        table.append(["Current", c, None, "Offline", None,None, None, None])
 except Exception as e:
     print(e)
 print(tabulate(table))
@@ -172,7 +184,7 @@ def Change_bank_product_name(x):
 
 df = pd.DataFrame(table, columns=table_headers)
 df['Balance'] = df['Balance'].apply(lambda x: re.sub('[^0-9.]', '', str(x)) if len(re.sub('[^0-9.]', '', str(x)))!=0 else None)
-df['Min_Opening_Bal'] = df['Min_Opening_Bal'].apply(lambda x: re.sub('[^0-9.]', '', str(x)) if len(re.sub('[^0-9.]', '', str(x)))!=0 else None)
+# df['Min_Opening_Bal'] = df['Min_Opening_Bal'].apply(lambda x: re.sub('[^0-9.]', '', str(x)) if len(re.sub('[^0-9.]', '', str(x)))!=0 else None)
 df['Interest'] = df['Interest'].apply(lambda x: re.sub('[^0-9.]', '', str(x)) if len(re.sub('[^0-9.]', '', str(x)))!=0 else None)
 df['AER'] = df['AER'].apply(lambda x: re.sub('[^0-9.]', '', str(x)) if len(re.sub('[^0-9.]', '', str(x)))!=0 else None)
 df['Bank_Product_Type'] = df['Interest_Type'].apply(Change_bank_product_name)

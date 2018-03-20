@@ -116,7 +116,7 @@ def pandaper():
     dataset['Date'] = now.strftime("%Y-%m-%d")
     dataset['Bank_Native_Country'] = "UK"
     dataset['State'] = "London"
-    dataset['Bank_Name'] = "Halifax Bank"
+    dataset['Bank_Name'] = "Halifax"
     dataset['Bank_Local_Currency'] = "GBP"
     dataset['Bank_Type'] = "Bank"
     dataset['Bank_Product'] ='Mortgages'

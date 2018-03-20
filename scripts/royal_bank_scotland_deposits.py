@@ -54,11 +54,11 @@ if len(variable_type)!=0:
 
 for li in lis:
     inter = text = re.findall(r'\d?\.?\d*%',li.text)
-    text = re.findall(r'£.*\d',li.text)
+    text = re.findall(r'(above\s?\n?£.*\d|£.*\d)',li.text)
     is_aer = re.findall(r'\d.*AER', li.text)
     if len(text)!=0 and len(inter)!=0:
         if len(is_aer) >= 1:
-            is_aer = re.sub('[^0-9.%]', '', is_aer[-1])
+            is_aer = re.sub('[^a-z0-9.%-,]', '', is_aer[-1])
         else:
             is_aer = None
         table.append(['Savings', product_names[0], text[0], 'Offline', None, variable, inter[-1], is_aer])
@@ -80,7 +80,7 @@ if len(lis_variable_type)!=0:
 
 for li in lis:
     inter = text = re.findall(r'\d?\.?\d*%',li.text)
-    text = re.findall(r'£.*\d',li.text)
+    text = re.findall(r'(above\s?\n?£.*\d|£.*\d)',li.text)
     iaisa_aer = re.findall(r'\d.*AER', li.text)
     if len(text)!=0 and len(inter)!=0:
         if len(iaisa_aer) >= 1:
@@ -117,11 +117,11 @@ for year in years:
     lis = lsoup.find("ul").find_all('li')
     for li in lis:
         inter = text = re.findall(r'\d?\.?\d*%', li.text)
-        text = re.findall(r'£.*\d', li.text)
+        text = re.findall(r'(above\s?\n?£.*\d|£.*\d)', li.text)
         frisa_aer = re.findall(r'\d.*AER', li.text)
         if len(text) != 0 and len(inter) != 0:
             if len(frisa_aer)>=1:
-                _frisa_aer = re.sub('[^0-9.%]','',frisa_aer[-1])
+                _frisa_aer = re.sub('[^0-9.%-a-z]','',frisa_aer[-1].replace('and','-').lower())
             else:
                 _frisa_aer = None
             table.append(['Savings', product_names[2]+' '+sub_frisa_heading, text[0], 'Offline', frisa_heading, frias_variable, inter[-1], _frisa_aer])
@@ -153,7 +153,7 @@ for year in years:
     lis = lsoup.find("ul").find_all('li')
     for li in lis:
         inter = text = re.findall(r'\d?\.?\d*%', li.text)
-        text = re.findall(r'£.*\d', li.text)
+        text = re.findall(r'(above\s?\n?£.*\d|£.*\d)', li.text)
         aer = re.findall(r'\d.*AER',li.text)
         if len(text) != 0 and len(inter) != 0:
             if len(aer)!=0:
@@ -181,7 +181,7 @@ def Change_bank_product_name(x):
         return 'Savings'
        
 df['Bank_Product_Type'] = df['Bank_Product_Name'].apply(Change_bank_product_name)
-df['Balance']= df['Balance'].apply(lambda x : re.sub('[^0-9-]','', str(x).replace('and','-')) if len(str(x))!=0 else x)
+df['Balance']= df['Balance'].apply(lambda x : re.sub('[^a-z ,0-9-]','', str(x).replace('and','-')) if len(str(x))!=0 else x)
 df.loc[:, 'Date'] = to_day.strftime("%m-%d-%Y")
 df.loc[:, 'Bank_Native_Country'] = 'UK'
 df.loc[:, 'State'] = 'London'

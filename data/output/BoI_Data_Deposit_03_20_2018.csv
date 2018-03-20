@@ -1,0 +1,10 @@
+Date,Bank_Native_Country,State,Bank_Name,Bank_Local_Currency,Bank_Type,Bank_Product,Bank_Product_Type,Bank_Product_Name,Min_Opening_Bal,Balance,Bank_Offer_Feature,Term in Months,Interest_Type,Interest,AER,Bank_Product_Code
+03-20-2018,UK,London,Bank of Ireland,GBP,Bank,Deposits,Savings,Regular savings balance,0,9999,Online,nan,Variable,1.20% ,1.20% ,
+03-20-2018,UK,London,Bank of Ireland,GBP,Bank,Deposits,Savings,Lump sum balance,"10,000+",,Online,nan,Variable,0.25% ,0.25% ,
+03-20-2018,UK,London,Bank of Ireland,GBP,Bank,Deposits,Term Deposits,365 12 Month Fixed Term Deposit,5000,1000000,Online,12 ,Variable,0.24% ,0.25% ,
+03-20-2018,UK,London,Bank of Ireland,GBP,Bank,Deposits,Savings,GoalSaver,1,"15,000",Offline,nan,Variable,1.35% ,1.35% ,
+03-20-2018,UK,London,Bank of Ireland,GBP,Bank,Deposits,Savings,GoalSaver,"15,000+",N/a,Offline,nan,Variable,0.25% ,0.25% ,
+03-20-2018,UK,London,Bank of Ireland,GBP,Bank,Deposits,Term Deposits,Term Deposits - Fixed Rates,"5,000","1,000,000",Offline,6 ,Variable,0.04%,0.1%,
+03-20-2018,UK,London,Bank of Ireland,GBP,Bank,Deposits,Term Deposits,Term Deposits - Fixed Rates,"5,000","1,000,000",Offline,12 ,Variable,0.19%,0.2%,
+03-20-2018,UK,London,Bank of Ireland,GBP,Bank,Deposits,Term Deposits,Term Deposits - Fixed Rates,"5,000","10,000,000",Offline,3 ,Variable,1.19% ,0.40% ,
+03-20-2018,UK,London,Bank of Ireland,GBP,Bank,Deposits,Current, Personal and Business,1,N/a,Offline,nan,Variable,0.00% ,0.00% ,

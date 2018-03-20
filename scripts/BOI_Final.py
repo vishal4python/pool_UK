@@ -1,12 +1,3 @@
-import pandas as pd
-import numpy as np
-import datetime
-import warnings
-
-# from maks_lib import input_path
-# from maks_lib import output_path
-warnings.simplefilter(action='ignore')
-now = datetime.datetime.now()
 
 import pandas as pd
 import numpy as np
@@ -22,8 +13,7 @@ df1 = pd.read_excel(input_path+"365-online-customer-rate-sheet.xlsx")
 df = pd.read_excel(input_path+"Deposits-Customer-Rate-Sheet.xlsx")
 
 df00 = df1[11:13]
-df00 = df00.rename(
-    columns={'Unnamed: 2': 'Min_Opening_Bal', 'Unnamed: 3': 'Balance', 'Unnamed: 4': 'Interest', 'Unnamed: 5': 'AER'})
+df00 = df00.rename(columns={'Unnamed: 2': 'Min_Opening_Bal', 'Unnamed: 3': 'Balance', 'Unnamed: 4': 'Interest', 'Unnamed: 5': 'AER'})
 df00 = df00.rename(columns={'Bank of Ireland': 'Bank_Product_Name'})
 df00.drop(df00.columns[[1]], axis=1, inplace=True)
 
@@ -46,8 +36,7 @@ for index in range(len(result1.index)):
 
 df1 = df[7:9]
 df1.drop(df1.columns[[0, 1, 6, 7]], axis=1, inplace=True)
-df1 = df1.rename(
-    columns={'Unnamed: 2': 'Min_Opening_Bal', 'Unnamed: 3': 'Balance', 'Unnamed: 4': 'Interest', 'Unnamed: 5': 'AER'})
+df1 = df1.rename(columns={'Unnamed: 2': 'Min_Opening_Bal', 'Unnamed: 3': 'Balance', 'Unnamed: 4': 'Interest', 'Unnamed: 5': 'AER'})
 df1["Bank_Product_Name"] = "GoalSaver"
 
 df2 = df[33:34]
@@ -108,6 +97,9 @@ df_final["Bank_Name"] = "Bank of Ireland"
 df_final["Bank_Local_Currency"] = "GBP"
 df_final["Bank_Type"] = "Bank"
 df_final["Bank_Product"] = "Deposits"
+df_final['Balance1']=df_final.apply(lambda x:'%s-%s' % (x['Min_Opening_Bal'],x['Balance']),axis=1)
+df_final['Balance']=df_final['Balance1']
+df_final.drop(df_final.columns[[9,17]], axis=1, inplace=True)
 
 df_final["Interest_Type"] = "Variable"
 for index in range(len(result.index)):
@@ -124,5 +116,9 @@ for index in range(len(result.index)):
         df_final.ix[index, 'Bank_Product_Type'] = "Current"
     else:
         df_final.ix[index, 'Bank_Product_Type'] = "Savings"
+    if "nan" in df_final['Balance'].iloc[index]:
+       # df03=pd.DataFrame(df_final["Balance"].str.split('-').tolist(),columns=["Int","pr"])
+        df_final['Balance'].iloc[index] = str(df_final['Balance'].iloc[index]).replace("-nan", "")
+
 
 df_final.to_csv(output_path+"Consolidate_BankofIreland_Data_Deposit_{}.csv".format(now.strftime("%m_%d_%Y")), index=False)

@@ -24,6 +24,9 @@ tabs = [["instantaccessdesktop",True],["ISAdesktop", False], ["FTSA desktop", Fa
 for tabLi in tabs:
 
     tab = jsoup.find("section", attrs={"id":tabLi[0]})
+    table_head_Bank_Offer_Feature = [table_head.text for table_head in tab.find_all("div", attrs={"role": "columnheader"})]
+    print(len(table_head_Bank_Offer_Feature))
+
     table_headers = [table_head.find("h4").text.strip() for table_head in tab.find_all("div", attrs={"role":"columnheader"})]
     tds = [ row.find_all("div", attrs={"role":"cell"}) for row in [rows  for rows in tab.find_all("div", attrs={"class":re.compile("comparison-content-table comparison-is-accordian")})  ]]
     minimumBalance = [re.sub('[^0-9.]', '', t.text) for t in tds[3]]
@@ -68,7 +71,14 @@ for tabLi in tabs:
                 if AER is not None:
                     if tabLi[1]:
                         interest = interest if interest is not None else AER
-                    a = ["Bank_Product_Type", table_headers[i], re.sub('[^0-9a-zA-Z, ]','',Amount).replace('and','-'), "Bank_Offer_Feature", Terms_in_month, 
+                    print(table_head_Bank_Offer_Feature[i])
+                    Bank_Offer_Feature = table_head_Bank_Offer_Feature[i] if len(table_head_Bank_Offer_Feature)>=3 else 'Offline'
+                    Bank_Offer_Feature = 'Online' if 'online' in Bank_Offer_Feature.lower() else "Offline"
+
+
+
+                    print(Bank_Offer_Feature)
+                    a = ["Bank_Product_Type", table_headers[i], re.sub('[^0-9a-zA-Z, ]','',Amount).replace('and','-'), Bank_Offer_Feature, Terms_in_month,
                          interest_type, re.sub('[^0-9.%]', '',interest) if interest is not None else None, 
                          re.sub('[^0-9.%]', '',AER) if AER is not None else None ]
                     if 'help' not in table_headers[i].lower():

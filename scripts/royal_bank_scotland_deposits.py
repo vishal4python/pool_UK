@@ -61,7 +61,7 @@ for li in lis:
             is_aer = re.sub('[^a-z0-9.%-,]', '', is_aer[-1])
         else:
             is_aer = None
-        table.append(['Savings', product_names[0], text[0], 'Offline', None, variable, inter[-1], is_aer])
+        table.append(['Savings', product_names[0], text[0], 'Offline', None, variable, inter[-1], inter[-1]])
 
 #INSTANT ACCESS ISA
 # print("INSTANT ACCESS ISA".center(100,'-'))

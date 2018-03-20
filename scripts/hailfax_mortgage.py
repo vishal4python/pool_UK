@@ -15,49 +15,54 @@ now = datetime.datetime.now()
 
 warnings.simplefilter(action='ignore')
 
-
+driver = webdriver.Firefox(executable_path=r'C:\ProgramData\Anaconda3\geckodriver.exe')
+driver.maximize_window()
 class Hailfax:
+    global driver
     def __init__(self, url, pvalue, dvalue, term):
         self.url = url
         self.pvalue = pvalue
         self.dvalue = dvalue
         self.term = term
+        #self.driver = global driver
 
-    def start_driver(self):
-        self.driver = webdriver.Firefox(executable_path=r'C:\ProgramData\Anaconda3\Scripts\geckodriver.exe')
-        self.driver.maximize_window()
-
-    def close_driver(self):
-        return self.driver.close()
+    # def start_driver(self):
+    #     self.driver = webdriver.Firefox(executable_path=r'C:\ProgramData\Anaconda3\geckodriver.exe')
+    #     self.driver.maximize_window()
+    #
+    # def close_driver(self):
+    #     return self.driver.close()
 
     def get_url(self):
-        self.driver.get(self.url)
+        driver.get(self.url)
 
     def fillform(self):
         time.sleep(6)
         no_button_xpath = "/html/body/div[1]/div[2]/div[2]/div/div/div/div/div/div[2]/form/div/div[1]/div/div[1]/div[1]/fieldset/div[2]/div[1]/label[2]/span"
-        no_button = self.driver.find_element_by_xpath(no_button_xpath)
+        no_button = driver.find_element_by_xpath(no_button_xpath)
         no_button.click()
-        select = Select(self.driver.find_element_by_id('goal'))
+        select = Select(driver.find_element_by_id('goal'))
         select.select_by_value('1')
         unhind_xpath = "/html/body/div[1]/div[2]/div[2]/div/div/div/div/div/div[2]/form/div/div[1]/div/div[2]/div[2]/div[1]/span"
-        unhind = self.driver.find_element_by_xpath(unhind_xpath)
+        unhind = driver.find_element_by_xpath(unhind_xpath)
         unhind.click()
-        self.driver.find_element_by_name("valueOfprop").send_keys(self.pvalue[1])
-        self.driver.find_element_by_name("depositAmount").send_keys(self.dvalue[1])
-        Select(self.driver.find_element_by_class_name("mortgage-term-available")).select_by_visible_text(self.term)
+        driver.find_element_by_name("valueOfprop").clear()
+        driver.find_element_by_name("valueOfprop").send_keys(self.pvalue[1])
+        driver.find_element_by_name("depositAmount").clear()
+        driver.find_element_by_name("depositAmount").send_keys(self.dvalue[1])
+        Select(driver.find_element_by_class_name("mortgage-term-available")).select_by_visible_text(self.term)
         time.sleep(5)
-        button = self.driver.find_element_by_xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/div/div/div[2]/form/div/div[3]/div/div[3]/div[2]/a")
+        button = driver.find_element_by_xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/div/div/div[2]/form/div/div[3]/div/div[3]/div[2]/a")
         button.click()
         time.sleep(10)
         # Select(self.driver.find_element_by_xpath('//*[@id="sort-results"]')).select_by_visible_text("Rate")
 
 
     def get_current_url(self):
-        return self.driver.current_url
+        return driver.current_url
 
     def save_page(self):
-        page = self.driver.page_source
+        page = driver.page_source
         with open("hailfax_mortgage_"+self.dvalue[1]+"_"+self.term+".html", 'w')as file:
             file.write(page)
 
@@ -107,7 +112,7 @@ def pandaper():
     dataset = pd.read_table('test.txt',sep=',',delimiter=None, header=None)
     dataset.columns = ['Bank_Product_Name', 'Fixed_Rate_Term', 'Interest_Type', "Interest", "APRC", "Term (Y)",
                        'Mortgage_Loan_Amt']
-    print(dataset)
+    #print(dataset)
     dataset['Date'] = now.strftime("%Y-%m-%d")
     dataset['Bank_Native_Country'] = "UK"
     dataset['State'] = "London"
@@ -139,12 +144,11 @@ if __name__ == "__main__":
     for i in range(len(property_values)):
         for term in ["10","15","25","30"]:
             obj = Hailfax(url, property_values[i], deposite_values[i], term)
-            obj.start_driver()
             obj.get_url()
             obj.fillform()
             obj.save_page()
-            obj.close_driver()
 
+    driver.close()
     removeexistingfile()
     tab1 = ['heading','rate']
     for i in range(len(property_values)):

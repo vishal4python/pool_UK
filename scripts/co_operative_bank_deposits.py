@@ -6,12 +6,13 @@ from tabulate import  tabulate
 import re
 import pandas as pd
 from maks_lib import output_path
+import numpy as np
 today = datetime.datetime.now()
 path = output_path+"Consolidate_ CoOp_Data_Deposits_"+str(today.strftime('%Y_%m_%d'))+'.csv'
 # path = "Consolidate_COOB_Data_Deposits_"+str(today.strftime('%Y_%m_%d'))+'.csv'
 table = []
 order = ["Date", "Bank_Native_Country", "State", "Bank_Name", "Bank_Local_Currency", "Bank_Type", "Bank_Product", "Bank_Product_Type", "Bank_Product_Name",
-         "Min_Opening_Bal", "Balance", "Bank_Offer_Feature", "Term in Months", "Interest_Type", "Interest", "AER"]
+         "Min_Opening_Bal", "Balance", "Bank_Offer_Feature", "Term in Months", "Interest_Type", "Interest", "AER", "Bank_Product_Code"]
 table_headers = ["Bank_Product_Type", "Bank_Product_Name", "Min_Opening_Bal", "Balance", "Bank_Offer_Feature", "Term in Months", "Interest_Type", "Interest", "AER"]
 # table.append(table_headers)
 
@@ -182,6 +183,7 @@ df.loc[:,"Bank_Name"] = "The Co-operative Bank"
 df.loc[:,"Bank_Local_Currency"] = "GBP"
 df.loc[:,"Bank_Type"] = "Bank"
 df.loc[:,"Bank_Product"] = "Deposits"
+df['Bank_Product_Code'] = np.nan
 df = df[order]
 df.to_csv(path, index=False)
 # print(df)

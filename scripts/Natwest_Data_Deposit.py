@@ -20,9 +20,10 @@ resp = requests.get("https://personal.natwest.com/personal/savings/compare-savin
 jsoup = BeautifulSoup(resp.content,"lxml")
 
 #Find All Tabs Data.
-tabs = ["instantaccessdesktop","ISAdesktop", "FTSA desktop"]
-for tab in tabs:
-    tab = jsoup.find("section", attrs={"id":tab})
+tabs = [["instantaccessdesktop",True],["ISAdesktop", False], ["FTSA desktop", False]]
+for tabLi in tabs:
+
+    tab = jsoup.find("section", attrs={"id":tabLi[0]})
     table_headers = [table_head.find("h4").text.strip() for table_head in tab.find_all("div", attrs={"role":"columnheader"})]
     tds = [ row.find_all("div", attrs={"role":"cell"}) for row in [rows  for rows in tab.find_all("div", attrs={"class":re.compile("comparison-content-table comparison-is-accordian")})  ]]
     minimumBalance = [re.sub('[^0-9.]', '', t.text) for t in tds[3]]
@@ -65,6 +66,8 @@ for tab in tabs:
                 except:
                     pass
                 if AER is not None:
+                    if tabLi[1]:
+                        interest = interest if interest is not None else AER
                     a = ["Bank_Product_Type", table_headers[i], re.sub('[^0-9a-zA-Z, ]','',Amount).replace('and','-'), "Bank_Offer_Feature", Terms_in_month, 
                          interest_type, re.sub('[^0-9.%]', '',interest) if interest is not None else None, 
                          re.sub('[^0-9.%]', '',AER) if AER is not None else None ]

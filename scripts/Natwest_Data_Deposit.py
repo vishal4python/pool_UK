@@ -58,11 +58,18 @@ for tab in tabs:
                 if Terms_in_month == None:
                     Terms_in_month = re.findall('\d.*Y',table_headers[i])
                     Terms_in_month = int(re.sub('[^0-9]', '', Terms_in_month[0]))*12  if len(Terms_in_month)!=0 else None
+                try:
+                    mil_Amount = re.findall('\dm',Amount)
+                    if len(mil_Amount)>=1:
+                        Amount = str(int(re.sub('[^0-9]','',mil_Amount[0]))*10000000)
+                except:
+                    pass
                 if AER is not None:
                     a = ["Bank_Product_Type", table_headers[i], re.sub('[^0-9a-zA-Z, ]','',Amount).replace('and','-'), "Bank_Offer_Feature", Terms_in_month, 
                          interest_type, re.sub('[^0-9.%]', '',interest) if interest is not None else None, 
                          re.sub('[^0-9.%]', '',AER) if AER is not None else None ]
-                    table.append(a)
+                    if 'help' not in table_headers[i].lower():
+                        table.append(a)
                 
 
 def checkBankProductType(x):
@@ -73,6 +80,7 @@ def checkBankProductType(x):
 
 # print(tabulate(table))
 # print(table_headers)
+order = ["Date", "Bank_Native_Country", "State", "Bank_Name", "Bank_Local_Currency", "Bank_Type", "Bank_Product", "Bank_Product_Type", "Bank_Product_Name", "Balance", "Bank_Offer_Feature", "Term in Months", "Interest_Type", "Interest", "AER", "Bank_Product_Code"]
 df = pd.DataFrame(table, columns=table_columns)
 df['Date'] = today.strftime('%m-%d-%Y')
 df['Bank_Native_Country'] = 'UK'
@@ -85,6 +93,6 @@ df['Bank_Product_Type'] = df['Interest_Type'].apply(checkBankProductType)
 df['Bank_Product_Code'] =   np.nan
 order = ['Date', 'Bank_Native_Country', 'State', 'Bank_Name', 'Bank_Local_Currency', 'Bank_Type', 'Bank_Product', 'Bank_Product_Type', 'Bank_Product_Name',
          'Balance', 'Bank_Offer_Feature', 'Term in Months', 'Interest_Type', 'Interest', 'AER', 'Bank_Product_Code']
-
+df = df[order]
 df.to_csv(path,index=False)
 print(df)

@@ -1,0 +1,120 @@
+Date,Bank_Native_Country,State,Bank_Name,Ticker,Bank_Local_Currency,Bank_Type,Bank_Product,Bank_Product_Type,Bank_Product_Code,Bank_Product_Name,Minm_Balance,Maxm_Balance,Bank_Offer_Feature,Term in Months,Interest_Type,Interest,AER
+ 2018-03-20,UK,London,The Co-operative Bank,,GBP,Bank,Deposits,Term Deposits,,Britannia 1yr Fixed Rate Bond,1000.0,,Offline,12.0,Fixed,0.65,0.65
+ 2018-03-20,UK,London,The Co-operative Bank,,GBP,Bank,Deposits,Term Deposits,,Britannia 2yr Fixed Rate Bond,1000.0,,Offline,24.0,Fixed,0.75,0.75
+ 2018-03-20,UK,London,The Co-operative Bank,,GBP,Bank,Deposits,Term Deposits,,Britannia 3yr Fixed Rate Bond,1000.0,,Offline,36.0,Fixed,0.9,0.9
+ 2018-03-20,UK,London,The Co-operative Bank,,GBP,Bank,Deposits,Term Deposits,,Britannia Fixed Rate Cash ISA - fixed until 05/04/2019,5000.0,,Offline,,Fixed,0.8,0.8
+ 2018-03-20,UK,London,The Co-operative Bank,,GBP,Bank,Deposits,Term Deposits,,Britannia Fixed Rate Cash ISA - fixed until 05/04/2020,5000.0,,Offline,,Fixed,0.9,0.9
+ 2018-03-20,UK,London,The Co-operative Bank,,GBP,Bank,Deposits,Savings,,Britannia Select Access Saver 8,1.0,,Offline,,Variable,0.6,0.6
+ 2018-03-20,UK,London,The Co-operative Bank,,GBP,Bank,Deposits,Savings,,Britannia Select Access Saver 8,1.0,,Offline,,Variable,0.1,0.1
+ 2018-03-20,UK,London,The Co-operative Bank,,GBP,Bank,Deposits,Savings,,Britannia Cash ISA,1.0,,Offline,,Variable,0.46,0.46
+ 2018-03-20,UK,London,The Co-operative Bank,,GBP,Bank,Deposits,Savings,,Britannia The Co-operative Membership Savings,1.0,,Offline,,Variable,0.25,0.25
+ 2018-03-20,UK,London,The Co-operative Bank,,GBP,Bank,Deposits,Savings,,Britannia Future Fund Account,5000.0,,Offline,,Variable,0.34,0.34
+ 2018-03-20,UK,London,The Co-operative Bank,,GBP,Bank,Deposits,Savings,,Britannia Future Fund Account,1000.0,,Offline,,Variable,0.34,0.34
+ 2018-03-20,UK,London,The Co-operative Bank,,GBP,Bank,Deposits,Savings,,Britannia Future Fund Account,1.0,,Offline,,Variable,0.34,0.34
+ 2018-03-20,UK,London,The Co-operative Bank,,GBP,Bank,Deposits,Savings,,Britannia Online Cash ISA,1.0,,Online,,Variable,0.56,0.56
+ 2018-03-20,UK,London,The Co-operative Bank,,GBP,Bank,Deposits,Savings,,Britannia Online Saver,1.0,,Online,,Variable,0.56,0.56
+ 2018-03-20,UK,London,The Co-operative Bank,,GBP,Bank,Deposits,Savings,,Britannia Smart Saver,1.0,,Offline,,Variable,0.34,0.34
+ 2018-03-20,UK,London,The Co-operative Bank,,GBP,Bank,Deposits,Savings,,The Co-operative Bank Cash ISA,1.0,,Offline,,Variable,0.46,0.46
+ 2018-03-20,UK,London,The Co-operative Bank,,GBP,Bank,Deposits,Savings,,The Co-operative Bank The Co-operative Membership Savings,1.0,,Offline,,Variable,0.25,0.25
+ 2018-03-20,UK,London,The Co-operative Bank,,GBP,Bank,Deposits,Savings,,The Co-operative Bank Future Fund Account,5000.0,,Offline,,Variable,0.34,0.34
+ 2018-03-20,UK,London,The Co-operative Bank,,GBP,Bank,Deposits,Savings,,The Co-operative Bank Future Fund Account,1000.0,,Offline,,Variable,0.34,0.34
+ 2018-03-20,UK,London,The Co-operative Bank,,GBP,Bank,Deposits,Savings,,The Co-operative Bank Future Fund Account,1.0,,Offline,,Variable,0.34,0.34
+ 2018-03-20,UK,London,The Co-operative Bank,,GBP,Bank,Deposits,Savings,,The Co-operative Bank Online Cash ISA,1.0,,Online,,Variable,0.56,0.56
+ 2018-03-20,UK,London,The Co-operative Bank,,GBP,Bank,Deposits,Savings,,The Co-operative Bank Online Saver,1.0,,Online,,Variable,0.56,0.56
+ 2018-03-20,UK,London,The Co-operative Bank,,GBP,Bank,Deposits,Savings,,The Co-operative Bank Smart Saver,1.0,,Offline,,Variable,0.34,0.34
+ 2018-03-20,UK,London,The Co-operative Bank,,GBP,Bank,Deposits,Current,,Current Account,,,Offline,,,,
+ 2018-03-20,UK,London,The Co-operative Bank,,GBP,Bank,Deposits,Current,,Cashminder,,,Offline,,,,
+ 2018-03-20,UK,London,Bank of Scotland ,,GBP,Bank,Deposits,Savings,,Access Cash ISA,1,,Offline,,Variable,0.35000000000000003%,0.35000000000000003%
+ 2018-03-20,UK,London,Bank of Scotland ,,GBP,Bank,Deposits,Savings,,Access Saver,1,,Offline,,Variable,0.2%,0.2%
+ 2018-03-20,UK,London,Bank of Scotland ,,GBP,Bank,Deposits,Term Deposits,,Fixed Cash ISA – 2 Year,1,,Offline,24.0,Variable,0.5%,0.5%
+ 2018-03-20,UK,London,Bank of Scotland ,,GBP,Bank,Deposits,Term Deposits,,Fixed Rate Bond – 1 Year,1,,Offline,12.0,Variable,0.4%,0.4%
+ 2018-03-20,UK,London,Bank of Scotland ,,GBP,Bank,Deposits,Savings,,Monthly Saver,1,,Offline,,Variable,2.5%,2.5%
+ 2018-03-20,UK,London,Bank of Scotland,PVT,GBP,Bank,Deposits,Savings,,Access Saver,,,Offline,12.0,Variable,0.20% ,0.20% 
+ 2018-03-20,UK,London,Bank of Scotland,PVT,GBP,Bank,Deposits,Savings,,Monthly Saver,,,Offline,,Fixed,2.50% ,2.50% 
+ 2018-03-20,UK,London,Bank of Scotland,PVT,GBP,Bank,Deposits,Savings,,Access Cash ISA,,,Offline,12.0,Variable,0.35%  ,0.35%  
+ 2018-03-20,UK,London,Bank of Scotland,PVT,GBP,Bank,Deposits,Savings,,Fixed Cash ISA,,,Offline,24.0,Fixed,0.50%  ,0.50%  
+ 2018-03-20,UK,London,Bank of Scotland,PVT,GBP,Bank,Deposits,Term Savings,,Fixed Rate Bond,,,Offline,12.0,Fixed,0.40% ,0.40% 
+ 2018-03-20,UK,London,Bank of Scotland,PVT,GBP,Bank,Deposits,Classic Account,,Classic Account,1,"5,000",Offline,,Variable,1.98%,2%
+ 2018-03-20,UK,London,Halifax,PVT,GBP,Bank,Deposits,Savings,,ISA Saver Variable,1,,Offline,12 months,Variable,0.35%,0.35%
+ 2018-03-20,UK,London,Halifax,PVT,GBP,Bank,Deposits,Savings,,Everyday Saver,1,,Offline,12 months,Variable,0.20%,0.20%
+ 2018-03-20,UK,London,Halifax,PVT,GBP,Bank,Deposits,Term Deposits,,ISA Saver Fixed,500,,Offline,1 year,Fixed,0.50%,0.50%
+ 2018-03-20,UK,London,Halifax,PVT,GBP,Bank,Deposits,Term Deposits,,Fixed Saver,500,,Offline,1 year,Fixed,0.45%,0.45%
+ 2018-03-20,UK,London,Halifax,PVT,GBP,Bank,Deposits,Term Deposits,,Regular Saver,25,250,Offline,,Fixed,2.50%,2.50%
+ 2018-03-20,UK,London,Halifax,PVT,GBP,Bank,Deposits,Savings,,Help to Buy: ISA,"1,000",,Offline,,Variable,2.00%,2.00%
+ 2018-03-20,UK,London,Halifax,PVT,GBP,Bank,Deposits,Savings,,ISA Saver Fixed,500,,Offline,1 year,Fixed,0.50%,0.50%
+ 2018-03-20,UK,London,Halifax,PVT,GBP,Bank,Deposits,Savings,,ISA Saver Variable,1,,Offline,12 months,Variable,0.35%,0.35%
+ 2018-03-20,UK,London,Halifax,PVT,GBP,Bank,Deposits,Savings,,Junior Cash ISA,1,,Offline,,Variable,3.00%,3.00%
+ 2018-03-20,UK,London,Lloyds Bank,,GBP,Bank,Deposits,Savings,,Cash ISA Saver,1,,Offline,,Variable,0.35000000000000003%,0.35000000000000003%
+ 2018-03-20,UK,London,Lloyds Bank,,GBP,Bank,Deposits,Savings,,Club Lloyds Monthly Saver,1,,Offline,,Variable,0.03%,0.03%
+ 2018-03-20,UK,London,Lloyds Bank,,GBP,Bank,Deposits,Savings,,Club Lloyds Saver,"1,500",,Offline,,Variable,0.35000000000000003%,0.35000000000000003%
+ 2018-03-20,UK,London,Lloyds Bank,,GBP,Bank,Deposits,Savings,,Club Lloyds Saver,1,"1,499",Offline,,Variable,0.2%,0.2%
+ 2018-03-20,UK,London,Lloyds Bank,,GBP,Bank,Deposits,Savings,,Easy Saver,1,,Offline,,Variable,0.2%,0.2%
+ 2018-03-20,UK,London,Lloyds Bank,,GBP,Bank,Deposits,Term Deposits,,Fixed Bond  -  1 Year,"2,000",,Offline,12.0,Variable,0.4%,0.4%
+ 2018-03-20,UK,London,Lloyds Bank,,GBP,Bank,Deposits,Term Deposits,,Fixed Rate Cash ISA  -  2 Year,1,,Offline,24.0,Variable,0.5%,0.5%
+ 2018-03-20,UK,London,Lloyds Bank,,GBP,Bank,Deposits,Savings,,Help to Buy: ISA,1,,Offline,,Variable,1.5%,1.5%
+ 2018-03-20,UK,London,Lloyds Bank,,GBP,Bank,Deposits,Savings,,Easy Saver,1,,Offline,,Variable,0.2%,0.2%
+ 2018-03-20,UK,London,Lloyds Bank,,GBP,Bank,Deposits,Term Deposits,,Fixed Bond  -  1 Year,"2,000",,Offline,12.0,Variable,0.4%,0.4%
+ 2018-03-20,UK,London,Lloyds Bank,,GBP,Bank,Deposits,Term Deposits,,Fixed Rate Cash ISA  -  2 Year,1,,Offline,24.0,Variable,0.5%,0.5%
+ 2018-03-20,UK,London,Lloyds Bank,,GBP,Bank,Deposits,Savings,,Help to Buy: ISA,1,,Offline,,Variable,1.5%,1.5%
+ 2018-03-20,UK,London,NatWest,,GBP,Bank,Deposits,Savings,,Instant Saver,1,"24,999",Bank_Offer_Feature,,Variable,0.10%,0.10%
+ 2018-03-20,UK,London,NatWest,,GBP,Bank,Deposits,Savings,,Instant Saver,"25,000","999,999",Bank_Offer_Feature,,Variable,0.20%,0.20%
+ 2018-03-20,UK,London,NatWest,,GBP,Bank,Deposits,Savings,,Instant Saver,10000000,,Bank_Offer_Feature,,Variable,0.25%,0.25%
+ 2018-03-20,UK,London,NatWest,,GBP,Bank,Deposits,Savings,,Savings Builder,1,,Bank_Offer_Feature,,Variable,0.10%,0.10%
+ 2018-03-20,UK,London,NatWest,,GBP,Bank,Deposits,Savings,,Savings Builder,1,"5,000",Bank_Offer_Feature,,Variable,1.50%,1.50%
+ 2018-03-20,UK,London,NatWest,,GBP,Bank,Deposits,Savings,,Savings Builder,"5,001","10,000",Bank_Offer_Feature,,Variable,1.00%,1.00%
+ 2018-03-20,UK,London,NatWest,,GBP,Bank,Deposits,Savings,,Savings Builder,"10,000",,Bank_Offer_Feature,,Variable,0.20%,0.20%
+ 2018-03-20,UK,London,NatWest,,GBP,Bank,Deposits,Savings,,Savings Builder,1,,Bank_Offer_Feature,,Variable,0.00%,0.00%
+ 2018-03-20,UK,London,NatWest,,GBP,Bank,Deposits,Savings,,Savings Builder,1,"5,000",Bank_Offer_Feature,,Variable,1.50%,1.50%
+ 2018-03-20,UK,London,NatWest,,GBP,Bank,Deposits,Savings,,Savings Builder,"5,001","10,000",Bank_Offer_Feature,,Variable,1.00%,1.00%
+ 2018-03-20,UK,London,NatWest,,GBP,Bank,Deposits,Savings,,Savings Builder,"10,000",,Bank_Offer_Feature,,Variable,0.20%,0.20%
+ 2018-03-20,UK,London,NatWest,,GBP,Bank,Deposits,Savings,,Premium Saver,1,,Bank_Offer_Feature,,Variable,0.10%,0.10%
+ 2018-03-20,UK,London,NatWest,,GBP,Bank,Deposits,Savings,,Premium Saver,1,"24,999",Bank_Offer_Feature,,Variable,0.10%,0.10%
+ 2018-03-20,UK,London,NatWest,,GBP,Bank,Deposits,Savings,,Premium Saver,"25,000","49,999",Bank_Offer_Feature,,Variable,0.50%,0.50%
+ 2018-03-20,UK,London,NatWest,,GBP,Bank,Deposits,Savings,,Premium Saver,"50,000",1,Bank_Offer_Feature,,Variable,0.75%,0.75%
+ 2018-03-20,UK,London,NatWest,,GBP,Bank,Deposits,Savings,,Premium Saver,1,,Bank_Offer_Feature,,Variable,0.10%,0.10%
+ 2018-03-20,UK,London,NatWest,,GBP,Bank,Deposits,Savings,,Cash ISA,"10,000",,Bank_Offer_Feature,,Variable,,0.10%
+ 2018-03-20,UK,London,NatWest,,GBP,Bank,Deposits,Savings,,Cash ISA,"10,000","24,999",Bank_Offer_Feature,,Variable,,0.25%
+ 2018-03-20,UK,London,NatWest,,GBP,Bank,Deposits,Savings,,Cash ISA,"25,000","49,999",Bank_Offer_Feature,,Variable,,0.50%
+ 2018-03-20,UK,London,NatWest,,GBP,Bank,Deposits,Savings,,Cash ISA,"50,000",,Bank_Offer_Feature,,Variable,,0.75%
+ 2018-03-20,UK,London,NatWest,,GBP,Bank,Deposits,Term Deposits,,Fixed Rate ISA,"1,000","24,999",Bank_Offer_Feature,12.0,Fixed,,1.00%
+ 2018-03-20,UK,London,NatWest,,GBP,Bank,Deposits,Term Deposits,,Fixed Rate ISA,"25,000",,Bank_Offer_Feature,12.0,Fixed,,1.10%
+ 2018-03-20,UK,London,NatWest,,GBP,Bank,Deposits,Term Deposits,,Fixed Rate ISA,"1,000","24,999",Bank_Offer_Feature,24.0,Fixed,,1.15%
+ 2018-03-20,UK,London,NatWest,,GBP,Bank,Deposits,Term Deposits,,Fixed Rate ISA,"25,000",,Bank_Offer_Feature,24.0,Fixed,,1.25%
+ 2018-03-20,UK,London,NatWest,,GBP,Bank,Deposits,Term Deposits,,1 Year Fixed Rate,"5,000","49,999",Bank_Offer_Feature,12.0,Fixed,,0.90%
+ 2018-03-20,UK,London,NatWest,,GBP,Bank,Deposits,Term Deposits,,1 Year Fixed Rate,"50,000","500,000",Bank_Offer_Feature,12.0,Fixed,,0.95%
+ 2018-03-20,UK,London,NatWest,,GBP,Bank,Deposits,Term Deposits,,2 Year Fixed Rate,"5,000","49,999",Bank_Offer_Feature,24.0,Fixed,1.00%,1.00%
+ 2018-03-20,UK,London,NatWest,,GBP,Bank,Deposits,Term Deposits,,2 Year Fixed Rate,"50,000","500,000",Bank_Offer_Feature,24.0,Fixed,1.05%,1.06%
+ 2018-03-20,UK,London,Royal Bank Of Scotland,RBS,GBP,Bank,Deposits,Savings,,Instant Saver,1,"24,999",Offline,,Variable,0.10%,0.10%
+ 2018-03-20,UK,London,Royal Bank Of Scotland,RBS,GBP,Bank,Deposits,Savings,,Instant Saver,"25,000","99,999",Offline,,Variable,0.20%,0.20%
+ 2018-03-20,UK,London,Royal Bank Of Scotland,RBS,GBP,Bank,Deposits,Savings,,Instant Saver,"100,000",,Offline,,Variable,0.25%,0.25%
+ 2018-03-20,UK,London,Royal Bank Of Scotland,RBS,GBP,Bank,Deposits,Savings,,Instant Access ISA,1,"24,999",Offline,,Variable,0.25%,
+ 2018-03-20,UK,London,Royal Bank Of Scotland,RBS,GBP,Bank,Deposits,Savings,,Instant Access ISA,"25,000",,Offline,,Variable,0.75%,
+ 2018-03-20,UK,London,Royal Bank Of Scotland,RBS,GBP,Bank,Deposits,Term Deposits,,Fixed Rate ISA 1 year fixed,"1,000","24,999",Offline,12.0,Fixed,1.00%,
+ 2018-03-20,UK,London,Royal Bank Of Scotland,RBS,GBP,Bank,Deposits,Term Deposits,,Fixed Rate ISA 1 year fixed,"25,000",,Offline,12.0,Fixed,1.10%,
+ 2018-03-20,UK,London,Royal Bank Of Scotland,RBS,GBP,Bank,Deposits,Term Deposits,,Fixed Rate ISA 2 year fixed,"1,000","24,999",Offline,24.0,Fixed,1.15%,
+ 2018-03-20,UK,London,Royal Bank Of Scotland,RBS,GBP,Bank,Deposits,Term Deposits,,Fixed Rate ISA 2 year fixed,"25,000",,Offline,24.0,Fixed,1.25%,
+ 2018-03-20,UK,London,Royal Bank Of Scotland,RBS,GBP,Bank,Deposits,Term Deposits,,Fixed Term Savings Account 1 year fixed,"5,000","49,999",Offline,12.0,Fixed,0.90%,0.90%
+ 2018-03-20,UK,London,Royal Bank Of Scotland,RBS,GBP,Bank,Deposits,Term Deposits,,Fixed Term Savings Account 1 year fixed,"50,000","500,000",Offline,12.0,Fixed,0.95%,0.95%
+ 2018-03-20,UK,London,Royal Bank Of Scotland,RBS,GBP,Bank,Deposits,Term Deposits,,Fixed Term Savings Account 2 year fixed,"5,000","49,999",Offline,24.0,Fixed,1.00%,1.00%
+ 2018-03-20,UK,London,Royal Bank Of Scotland,RBS,GBP,Bank,Deposits,Term Deposits,,Fixed Term Savings Account 2 year fixed,"50,000","500,000",Offline,24.0,Fixed,1.05%,1.06%
+ 2018-03-20,UK,London,Royal Bank Of Scotland,RBS,GBP,Bank,Deposits,Current,,An everyday bank account ,,,Offline,,,,
+ 2018-03-20,UK,London,Virgin Money Plc,VM,GBP,Bank,Deposits,Savings,,Easy Access Cash E-ISA,1,,Online,,Variable,1.21%,1.21%
+ 2018-03-20,UK,London,Virgin Money Plc,VM,GBP,Bank,Deposits,Term Deposits,,1 Year Fixed Rate Cash E-ISA,1,,Online,12.0,Fixed,1.50%,1.50%
+ 2018-03-20,UK,London,Virgin Money Plc,VM,GBP,Bank,Deposits,Term Deposits,,2 Year Fixed Rate Cash E-ISA,1,,Online,24.0,Fixed,1.66%,1.66%
+ 2018-03-20,UK,London,Virgin Money Plc,VM,GBP,Bank,Deposits,Term Deposits,,3 Year Fixed Rate Cash E-ISA,1,,Online,36.0,Fixed,2.00%,2.00%
+ 2018-03-20,UK,London,Virgin Money Plc,VM,GBP,Bank,Deposits,Term Deposits,,5 Year Fixed Rate Cash E-ISA,1,,Online,60.0,Fixed,2.15%,2.15%
+ 2018-03-20,UK,London,Virgin Money Plc,VM,GBP,Bank,Deposits,Savings,,Easy Access Cash ISA,1,,Offline,,Variable,1.21%,1.21%
+ 2018-03-20,UK,London,Virgin Money Plc,VM,GBP,Bank,Deposits,Term Deposits,,1 Year Fixed Rate Cash ISA,1,,Offline,12.0,Fixed,1.50%,1.50%
+ 2018-03-20,UK,London,Virgin Money Plc,VM,GBP,Bank,Deposits,Term Deposits,,2 Year Fixed Rate Cash ISA,1,,Offline,24.0,Fixed,1.66%,1.66%
+ 2018-03-20,UK,London,Virgin Money Plc,VM,GBP,Bank,Deposits,Term Deposits,,3 Year Fixed Rate Cash ISA,1,,Offline,36.0,Fixed,2.00%,2.00%
+ 2018-03-20,UK,London,Virgin Money Plc,VM,GBP,Bank,Deposits,Term Deposits,,5 Year Fixed Rate Cash ISA,1,,Offline,60.0,Fixed,2.15%,2.15%
+ 2018-03-20,UK,London,Virgin Money Plc,VM,GBP,Bank,Deposits,Savings,,Regular E-Saver,1,"3,500",Online,,Fixed,2.25%,2.25%
+ 2018-03-20,UK,London,Virgin Money Plc,VM,GBP,Bank,Deposits,Savings,,Regular Saver,1,"3,250",Offline,,Fixed,2.25%,2.25%
+ 2018-03-20,UK,London,Virgin Money Plc,VM,GBP,Bank,Deposits,Savings,,Easy Access Saver,1,"250,000",Offline,,Variable,1.01%,1.01%
+ 2018-03-20,UK,London,Virgin Money Plc,VM,GBP,Bank,Deposits,Term Deposits,,1 Year Fixed Rate E-Bond,1,"1,000,000",Online,12.0,Fixed,1.25%,1.25%
+ 2018-03-20,UK,London,Virgin Money Plc,VM,GBP,Bank,Deposits,Term Deposits,,3 Year Fixed Rate E-Bond,1,"1,000,000",Online,36.0,Fixed,1.50%,1.50%
+ 2018-03-20,UK,London,Virgin Money Plc,VM,GBP,Bank,Deposits,Term Deposits,,5 Year Fixed Rate E-Bond,1,"1,000,000",Online,60.0,Fixed,1.75%,1.75%
+ 2018-03-20,UK,London,Virgin Money Plc,VM,GBP,Bank,Deposits,Term Deposits,,1 Year Fixed Rate Bond,1,"1,000,000",Offline,12.0,Fixed,1.25%,1.25%
+ 2018-03-20,UK,London,Virgin Money Plc,VM,GBP,Bank,Deposits,Term Deposits,,3 Year Fixed Rate Bond,1,"1,000,000",Offline,36.0,Fixed,1.50%,1.50%
+ 2018-03-20,UK,London,Virgin Money Plc,VM,GBP,Bank,Deposits,Term Deposits,,5 Year Fixed Rate Bond,1,"1,000,000",Offline,60.0,Fixed,1.75%,1.75%
+ 2018-03-20,UK,London,Virgin Money Plc,VM,GBP,Bank,Deposits,Current,,Essential Current Account,"100,000",,Offline,,Variable,0.75%,0.75%

@@ -16,6 +16,7 @@ path = output_path+"Consolidate_Virgin_Data_Deposit_"+today.strftime('%Y_%m_%d')
 # path = "Consolidate_Virgin_Data_Deposit_"+str(today.strftime('%Y_%m_%d'))+".csv"
 order = ["Date", "Bank_Native_Country", "State", "Bank_Name", "Bank_Local_Currency", "Bank_Type", "Bank_Product", "Bank_Product_Type", "Bank_Product_Name", "Balance", "Bank_Offer_Feature", "Term in Months", "Interest_Type", "Interest", "AER", "Bank_Product_Code"]
 table = []
+removedData = ["Help to Buy", "Saving to Buy","Man", "Charity", "Double", "Young"]
 headers = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36"}
 table_headers = ["Bank_Product_Type", "Bank_Product_Name", "Balance", "Bank_Offer_Feature", "Term in Months",
@@ -60,13 +61,10 @@ for div in divs:
                         interest_type = "Fixed"
                     else:
                         interest_type = "Variable"
-                    checks = ["Man", "Charity", "Double", "Young"]
-                    check_found = False
-                    for check in checks:
-                        if check in product_name:
-                            check_found =True
-                            break
-                    if check_found:
+
+                    product_name = re.sub('[\n,\r]', '', product_name)
+                    checkData = True if len([rd for rd in removedData if rd.lower() in product_name.lower()]) != 0 else False
+                    if checkData:
                         continue
                     a = ["Savings", re.sub('[\n,\r]', '', product_name), minimum_balance, Bank_Offer_Feature, term_in_months,
                          interest_type, interest, IARE]

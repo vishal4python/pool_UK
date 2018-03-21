@@ -112,9 +112,9 @@ df_deposit["Interest_Type"] = "Fixed"
 
 
 for idx in range(len(df_deposit.index)):   
-    if "Savings" in df_deposit['Bank_Product_Type'].iloc[idx]:
+    if "Savings" in str(df_deposit['Bank_Product_Type'].iloc[idx]):
         s = "SB"
-    elif "Current" in df_deposit['Bank_Product_Type'].iloc[idx]:
+    elif "Current" in str(df_deposit['Bank_Product_Type'].iloc[idx]):
         s = "CC"
     else:
         s = "CD"

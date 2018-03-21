@@ -136,7 +136,7 @@ df02["Term in Months"]=(df02["Term in Months"]*12)
 df02["Bank_Product_Type"]="Term Deposits"
 
 frames_page3 = [df01,df02]
-result_page3=pd.concat(frames_page2)
+result_page3=pd.concat(frames_page3)
 result_page3['Bank_Product_Type'].fillna("Savings",inplace=True)
 
 frames = [result_page1,result_page2,result_page3]

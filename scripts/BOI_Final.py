@@ -74,7 +74,7 @@ for index in range(len(result2.index)):
     result2['Interest'].iloc[index] = result2['Interest'].iloc[index].replace("Variable", "").replace("Fixed", "")
     result2['AER'].iloc[index] = result2['AER'].iloc[index].replace("Variable", "").replace("Fixed", "")
     result2['Min_Opening_Bal'].iloc[index] = result2['Min_Opening_Bal'].iloc[index].replace("¼", "").replace("¼", "")
-    result2['Balance'].iloc[index] = result2['Balance'].iloc[index].replace("¼", "").replace("¼", "")
+    result2['Balance'].iloc[index] = str(result2['Balance'].iloc[index]).replace("¼", "").replace("¼", "")
 
 frames = [result1, result2]
 result = pd.concat(frames)

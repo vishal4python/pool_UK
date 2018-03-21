@@ -42,13 +42,27 @@ def barclays(properties, deposit, year):
     jsoup = BeautifulSoup(browser.page_source,"html.parser")
 
     result = jsoup.find("table", attrs={"class": "table table-mortgage display responsive nowrap dataTable dtr-column collapsed"})
-    products = result.find_all("tr")#, attrs={"class": "group odd parent"})
-    data = pd.read_html(result)
-    print(data)
-    for product in products:
-        try:
-            Bank_Product_Name = product.find("div", attrs={"class": "product-name"}).text
-            #print(Bank_Product_Name)
+    trs = result.find_all('tr')
+    for tr in trs:
+        if tr is not None:
+            tds = tr.find_all("td")
+            for td in tds:
+                product_name = re.search(r'(.*Fixed|.*Tracker)', td.text)
+                if product_name is not None:
+                    Bank_product_name = product_name.group()
+                    fixed_rate = re.search(r'\d ', Bank_product_name).group()
+                APRC = re.search(r'\d\.\d+%.*', td.text)
+                if APRC is not None:
+                    APRC = APRC.group()
+                    if len(APRC) < 6:
+                        APRC = APRC
+                    if "until" in APRC or 'BBBR' in APRC:
+                        interest = re.search(r'\d\.\d{1,}%', APRC).group()
+                if "Min loan" in td.text:
+                    max_loan = re.search(r'(Max loan) (.*\d)', td.text).groups()[1]
+                    min_loan = re.search(r'\d,\d+', td.text).group()
+
+
     #         Interest = product.find("div", attrs={"class": "rate"}).text
     #         APRC = product.find("div", attrs={"class": "cost-comparison"}).text
     #

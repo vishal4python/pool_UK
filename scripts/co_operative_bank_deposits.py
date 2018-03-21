@@ -185,8 +185,8 @@ def Change_bank_product_name(x):
 df = pd.DataFrame(table, columns=table_headers)
 df['Balance'] = df['Balance'].apply(lambda x: re.sub('[^0-9.]', '', str(x)) if len(re.sub('[^0-9.]', '', str(x)))!=0 else None)
 # df['Min_Opening_Bal'] = df['Min_Opening_Bal'].apply(lambda x: re.sub('[^0-9.]', '', str(x)) if len(re.sub('[^0-9.]', '', str(x)))!=0 else None)
-df['Interest'] = df['Interest'].apply(lambda x: re.sub('[^0-9.]', '', str(x)) if len(re.sub('[^0-9.]', '', str(x)))!=0 else None)
-df['AER'] = df['AER'].apply(lambda x: re.sub('[^0-9.]', '', str(x)) if len(re.sub('[^0-9.]', '', str(x)))!=0 else None)
+df['Interest'] = df['Interest'].apply(lambda x: re.sub('[^0-9.%]', '', str(x)) if len(re.sub('[^0-9.%]', '', str(x)))!=0 else None)
+df['AER'] = df['AER'].apply(lambda x: re.sub('[^0-9.%]', '', str(x)) if len(re.sub('[^0-9.%]', '', str(x)))!=0 else None)
 df['Bank_Product_Type'] = df['Interest_Type'].apply(Change_bank_product_name)
 df.loc[:,"Date"] = today.strftime('%m-%d-%Y')
 df.loc[:,"Bank_Native_Country"] = "UK"

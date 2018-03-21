@@ -93,6 +93,8 @@ for life in lifes:
 print(tabulate(table))
 df = pd.DataFrame(table[1:], columns=table_headers)
 df['Date'] = today.strftime('%m-%d-%Y')
+df["Interest"] = df["Interest"].astype(str)+'%'
+df["APRC"] = df["APRC"].astype(str)+'%'
 df['Bank_Native_Country'] = 'UK'
 df['State'] = 'London'
 df['Bank_Name'] = 'The Co-operative Bank'

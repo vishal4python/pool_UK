@@ -17,9 +17,13 @@ from maks_lib import log_config
 from maks_lib import logpath
 import logging
 banks = glob.glob("*.py")
+Bank_Names = ['Bank_of_scotland_Deposits.py','bank_of_virgin_deposits.py','bank_of_virgin_mortgage.py','BOI_Final.pdf.py',
+'co_operative_bank_deposits.py','co_operative_bank_mortgage.py','hailfax.py','hailfax_mortgage.py','Lloyds.py',
+'Lloyds_mortgage.py','Natwest_Data_Deposit.py','Natwest_Data_Mortgage.py','royal_bank_scotland_deposits.py',
+'royal_bank_scotland_mortgage.py']
 
 log_config(logpath, "UK_BANK_RUNStatus".format(), __doc__)
-for bank in banks:
+for bank in Bank_Names:
     logging.info("Web-Scrapping Starting for bank: {}\n".format(bank))
     cmd = "python "+ bank
     stdout = sp.run(cmd, shell=True, stdout=sp.PIPE)

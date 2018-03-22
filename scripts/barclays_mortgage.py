@@ -1,7 +1,7 @@
 import time
 import datetime
 from selenium import webdriver
-from selenium.webdriver.firefox.firefox_binary import FirefoxBinary
+import os
 from bs4 import BeautifulSoup
 from tabulate import tabulate
 import pandas as pd
@@ -15,7 +15,7 @@ table = []
 table_headers = ["Bank_Product_Name", "Fixed_Rate_Term","APRC", "Interest","Min_Loan_Amount","Mortgage_Loan_Amt","Term (Y)"]
 # table.append(table_headers)
 print("Scrapping is in-progress..")
-browser = webdriver.Chrome()
+browser = webdriver.Firefox()
 
 file = open("test.txt",'w',encoding="UTF-8")
 
@@ -40,25 +40,29 @@ def filform(properties, deposit, year):
     yxpath = "//*[@id='mortgage-calculator-component']/div/div[5]/form/div[11]/div/fieldset/div/div/div/div[1]/div/div/select"
     Select(browser.find_element_by_xpath(yxpath)).select_by_value(str(year))
     #Select(browser.find_element_by_xpath(yxpath)).select_by_value("10")
-
+    time.sleep(2)
     browser.find_element_by_css_selector("#mortgage-calculator-component > div > div.mCalc-module.mCalc-Cost > form > div:nth-child(12) > div > ul > li > button").click()
 
 def barclays(properties, deposit, year):
     browser.get("https://www.barclays.co.uk/mortgages/mortgage-calculator/#/cost")
-    #browser.refresh()
+    browser.refresh()
 
     time.sleep(10)
 
     try:
         filform(properties, deposit, year)
 
-    except Exception:
+    except Exception as e:
+        #print("Error",e)
         try:
-            browser.find_element_by_class_name("acsCloseButton acsAbandonButton").click()
+            time.sleep(1)
+            browser.switch_to.alert.dismiss()
+            #browser.find_element_by_xpath("/html/body/div[14]/div/div[1]/div/a[1]").click()
+            time.sleep(1)
             filform(properties, deposit, year)
         except Exception as e:
-            browser.close()
-            print(e)
+            filform(properties, deposit, year)
+            print("Error",e)
     time.sleep(15)
     # print(browser.page_source)
 
@@ -102,7 +106,6 @@ def panda():
     dataset = pd.read_table('test.txt', sep=',', delimiter=None, header=None)
     #dataset.columns = ['Bank_Product_Name', 'Fixed_Rate_Term', 'Interest_Type', "Interest", "APRC", "Term (Y)", 'Mortgage_Loan_Amt']
     dataset.columns = ["Bank_Product_Name", "Fixed_Rate_Term","APRC", "Interest","Min_Loan_Amount","Mortgage_Loan_Amt","Term (Y)"]
-    print(dataset["Min_Loan_Amount"])
     dataset['Date'] = now.strftime("%Y-%m-%d")
     dataset['Bank_Native_Country'] = "UK"
     dataset['State'] = "London"
@@ -117,7 +120,7 @@ def panda():
     dataset['Mortgage_Reason'] = "Primary Residence"
     dataset['Mortgage_Pymt_Mode'] = "Principal + Interest"
     dataset['Bank_Product_Code'] = np.nan
-    dataset["Interest_Type"] = np.nan
+    dataset["Interest_Type"] = "Variable"
     columns = ['Date', 'Bank_Native_Country', 'State', 'Bank_Name', 'Bank_Local_Currency', 'Bank_Type', 'Bank_Product',
                'Bank_Product_Type', 'Bank_Product_Name', 'Min_Loan_Amount', 'Bank_Offer_Feature', 'Term (Y)',
                'Interest_Type', 'Interest', 'APRC', 'Mortgage_Loan_Amt', 'Mortgage_Down_Payment', 'Mortgage_Category', 'Mortgage_Reason',

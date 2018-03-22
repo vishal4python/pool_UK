@@ -17,7 +17,7 @@ from maks_lib import log_config
 from maks_lib import logpath
 import logging
 banks = glob.glob("*.py")
-Bank_Names = ['Bank_of_scotland_Deposits.py','bank_of_virgin_deposits.py','bank_of_virgin_mortgage.py',
+Bank_Names = ['Bank_of_scotland_Deposits.py','bank_of_virgin_deposits.py','bank_of_virgin_mortgage.py','BOI_Final.py',
 'co_operative_bank_deposits.py','co_operative_bank_mortgage.py','hailfax.py','hailfax_mortgage.py','Lloyds.py',
 'Lloyds_mortgage.py','Natwest_Data_Deposit.py','Natwest_Data_Mortgage.py','royal_bank_scotland_deposits.py',
 'royal_bank_scotland_mortgage.py']

@@ -16,15 +16,15 @@ Date,Bank_Native_Country,State,Bank_Name,Ticker,Bank_Local_Currency,Bank_Type,Ba
  2018-03-23,UK,London,The Co-operative Bank,Private,GBP,Bank,Deposits,Savings,_MSBF,The Co-operative Bank Smart Saver,1.0,,Offline,,Fixed,0.34%,0.34%
  2018-03-23,UK,London,The Co-operative Bank,Private,GBP,Bank,Deposits,Current,_MCCF,Current Account,,,Offline,,Fixed,,
  2018-03-23,UK,London,The Co-operative Bank,Private,GBP,Bank,Deposits,Current,_MCCF,Cashminder,,,Offline,,Fixed,,
- 2018-03-23,UK,London,Bank of Ireland,,GBP,Bank,Deposits,Savings,_MSBF,Regular savings balance,0,9999,Online,,Fixed,1.20%,1.20%
- 2018-03-23,UK,London,Bank of Ireland,,GBP,Bank,Deposits,Savings,_MSBF,Lump sum balance,10000,,Online,,Fixed,0.25%,0.25%
- 2018-03-23,UK,London,Bank of Ireland,,GBP,Bank,Deposits,Term Deposits,12MCDF,365 12 Month Fixed Term Deposit,5000,1000000,Online,12.0,Fixed,0.24%,0.25%
- 2018-03-23,UK,London,Bank of Ireland,,GBP,Bank,Deposits,Savings,_MSBF,GoalSaver,1,15000,Offline,,Fixed,1.35%,1.35%
- 2018-03-23,UK,London,Bank of Ireland,,GBP,Bank,Deposits,Savings,_MSBF,GoalSaver,15000,,Offline,,Fixed,0.25%,0.25%
- 2018-03-23,UK,London,Bank of Ireland,,GBP,Bank,Deposits,Term Deposits,6MCDF,Term Deposits - Fixed Rates,5000,1000000,Offline,6.0,Fixed,0.04%,0.10%
- 2018-03-23,UK,London,Bank of Ireland,,GBP,Bank,Deposits,Term Deposits,12MCDF,Term Deposits - Fixed Rates,5000,1000000,Offline,12.0,Fixed,0.19%,0.20%
- 2018-03-23,UK,London,Bank of Ireland,,GBP,Bank,Deposits,Term Deposits,36MCDF,Term Deposits - Fixed Rates,5000,10000000,Offline,36.0,Fixed,1.19%,0.40%
- 2018-03-23,UK,London,Bank of Ireland,,GBP,Bank,Deposits,Current,_MCCF, Personal and Business,1,,Offline,,Fixed,0.00%,0.00%
+ 2018-03-23,UK,London,Bank of Ireland,BIRG,GBP,Bank,Deposits,Savings,_MSBF,Regular savings balance,0,9999,Online,,Fixed,1.20%,1.20%
+ 2018-03-23,UK,London,Bank of Ireland,BIRG,GBP,Bank,Deposits,Savings,_MSBF,Lump sum balance,10000,,Online,,Fixed,0.25%,0.25%
+ 2018-03-23,UK,London,Bank of Ireland,BIRG,GBP,Bank,Deposits,Term Deposits,12MCDF,365 12 Month Fixed Term Deposit,5000,1000000,Online,12.0,Fixed,0.24%,0.25%
+ 2018-03-23,UK,London,Bank of Ireland,BIRG,GBP,Bank,Deposits,Savings,_MSBF,GoalSaver,1,15000,Offline,,Fixed,1.35%,1.35%
+ 2018-03-23,UK,London,Bank of Ireland,BIRG,GBP,Bank,Deposits,Savings,_MSBF,GoalSaver,15000,,Offline,,Fixed,0.25%,0.25%
+ 2018-03-23,UK,London,Bank of Ireland,BIRG,GBP,Bank,Deposits,Term Deposits,6MCDF,Term Deposits - Fixed Rates,5000,1000000,Offline,6.0,Fixed,0.04%,0.10%
+ 2018-03-23,UK,London,Bank of Ireland,BIRG,GBP,Bank,Deposits,Term Deposits,12MCDF,Term Deposits - Fixed Rates,5000,1000000,Offline,12.0,Fixed,0.19%,0.20%
+ 2018-03-23,UK,London,Bank of Ireland,BIRG,GBP,Bank,Deposits,Term Deposits,36MCDF,Term Deposits - Fixed Rates,5000,10000000,Offline,36.0,Fixed,1.19%,0.40%
+ 2018-03-23,UK,London,Bank of Ireland,BIRG,GBP,Bank,Deposits,Current,_MCCF, Personal and Business,1,,Offline,,Fixed,0.00%,0.00%
  2018-03-23,UK,London,Bank of Scotland,Private,GBP,Bank,Deposits,Savings,12MSBF,Access Saver,,,Offline,12.0,Fixed,0.20% ,0.20% 
  2018-03-23,UK,London,Bank of Scotland,Private,GBP,Bank,Deposits,Savings,_MSBF,Monthly Saver,,,Offline,,Fixed,2.50% ,2.50% 
  2018-03-23,UK,London,Bank of Scotland,Private,GBP,Bank,Deposits,Savings,12MSBF,Access Cash ISA,,,Offline,12.0,Fixed,0.35%  ,0.35%  
@@ -123,17 +123,17 @@ Date,Bank_Native_Country,State,Bank_Name,Ticker,Bank_Local_Currency,Bank_Type,Ba
  2018-03-23,UK,London,Royal Bank Of Scotland,RBS,GBP,Bank,Deposits,Term Deposits,24MCDF,Fixed Term Savings Account 2 year fixed,5000,49999,Offline,24.0,Fixed,1.00%,1.00%
  2018-03-23,UK,London,Royal Bank Of Scotland,RBS,GBP,Bank,Deposits,Term Deposits,24MCDF,Fixed Term Savings Account 2 year fixed,50000,500000,Offline,24.0,Fixed,1.05%,1.06%
  2018-03-23,UK,London,Royal Bank Of Scotland,RBS,GBP,Bank,Deposits,Current,_MCCF,An everyday bank account ,,,Offline,,Fixed,,
- 2018-03-23,UK,London,Santander Bank,,GBP,Bank,Deposits,Savings,_MSBF,Regular eSaver,,,Online,,Fixed,3.00%,3.00%
- 2018-03-23,UK,London,Santander Bank,,GBP,Bank,Deposits,Savings,_MSBF,eSaver,,,Online,,Fixed,0.15%,0.15%
- 2018-03-23,UK,London,Santander Bank,,GBP,Bank,Deposits,Savings,_MSBF,Everyday Saver,,,Online,,Fixed,0.25%,0.25%
- 2018-03-23,UK,London,Santander Bank,,GBP,Bank,Deposits,Savings,24MSBF,2 Year Fixed Rate ISA,500,,Online,24.0,Fixed,0.55%,0.55%
- 2018-03-23,UK,London,Santander Bank,,GBP,Bank,Deposits,Savings,_MSBF,eISA,1,,Online,,Fixed,0.35%,0.35%
- 2018-03-23,UK,London,Santander Bank,,GBP,Bank,Deposits,Savings,_MSBF,Easy ISA,40000,,Online,,Fixed,0.50%,0.50%
- 2018-03-23,UK,London,Santander Bank,,GBP,Bank,Deposits,Savings,_MSBF,Easy ISA,1,39999,Online,,Fixed,0.10%,0.10%
- 2018-03-23,UK,London,Santander Bank,,GBP,Bank,Deposits,Term Deposits,12MCDF,1 Year Fixed Rate Bond,500,,Offline,12.0,Fixed,0.50%,0.50%
- 2018-03-23,UK,London,Santander Bank,,GBP,Bank,Deposits,Term Deposits,24MCDF,2 Year Fixed Rate Bond,500,,Offline,24.0,Fixed,0.55%,0.55%
- 2018-03-23,UK,London,Santander Bank,,GBP,Bank,Deposits,Current,_MCCF,1|2|3 Current Account,20000,,Offline,,Fixed,1.49%,1.50%
- 2018-03-23,UK,London,Santander Bank,,GBP,Bank,Deposits,Current,_MCCF,Select Current Account,20000,,Offline,,Fixed,1.49%,1.50%
+ 2018-03-23,UK,London,Santander Bank,Private,GBP,Bank,Deposits,Savings,_MSBF,Regular eSaver,,,Online,,Fixed,3.00%,3.00%
+ 2018-03-23,UK,London,Santander Bank,Private,GBP,Bank,Deposits,Savings,_MSBF,eSaver,,,Online,,Fixed,0.15%,0.15%
+ 2018-03-23,UK,London,Santander Bank,Private,GBP,Bank,Deposits,Savings,_MSBF,Everyday Saver,,,Online,,Fixed,0.25%,0.25%
+ 2018-03-23,UK,London,Santander Bank,Private,GBP,Bank,Deposits,Savings,24MSBF,2 Year Fixed Rate ISA,500,,Online,24.0,Fixed,0.55%,0.55%
+ 2018-03-23,UK,London,Santander Bank,Private,GBP,Bank,Deposits,Savings,_MSBF,eISA,1,,Online,,Fixed,0.35%,0.35%
+ 2018-03-23,UK,London,Santander Bank,Private,GBP,Bank,Deposits,Savings,_MSBF,Easy ISA,40000,,Online,,Fixed,0.50%,0.50%
+ 2018-03-23,UK,London,Santander Bank,Private,GBP,Bank,Deposits,Savings,_MSBF,Easy ISA,1,39999,Online,,Fixed,0.10%,0.10%
+ 2018-03-23,UK,London,Santander Bank,Private,GBP,Bank,Deposits,Term Deposits,12MCDF,1 Year Fixed Rate Bond,500,,Offline,12.0,Fixed,0.50%,0.50%
+ 2018-03-23,UK,London,Santander Bank,Private,GBP,Bank,Deposits,Term Deposits,24MCDF,2 Year Fixed Rate Bond,500,,Offline,24.0,Fixed,0.55%,0.55%
+ 2018-03-23,UK,London,Santander Bank,Private,GBP,Bank,Deposits,Current,_MCCF,1|2|3 Current Account,20000,,Offline,,Fixed,1.49%,1.50%
+ 2018-03-23,UK,London,Santander Bank,Private,GBP,Bank,Deposits,Current,_MCCF,Select Current Account,20000,,Offline,,Fixed,1.49%,1.50%
  2018-03-23,UK,London,Virgin Money Plc.,VM,GBP,Bank,Deposits,Term Deposits,12MCDF,1 Year Fixed Rate Cash E-ISA Issue 317,20000,,Online,12.0,Fixed,1.50%,1.50%
  2018-03-23,UK,London,Virgin Money Plc.,VM,GBP,Bank,Deposits,Term Deposits,24MCDF,2 Year Fixed Rate Cash E-ISA Issue 306,20000,,Online,24.0,Fixed,1.66%,1.66%
  2018-03-23,UK,London,Virgin Money Plc.,VM,GBP,Bank,Deposits,Term Deposits,36MCDF,3 Year Fixed Rate Cash E-ISA Issue 313,20000,,Online,36.0,Fixed,2.00%,2.00%

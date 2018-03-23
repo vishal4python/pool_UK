@@ -328,6 +328,14 @@ Date,Bank_Native_Country,State,Bank_Name,Ticker,Bank_Local_Currency,Bank_Type,Ba
  2018-03-23,UK,London,Halifax,Private,GBP,Bank,Mortgages,Mortgages,30YMF,5 year Fixed LTV 80 to 85%,,Offline,30.0,Variable,2.11%,3.99%,360000,20%,New Purchase,Primary Residence,Principal + Interest,5.0
  2018-03-23,UK,London,Halifax,Private,GBP,Bank,Mortgages,Mortgages,30YMF,5 year Fixed LTV 75 to 80%,,Offline,30.0,Variable,2.35%,3.99%,360000,20%,New Purchase,Primary Residence,Principal + Interest,5.0
  2018-03-23,UK,London,Halifax,Private,GBP,Bank,Mortgages,Mortgages,30YMF,5 year Fixed LTV 80 to 85%,,Offline,30.0,Variable,2.46%,3.99%,360000,20%,New Purchase,Primary Residence,Principal + Interest,5.0
+ 2018-03-23,UK,London,HSBC,HSBA,GBP,Bank,Mortgages,Mortgages,_YMV,10 Year Fixed Fee Saver*,,Offline,,Variable,2.99%,3.3%,,20%,New Purchase,Primary Residence,Principal + Interest,10.0
+ 2018-03-23,UK,London,HSBC,HSBA,GBP,Bank,Mortgages,Mortgages,_YMV,2 Year Fixed Standard,,Offline,,Variable,1.54%,3.6%,,20%,New Purchase,Primary Residence,Principal + Interest,2.0
+ 2018-03-23,UK,London,HSBC,HSBA,GBP,Bank,Mortgages,Mortgages,_YMV,2 Year Fixed Fee Saver*,,Offline,,Variable,1.94%,3.7%,,20%,New Purchase,Primary Residence,Principal + Interest,2.0
+ 2018-03-23,UK,London,HSBC,HSBA,GBP,Bank,Mortgages,Mortgages,_YMV,3 Year Fixed Standard,,Offline,,Variable,1.89%,3.5%,,20%,New Purchase,Primary Residence,Principal + Interest,3.0
+ 2018-03-23,UK,London,HSBC,HSBA,GBP,Bank,Mortgages,Mortgages,_YMV,3 Year Fixed Fee Saver*,,Offline,,Variable,2.09%,3.5%,,20%,New Purchase,Primary Residence,Principal + Interest,3.0
+ 2018-03-23,UK,London,HSBC,HSBA,GBP,Bank,Mortgages,Mortgages,_YMV,5 Year Fixed Standard,,Offline,,Variable,2.04%,3.3%,,20%,New Purchase,Primary Residence,Principal + Interest,5.0
+ 2018-03-23,UK,London,HSBC,HSBA,GBP,Bank,Mortgages,Mortgages,_YMV,5 Year Fixed Fee Saver*,,Offline,,Variable,2.29%,3.3%,,20%,New Purchase,Primary Residence,Principal + Interest,5.0
+ 2018-03-23,UK,London,HSBC,HSBA,GBP,Bank,Mortgages,Mortgages,_YMV,2 Year Term Tracker Standard,,Offline,,Variable,1.39%,3.6%,,20%,New Purchase,Primary Residence,Principal + Interest,2.0
  2018-03-23,UK,London,Lloyds Bank,LLOY,GBP,Bank,Mortgages,Mortgages,10YMF,2 year Fixed LTV 75 to 80%,,Offline,10.0,Variable,2.84%,3.9%,72000,20%,New Purchase,Primary Residence,Principal + Interest,2.0
  2018-03-23,UK,London,Lloyds Bank,LLOY,GBP,Bank,Mortgages,Mortgages,10YMF,2 year Fixed LTV 80 to 85%,,Offline,10.0,Variable,3.09%,3.9%,72000,20%,New Purchase,Primary Residence,Principal + Interest,2.0
  2018-03-23,UK,London,Lloyds Bank,LLOY,GBP,Bank,Mortgages,Mortgages,10YMF,5 year Fixed LTV 75 to 80%,,Offline,10.0,Variable,3.14%,3.7%,72000,20%,New Purchase,Primary Residence,Principal + Interest,5.0

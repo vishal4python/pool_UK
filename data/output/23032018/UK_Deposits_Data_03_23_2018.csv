@@ -134,6 +134,12 @@ Date,Bank_Native_Country,State,Bank_Name,Ticker,Bank_Local_Currency,Bank_Type,Ba
  2018-03-23,UK,London,Santander Bank,Private,GBP,Bank,Deposits,Term Deposits,24MCDF,2 Year Fixed Rate Bond,500,,Offline,24.0,Fixed,0.55%,0.55%
  2018-03-23,UK,London,Santander Bank,Private,GBP,Bank,Deposits,Current,_MCCF,1|2|3 Current Account,20000,,Offline,,Fixed,1.49%,1.50%
  2018-03-23,UK,London,Santander Bank,Private,GBP,Bank,Deposits,Current,_MCCF,Select Current Account,20000,,Offline,,Fixed,1.49%,1.50%
+ 2018-03-23,UK,London,TSB,Private,GBP,Bank,Deposits,Savings,_MSBF,ISAs_Cash ISA Saver,1,,Online,,Fixed,0.50%,0.50%
+ 2018-03-23,UK,London,TSB,Private,GBP,Bank,Deposits,Term Deposits,24MCDF,ISAs_2 Year Fixed Rate Cash ISA,1,,Online,24.0,Fixed,1.00%,1.00%
+ 2018-03-23,UK,London,TSB,Private,GBP,Bank,Deposits,Savings,_MSBF,instant access savings accounts_eSavings,1,,Online,,Fixed,0.45%,0.45%
+ 2018-03-23,UK,London,TSB,Private,GBP,Bank,Deposits,Savings,_MSBF,instant access savings accounts_Easy Saver,1,,Online,,Fixed,0.40%,0.40%
+ 2018-03-23,UK,London,TSB,Private,GBP,Bank,Deposits,Term Deposits,_MCDF,fixed term savings_Fixed Bond,2000,,Online,,Fixed,0.80%,0.80%
+ 2018-03-23,UK,London,TSB,Private,GBP,Bank,Deposits,Current,_MCCF,Classic Plus account,1500,,Online,,Fixed,2.96%,3%
  2018-03-23,UK,London,Virgin Money Plc.,VM,GBP,Bank,Deposits,Term Deposits,12MCDF,1 Year Fixed Rate Cash E-ISA Issue 317,20000,,Online,12.0,Fixed,1.50%,1.50%
  2018-03-23,UK,London,Virgin Money Plc.,VM,GBP,Bank,Deposits,Term Deposits,24MCDF,2 Year Fixed Rate Cash E-ISA Issue 306,20000,,Online,24.0,Fixed,1.66%,1.66%
  2018-03-23,UK,London,Virgin Money Plc.,VM,GBP,Bank,Deposits,Term Deposits,36MCDF,3 Year Fixed Rate Cash E-ISA Issue 313,20000,,Online,36.0,Fixed,2.00%,2.00%

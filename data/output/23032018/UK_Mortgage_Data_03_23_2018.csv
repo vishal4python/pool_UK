@@ -644,6 +644,54 @@ Date,Bank_Native_Country,State,Bank_Name,Ticker,Bank_Local_Currency,Bank_Type,Ba
  2018-03-23,UK,London,Santander Bank,Private,GBP,Bank,Mortgages,Mortgages,30YMV,5 year fixed rate First Time Buyer Exclusive,,Offline,30.0,Variable,2.040%,3.750%,"360,000 ",20%,New Purchase,Primary Residence,Principal + Interest,5.0
  2018-03-23,UK,London,Santander Bank,Private,GBP,Bank,Mortgages,Mortgages,30YMV,5 year fixed rate,,Offline,30.0,Variable,2.190%,3.750%,"360,000 ",20%,New Purchase,Primary Residence,Principal + Interest,5.0
  2018-03-23,UK,London,Santander Bank,Private,GBP,Bank,Mortgages,Mortgages,30YMV,5 year fixed rate,,Offline,30.0,Variable,2.490%,3.750%,"360,000 ",20%,New Purchase,Primary Residence,Principal + Interest,5.0
+ 2018-03-23,UK,London,TSB,Private,GBP,Bank,Mortgages,Mortgages,10YMF,2 year fixed With Fee,,Offline,10.0,Variable,1.49%,3.7%,72000,20%,New Purchase,Primary Residence,Principal + Interest,2.0
+ 2018-03-23,UK,London,TSB,Private,GBP,Bank,Mortgages,Mortgages,10YMF,2 year fixed,,Offline,10.0,Variable,1.79%,3.7%,72000,20%,New Purchase,Primary Residence,Principal + Interest,2.0
+ 2018-03-23,UK,London,TSB,Private,GBP,Bank,Mortgages,Mortgages,10YMF,5 year fixed With Fee,,Offline,10.0,Variable,1.94%,3.3%,72000,20%,New Purchase,Primary Residence,Principal + Interest,5.0
+ 2018-03-23,UK,London,TSB,Private,GBP,Bank,Mortgages,Mortgages,10YMF,10 year fixed,,Offline,10.0,Variable,3.19%,3.5%,72000,20%,New Purchase,Primary Residence,Principal + Interest,10.0
+ 2018-03-23,UK,London,TSB,Private,GBP,Bank,Mortgages,Mortgages,15YMF,2 year fixed With Fee,,Offline,15.0,Variable,1.49%,3.7%,72000,20%,New Purchase,Primary Residence,Principal + Interest,2.0
+ 2018-03-23,UK,London,TSB,Private,GBP,Bank,Mortgages,Mortgages,15YMF,2 year fixed,,Offline,15.0,Variable,1.79%,3.7%,72000,20%,New Purchase,Primary Residence,Principal + Interest,2.0
+ 2018-03-23,UK,London,TSB,Private,GBP,Bank,Mortgages,Mortgages,15YMF,5 year fixed With Fee,,Offline,15.0,Variable,1.94%,3.3%,72000,20%,New Purchase,Primary Residence,Principal + Interest,5.0
+ 2018-03-23,UK,London,TSB,Private,GBP,Bank,Mortgages,Mortgages,15YMF,10 year fixed,,Offline,15.0,Variable,3.19%,3.5%,72000,20%,New Purchase,Primary Residence,Principal + Interest,10.0
+ 2018-03-23,UK,London,TSB,Private,GBP,Bank,Mortgages,Mortgages,25YMF,2 year fixed With Fee,,Offline,25.0,Variable,1.49%,3.7%,72000,20%,New Purchase,Primary Residence,Principal + Interest,2.0
+ 2018-03-23,UK,London,TSB,Private,GBP,Bank,Mortgages,Mortgages,25YMF,2 year fixed,,Offline,25.0,Variable,1.79%,3.7%,72000,20%,New Purchase,Primary Residence,Principal + Interest,2.0
+ 2018-03-23,UK,London,TSB,Private,GBP,Bank,Mortgages,Mortgages,25YMF,5 year fixed With Fee,,Offline,25.0,Variable,1.94%,3.3%,72000,20%,New Purchase,Primary Residence,Principal + Interest,5.0
+ 2018-03-23,UK,London,TSB,Private,GBP,Bank,Mortgages,Mortgages,25YMF,10 year fixed,,Offline,25.0,Variable,3.19%,3.5%,72000,20%,New Purchase,Primary Residence,Principal + Interest,10.0
+ 2018-03-23,UK,London,TSB,Private,GBP,Bank,Mortgages,Mortgages,30YMF,2 year fixed With Fee,,Offline,30.0,Variable,1.49%,3.7%,72000,20%,New Purchase,Primary Residence,Principal + Interest,2.0
+ 2018-03-23,UK,London,TSB,Private,GBP,Bank,Mortgages,Mortgages,30YMF,2 year fixed,,Offline,30.0,Variable,1.79%,3.7%,72000,20%,New Purchase,Primary Residence,Principal + Interest,2.0
+ 2018-03-23,UK,London,TSB,Private,GBP,Bank,Mortgages,Mortgages,30YMF,5 year fixed With Fee,,Offline,30.0,Variable,1.94%,3.3%,72000,20%,New Purchase,Primary Residence,Principal + Interest,5.0
+ 2018-03-23,UK,London,TSB,Private,GBP,Bank,Mortgages,Mortgages,30YMF,10 year fixed,,Offline,30.0,Variable,3.19%,3.5%,72000,20%,New Purchase,Primary Residence,Principal + Interest,10.0
+ 2018-03-23,UK,London,TSB,Private,GBP,Bank,Mortgages,Mortgages,10YMF,2 year fixed With Fee,,Offline,10.0,Variable,1.49%,3.7%,216000,20%,New Purchase,Primary Residence,Principal + Interest,2.0
+ 2018-03-23,UK,London,TSB,Private,GBP,Bank,Mortgages,Mortgages,10YMF,2 year fixed,,Offline,10.0,Variable,1.79%,3.7%,216000,20%,New Purchase,Primary Residence,Principal + Interest,2.0
+ 2018-03-23,UK,London,TSB,Private,GBP,Bank,Mortgages,Mortgages,10YMF,5 year fixed With Fee,,Offline,10.0,Variable,1.94%,3.3%,216000,20%,New Purchase,Primary Residence,Principal + Interest,5.0
+ 2018-03-23,UK,London,TSB,Private,GBP,Bank,Mortgages,Mortgages,10YMF,10 year fixed,,Offline,10.0,Variable,3.19%,3.5%,216000,20%,New Purchase,Primary Residence,Principal + Interest,10.0
+ 2018-03-23,UK,London,TSB,Private,GBP,Bank,Mortgages,Mortgages,15YMF,2 year fixed With Fee,,Offline,15.0,Variable,1.49%,3.7%,216000,20%,New Purchase,Primary Residence,Principal + Interest,2.0
+ 2018-03-23,UK,London,TSB,Private,GBP,Bank,Mortgages,Mortgages,15YMF,2 year fixed,,Offline,15.0,Variable,1.79%,3.7%,216000,20%,New Purchase,Primary Residence,Principal + Interest,2.0
+ 2018-03-23,UK,London,TSB,Private,GBP,Bank,Mortgages,Mortgages,15YMF,5 year fixed With Fee,,Offline,15.0,Variable,1.94%,3.3%,216000,20%,New Purchase,Primary Residence,Principal + Interest,5.0
+ 2018-03-23,UK,London,TSB,Private,GBP,Bank,Mortgages,Mortgages,15YMF,10 year fixed,,Offline,15.0,Variable,3.19%,3.5%,216000,20%,New Purchase,Primary Residence,Principal + Interest,10.0
+ 2018-03-23,UK,London,TSB,Private,GBP,Bank,Mortgages,Mortgages,25YMF,2 year fixed With Fee,,Offline,25.0,Variable,1.49%,3.7%,216000,20%,New Purchase,Primary Residence,Principal + Interest,2.0
+ 2018-03-23,UK,London,TSB,Private,GBP,Bank,Mortgages,Mortgages,25YMF,2 year fixed,,Offline,25.0,Variable,1.79%,3.7%,216000,20%,New Purchase,Primary Residence,Principal + Interest,2.0
+ 2018-03-23,UK,London,TSB,Private,GBP,Bank,Mortgages,Mortgages,25YMF,5 year fixed With Fee,,Offline,25.0,Variable,1.94%,3.3%,216000,20%,New Purchase,Primary Residence,Principal + Interest,5.0
+ 2018-03-23,UK,London,TSB,Private,GBP,Bank,Mortgages,Mortgages,25YMF,10 year fixed,,Offline,25.0,Variable,3.19%,3.5%,216000,20%,New Purchase,Primary Residence,Principal + Interest,10.0
+ 2018-03-23,UK,London,TSB,Private,GBP,Bank,Mortgages,Mortgages,30YMF,2 year fixed With Fee,,Offline,30.0,Variable,1.49%,3.7%,216000,20%,New Purchase,Primary Residence,Principal + Interest,2.0
+ 2018-03-23,UK,London,TSB,Private,GBP,Bank,Mortgages,Mortgages,30YMF,2 year fixed,,Offline,30.0,Variable,1.79%,3.7%,216000,20%,New Purchase,Primary Residence,Principal + Interest,2.0
+ 2018-03-23,UK,London,TSB,Private,GBP,Bank,Mortgages,Mortgages,30YMF,5 year fixed With Fee,,Offline,30.0,Variable,1.94%,3.3%,216000,20%,New Purchase,Primary Residence,Principal + Interest,5.0
+ 2018-03-23,UK,London,TSB,Private,GBP,Bank,Mortgages,Mortgages,30YMF,10 year fixed,,Offline,30.0,Variable,3.19%,3.5%,216000,20%,New Purchase,Primary Residence,Principal + Interest,10.0
+ 2018-03-23,UK,London,TSB,Private,GBP,Bank,Mortgages,Mortgages,10YMF,2 year fixed With Fee,,Offline,10.0,Variable,1.49%,3.7%,360000,20%,New Purchase,Primary Residence,Principal + Interest,2.0
+ 2018-03-23,UK,London,TSB,Private,GBP,Bank,Mortgages,Mortgages,10YMF,2 year fixed,,Offline,10.0,Variable,1.79%,3.7%,360000,20%,New Purchase,Primary Residence,Principal + Interest,2.0
+ 2018-03-23,UK,London,TSB,Private,GBP,Bank,Mortgages,Mortgages,10YMF,5 year fixed With Fee,,Offline,10.0,Variable,1.94%,3.3%,360000,20%,New Purchase,Primary Residence,Principal + Interest,5.0
+ 2018-03-23,UK,London,TSB,Private,GBP,Bank,Mortgages,Mortgages,10YMF,10 year fixed,,Offline,10.0,Variable,3.19%,3.5%,360000,20%,New Purchase,Primary Residence,Principal + Interest,10.0
+ 2018-03-23,UK,London,TSB,Private,GBP,Bank,Mortgages,Mortgages,15YMF,2 year fixed With Fee,,Offline,15.0,Variable,1.49%,3.7%,360000,20%,New Purchase,Primary Residence,Principal + Interest,2.0
+ 2018-03-23,UK,London,TSB,Private,GBP,Bank,Mortgages,Mortgages,15YMF,2 year fixed,,Offline,15.0,Variable,1.79%,3.7%,360000,20%,New Purchase,Primary Residence,Principal + Interest,2.0
+ 2018-03-23,UK,London,TSB,Private,GBP,Bank,Mortgages,Mortgages,15YMF,5 year fixed With Fee,,Offline,15.0,Variable,1.94%,3.3%,360000,20%,New Purchase,Primary Residence,Principal + Interest,5.0
+ 2018-03-23,UK,London,TSB,Private,GBP,Bank,Mortgages,Mortgages,15YMF,10 year fixed,,Offline,15.0,Variable,3.19%,3.5%,360000,20%,New Purchase,Primary Residence,Principal + Interest,10.0
+ 2018-03-23,UK,London,TSB,Private,GBP,Bank,Mortgages,Mortgages,25YMF,2 year fixed With Fee,,Offline,25.0,Variable,1.49%,3.7%,360000,20%,New Purchase,Primary Residence,Principal + Interest,2.0
+ 2018-03-23,UK,London,TSB,Private,GBP,Bank,Mortgages,Mortgages,25YMF,2 year fixed,,Offline,25.0,Variable,1.79%,3.7%,360000,20%,New Purchase,Primary Residence,Principal + Interest,2.0
+ 2018-03-23,UK,London,TSB,Private,GBP,Bank,Mortgages,Mortgages,25YMF,5 year fixed With Fee,,Offline,25.0,Variable,1.94%,3.3%,360000,20%,New Purchase,Primary Residence,Principal + Interest,5.0
+ 2018-03-23,UK,London,TSB,Private,GBP,Bank,Mortgages,Mortgages,25YMF,10 year fixed,,Offline,25.0,Variable,3.19%,3.5%,360000,20%,New Purchase,Primary Residence,Principal + Interest,10.0
+ 2018-03-23,UK,London,TSB,Private,GBP,Bank,Mortgages,Mortgages,30YMF,2 year fixed With Fee,,Offline,30.0,Variable,1.49%,3.7%,360000,20%,New Purchase,Primary Residence,Principal + Interest,2.0
+ 2018-03-23,UK,London,TSB,Private,GBP,Bank,Mortgages,Mortgages,30YMF,2 year fixed,,Offline,30.0,Variable,1.79%,3.7%,360000,20%,New Purchase,Primary Residence,Principal + Interest,2.0
+ 2018-03-23,UK,London,TSB,Private,GBP,Bank,Mortgages,Mortgages,30YMF,5 year fixed With Fee,,Offline,30.0,Variable,1.94%,3.3%,360000,20%,New Purchase,Primary Residence,Principal + Interest,5.0
+ 2018-03-23,UK,London,TSB,Private,GBP,Bank,Mortgages,Mortgages,30YMF,10 year fixed,,Offline,30.0,Variable,3.19%,3.5%,360000,20%,New Purchase,Primary Residence,Principal + Interest,10.0
  2018-03-23,UK,London,Virgin Money Plc.,VM,GBP,Bank,Mortgages,Mortgages,10YMV, 2 Year Everyday Tracker,,Offline,10.0,Variable,1.74,4.4%,72000,20%,New Purchase,Primary Residence,Principal + Interest,2.0
  2018-03-23,UK,London,Virgin Money Plc.,VM,GBP,Bank,Mortgages,Mortgages,10YMF, 2 Year Everyday Fixed Cashback,,Offline,10.0,Variable,1.81,4.4%,72000,20%,New Purchase,Primary Residence,Principal + Interest,2.0
  2018-03-23,UK,London,Virgin Money Plc.,VM,GBP,Bank,Mortgages,Mortgages,10YMF, 2 Year Everyday Fixed Cashback FTB,,Offline,10.0,Variable,1.89,4.4%,72000,20%,New Purchase,Primary Residence,Principal + Interest,2.0

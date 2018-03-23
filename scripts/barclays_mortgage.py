@@ -9,6 +9,7 @@ import re
 import numpy as np
 from maks_lib import output_path
 from selenium.webdriver.support.ui import Select
+from selenium.common.exceptions import ElementClickInterceptedException
 
 now = datetime.datetime.now()
 table = []
@@ -52,12 +53,11 @@ def barclays(properties, deposit, year):
     try:
         filform(properties, deposit, year)
 
-    except Exception as e:
+    except ElementClickInterceptedException:
         #print("Error",e)
         try:
-            time.sleep(1)
-            browser.switch_to.alert.dismiss()
-            #browser.find_element_by_xpath("/html/body/div[14]/div/div[1]/div/a[1]").click()
+            #alert = browser.switch_to_alert()
+            browser.find_element_by_xpath("/html/body/div[14]/div/div[1]/div/a[1]").click()
             time.sleep(1)
             filform(properties, deposit, year)
         except Exception as e:
@@ -69,7 +69,7 @@ def barclays(properties, deposit, year):
     jsoup = BeautifulSoup(browser.page_source,"html.parser")
 
     result = jsoup.find("table", attrs={"class": "table table-mortgage display responsive nowrap dataTable dtr-column collapsed"})
-    # print(result)
+    #print(result)
     # print("---------------------------")
     if result is not None:
         trs = result.find_all('tr')
@@ -97,15 +97,18 @@ def barclays(properties, deposit, year):
                             interest = re.search(r'\d\.\d{1,}%', APRC).group()
                             file.write(interest+",")
                     if "Min loan" in td.text:
+
+                        ltv = re.search(r"\d+%",td.text).group()
+                        print(ltv)
                         max_loan = re.search(r'(Max loan) (.*\d)', td.text).groups()[1]
                         min_loan = re.search(r'\d,\d+', td.text).group()
                         min_loan = min_loan.replace(",","")
                         #print(min_loan,"--------------------------------------")
-                        file.write(min_loan+","+str(deposit)+","+str(year)+"\n")
+                        file.write(min_loan+","+str(deposit)+","+str(year)+","+ltv+"\n")
 def panda():
     dataset = pd.read_table('test.txt', sep=',', delimiter=None, header=None)
     #dataset.columns = ['Bank_Product_Name', 'Fixed_Rate_Term', 'Interest_Type', "Interest", "APRC", "Term (Y)", 'Mortgage_Loan_Amt']
-    dataset.columns = ["Bank_Product_Name", "Fixed_Rate_Term","APRC", "Interest","Min_Loan_Amount","Mortgage_Loan_Amt","Term (Y)"]
+    dataset.columns = ["Bank_Product_Name", "Fixed_Rate_Term","APRC", "Interest","Min_Loan_Amount","Mortgage_Loan_Amt","Term (Y)","ltv"]
     dataset['Date'] = now.strftime("%Y-%m-%d")
     dataset['Bank_Native_Country'] = "UK"
     dataset['State'] = "London"
@@ -121,25 +124,25 @@ def panda():
     dataset['Mortgage_Pymt_Mode'] = "Principal + Interest"
     dataset['Bank_Product_Code'] = np.nan
     dataset["Interest_Type"] = "Variable"
+    dataset['APRC'] = dataset["APRC"].str.split("%")[0]
     columns = ['Date', 'Bank_Native_Country', 'State', 'Bank_Name', 'Bank_Local_Currency', 'Bank_Type', 'Bank_Product',
                'Bank_Product_Type', 'Bank_Product_Name', 'Min_Loan_Amount', 'Bank_Offer_Feature', 'Term (Y)',
                'Interest_Type', 'Interest', 'APRC', 'Mortgage_Loan_Amt', 'Mortgage_Down_Payment', 'Mortgage_Category', 'Mortgage_Reason',
-               'Mortgage_Pymt_Mode', 'Fixed_Rate_Term', 'Bank_Product_Code'
+               'Mortgage_Pymt_Mode', 'Fixed_Rate_Term', 'Bank_Product_Code',"ltv"
                ]
     df = dataset.reindex(columns=columns)
     df.to_csv(output_path + "Consolidate_Barclays_Data_Mortgage_{}.csv".format(now.strftime("%m_%d_%Y")), index=False)
 
-terms = [10, 15, 20, 25, 30]
+terms = [10, 15, 20, 30]
 cases = [[90000, 72000], [270000, 216000], [450000, 360000]]
-#barclays(90000, 72000, 10)
-for term in terms:
-    for case in cases:
-        #print(case[0], case[1], term)
-        barclays(case[0], case[1], term)
-
+barclays(90000, 72000, 10)
+# for term in terms:
+#     for case in cases:
+#         #print(case[0], case[1], term)
+#         barclays(case[0], case[1], term)
 
 file.close()
 browser.close()
 panda()
-os.remove("test.txt")
+#os.remove("test.txt")
 print("Scrapping Finished !!!")

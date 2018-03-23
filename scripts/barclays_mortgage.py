@@ -10,6 +10,8 @@ import numpy as np
 from maks_lib import output_path
 from selenium.webdriver.support.ui import Select
 from selenium.common.exceptions import ElementClickInterceptedException
+import warnings
+warnings.simplefilter(action='ignore')
 
 now = datetime.datetime.now()
 table = []
@@ -99,7 +101,7 @@ def barclays(properties, deposit, year):
                     if "Min loan" in td.text:
 
                         ltv = re.search(r"\d+%",td.text).group()
-                        print(ltv)
+                        #print(ltv)
                         max_loan = re.search(r'(Max loan) (.*\d)', td.text).groups()[1]
                         min_loan = re.search(r'\d,\d+', td.text).group()
                         min_loan = min_loan.replace(",","")
@@ -124,25 +126,28 @@ def panda():
     dataset['Mortgage_Pymt_Mode'] = "Principal + Interest"
     dataset['Bank_Product_Code'] = np.nan
     dataset["Interest_Type"] = "Variable"
-    dataset['APRC'] = dataset["APRC"].str.split("%")[0]
+    dataset = dataset[dataset["ltv"] == '80%']
+    dataset.drop(columns=["ltv"], inplace=True)
+    for idx in range(len(dataset.index)):
+        dataset['APRC'].iloc[idx] = str(dataset['APRC'].iloc[idx]).split("%")[0]+"%"
+
     columns = ['Date', 'Bank_Native_Country', 'State', 'Bank_Name', 'Bank_Local_Currency', 'Bank_Type', 'Bank_Product',
                'Bank_Product_Type', 'Bank_Product_Name', 'Min_Loan_Amount', 'Bank_Offer_Feature', 'Term (Y)',
                'Interest_Type', 'Interest', 'APRC', 'Mortgage_Loan_Amt', 'Mortgage_Down_Payment', 'Mortgage_Category', 'Mortgage_Reason',
-               'Mortgage_Pymt_Mode', 'Fixed_Rate_Term', 'Bank_Product_Code',"ltv"
+               'Mortgage_Pymt_Mode', 'Fixed_Rate_Term', 'Bank_Product_Code'
                ]
     df = dataset.reindex(columns=columns)
     df.to_csv(output_path + "Consolidate_Barclays_Data_Mortgage_{}.csv".format(now.strftime("%m_%d_%Y")), index=False)
 
 terms = [10, 15, 20, 30]
 cases = [[90000, 72000], [270000, 216000], [450000, 360000]]
-barclays(90000, 72000, 10)
-# for term in terms:
-#     for case in cases:
-#         #print(case[0], case[1], term)
-#         barclays(case[0], case[1], term)
+#barclays(90000, 72000, 10)
+for term in terms:
+    for case in cases:
+        barclays(case[0], case[1], term)
 
 file.close()
 browser.close()
 panda()
-#os.remove("test.txt")
+os.remove("test.txt")
 print("Scrapping Finished !!!")

@@ -97,3 +97,12 @@ def iaas():
                 interest = re.search(r'\d\.\d+% variable', p[3].text).group().strip("variable")
                 data.append([product_name1, AER, interest, None, None,'Savings'])
                 c += 1
+
+def main():
+    instant_access()
+    iaas()
+    print(tabulate(data))
+    print("Not Implemented completely")
+
+if __name__ == '__main__':
+    main()

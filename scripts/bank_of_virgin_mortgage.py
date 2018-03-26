@@ -47,7 +47,7 @@ def virgin_mortgage(property_value, deposit, term):
         tds = tbody.find_all("td")
         Bank_Product_Name = (tds[0].text)
         Fixed_Rate_Term = (tds[2].text)
-        interest_rate = (tds[3].text).split("%")[0]
+        interest_rate = (tds[3].text).split("%")[0]+'%'
         aprc = (tds[5].text)
         years = re.findall('\d.*year', Fixed_Rate_Term)
         if len(years)>=1:

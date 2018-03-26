@@ -1,5 +1,6 @@
 import pandas as pd
 import numpy as np
+import re
 import datetime
 import warnings
 from maks_lib import input_path
@@ -93,5 +94,5 @@ df_final["Bank_Type"]="Bank"
 df_final["Bank_Product"]="Deposits"
 df_final['Bank_Offer_Feature']=result['Bank_Offer_Feature'].values
 df_final["Interest_Type"]="Variable"
-
+df_final['Balance'] = df_final['Balance'].apply(lambda x:re.sub('[^0-9a-zA-Z,.]','',str(x)))
 df_final.to_csv(output_path+"Consolidate_HSBC_Data_Deposit_{}.csv".format(now.strftime("%m_%d_%Y")), index=False )

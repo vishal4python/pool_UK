@@ -103,8 +103,9 @@ df_final.drop(df_final.columns[[9,17]], axis=1, inplace=True)
 
 df_final["Interest_Type"] = "Variable"
 for index in range(len(result.index)):
-    df_final['Term in Months'].iloc[index] = str(df_final['Term in Months'].iloc[index]).replace("Months", "").replace(
-        "Years", "").replace("months", "")
+    df_final['Term in Months'].iloc[index] = str(df_final['Term in Months'].iloc[index]).replace("Months", "").replace("months", "").replace("Years",'')
+    df_final['Term in Months'].iloc[index] = str(df_final['Term in Months'].iloc[index]).replace("nan", "")
+
     if "Saver" in result['Bank_Product_Name'].iloc[index]:
         df_final.ix[index, 'Bank_Product_Type'] = "Savings"
 
@@ -117,8 +118,11 @@ for index in range(len(result.index)):
     else:
         df_final.ix[index, 'Bank_Product_Type'] = "Savings"
     if "nan" in df_final['Balance'].iloc[index]:
-       # df03=pd.DataFrame(df_final["Balance"].str.split('-').tolist(),columns=["Int","pr"])
+       
         df_final['Balance'].iloc[index] = str(df_final['Balance'].iloc[index]).replace("-nan", "")
+    if "3" in df_final['Term in Months'].iloc[index]:
+        df_final["Term in Months"].iloc[index] = 3*12
+
 
 
 df_final.to_csv(output_path+"Consolidate_BankofIreland_Data_Deposit_{}.csv".format(now.strftime("%m_%d_%Y")), index=False)

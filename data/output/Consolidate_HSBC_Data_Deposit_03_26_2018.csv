@@ -1,0 +1,10 @@
+Date,Bank_Native_Country,State,Bank_Name,Bank_Local_Currency,Bank_Type,Bank_Product,Bank_Product_Type,Bank_Product_Name,Balance,Bank_Offer_Feature,Term in Months,Interest_Type,Interest,AER,Bank_Product_Code
+03-26-2018,UK,London,HSBC Bank,GBP,Bank,Deposits,Savings,Online Bonus Saver,"                        Up to £50,000",Online,,Variable,0.10%,0.10%,
+03-26-2018,UK,London,HSBC Bank,GBP,Bank,Deposits,Savings,Online Bonus Saver,"50,000+",Online,,Variable,0.10%,0.10%,
+03-26-2018,UK,London,HSBC Bank,GBP,Bank,Deposits,Savings,Flexible Saver,All balances,Offline,,Variable,0.05%,0.05%,
+03-26-2018,UK,London,HSBC Bank,GBP,Bank,Deposits,Term Deposits,Fixed Rate Saver,"2,000+",Offline,36.0,Variable,0.70%,0.70%,
+03-26-2018,UK,London,HSBC Bank,GBP,Bank,Deposits,Term Deposits,Fixed Rate Saver,"50,000+",Offline,36.0,Variable,0.70%,0.70%,
+03-26-2018,UK,London,HSBC Bank,GBP,Bank,Deposits,Term Deposits,Fixed Rate Saver,"2,000+",Offline,12.0,Variable,0.50%,0.50%,
+03-26-2018,UK,London,HSBC Bank,GBP,Bank,Deposits,Term Deposits,Fixed Rate Saver,"50,000+",Offline,12.0,Variable,0.60%,0.60%,
+03-26-2018,UK,London,HSBC Bank,GBP,Bank,Deposits,Term Deposits,Fixed Rate Saver,"2,000+",Offline,6.0,Variable,0.40%,0.40%,
+03-26-2018,UK,London,HSBC Bank,GBP,Bank,Deposits,Term Deposits,Fixed Rate Saver,"50,000+",Offline,6.0,Variable,0.40%,0.40%,

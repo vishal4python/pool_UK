@@ -70,7 +70,7 @@ for case in cases:
                         Interest_Type = "Fixed"
                     else:
                         Interest_Type = "Variable"
-                    a = [Bank_Product_Name, Min_Loan_Amount, term, Interest_Type, Interest, None, case[0]-case[1], frt, 100-int(re.sub('[^0-9.]','',ltv))]
+                    a = [Bank_Product_Name, Min_Loan_Amount, term, Interest_Type, Interest, None, case[0]-case[1], frt, str(100-int(re.sub('[^0-9.]','',ltv)))+'%']
                     table.append(a)
                 except:
                     pass

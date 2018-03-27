@@ -57,7 +57,7 @@ try:
     else:
         charge_type = "Fixed"
         # ['Bank_Product_Type', 'Bank_Product_Name', 'Balance', 'Bank_Offer_Feature', 'Term in Months', 'Interest_Type','Interest', 'AER']
-    b = ["Current", charges_account, charges_amount, "Variable", '',charge_type, charge_interest+'gross', charge_aer+'aer']
+    b = ["Current", charges_account, charges_amount, "Offline", '',charge_type, charge_interest+'gross', charge_aer+'aer']
     # print(b)
     Excel_Table.append(b)
 except Exception as e:

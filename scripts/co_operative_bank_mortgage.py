@@ -55,7 +55,7 @@ for div in divs:
             term = re.sub('[^0-9]','',term[0])
         else:
             term = None
-        a = [Bank_Product_Name, Min_Loan_Amount, None, Interest_Type, Interest, APRC, None,term, 100-float(re.sub('[^0-9.]','',Mortgage_Down_Payment))]
+        a = [Bank_Product_Name, Min_Loan_Amount, None, Interest_Type, Interest, APRC, None,term, str(100-int(re.sub('[^0-9.]','',Mortgage_Down_Payment)))+'%']
         table.append(a)
     except Exception as e:
         print(e)
@@ -86,7 +86,7 @@ for life in lifes:
         else:
             term = None
         a = [Bank_Product_Name, Min_Loan_Amount, None, Interest_Type, Interest, APRC, None,
-             term, Mortgage_Down_Payment]
+             term, str(100-int(re.sub('[^0-9.]','',Mortgage_Down_Payment)))+'%']
         table.append(a)
     except:
         pass

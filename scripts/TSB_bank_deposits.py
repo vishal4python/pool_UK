@@ -26,12 +26,6 @@ for table in list(tables):
             print(len(a))
             if len(a)>7:
                 del a[1]
-            if "current" in a[0].strip().lower():
-                Bank_Product_Type = 'Current'
-            elif 'fixed' in a[0].strip().lower():
-                Bank_Product_Type = 'Term Deposits'
-            else:
-                Bank_Product_Type = 'Savings'
             Bank_Offer_Feature = 'Online' if 'online' in a[5].lower() else 'Offline'
             found = False
             for check in ["junior", "monthly saver", "young"]:
@@ -39,6 +33,15 @@ for table in list(tables):
                     found = True
                     break
             if not found:
+                test = main_heading.replace('Compare', '').strip() + '_' + a[0].strip()
+                if 'current' in test.lower():
+                    Bank_Product_Type = 'Current'
+                elif 'savings' in test.lower():
+                    Bank_Product_Type = 'Savings'
+                elif 'fixed' in test.lower():
+                    Bank_Product_Type = 'Term Deposits'
+                else:
+                    Bank_Product_Type = 'Savings'
                 Excel_table.append([Bank_Product_Type, main_heading.replace('Compare', '').strip()+'_'+a[0].strip(), a[2].strip(), Bank_Offer_Feature, 'Term in Months', 'Interest_Type',a[1].strip(), a[1].strip()])
         print(main_heading)
 

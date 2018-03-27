@@ -96,27 +96,27 @@ df03["Term in Months"]=df03["Term in Months"].apply(int)
 df03["Term in Months"]=(df03["Term in Months"]*12)
 df03["Bank_Product_Type"]="Term Deposits"
 
-df04=df1[30:31]
-df04= df04.rename(columns={'Unnamed: 2': 'Bank_Product_Name'})
-df04.drop(df04.columns[[0,1,3,4,5]], axis=1, inplace=True)
-df=df1[33:34]
-df04["Balance"]=df["Unnamed: 1"].values
-df04["Interest"]=df["Unnamed: 2"].values
-df04["Interest"]=(df04["Interest"]*100).astype(str)+'%'
-df04["AER"]=df04["Interest"]
+# df04=df1[30:31]
+# df04= df04.rename(columns={'Unnamed: 2': 'Bank_Product_Name'})
+# df04.drop(df04.columns[[0,1,3,4,5]], axis=1, inplace=True)
+# df=df1[33:34]
+# df04["Balance"]=df["Unnamed: 1"].values
+# df04["Interest"]=df["Unnamed: 2"].values
+# df04["Interest"]=(df04["Interest"]*100).astype(str)+'%'
+# df04["AER"]=df04["Interest"]
 
-frames_page2 = [df01,df02,df03,df04]
+frames_page2 = [df01,df02,df03]
 result_page2=pd.concat(frames_page2)
 result_page2['Bank_Product_Type'].fillna("Savings",inplace=True)
 
-df01=df2[0:1]
-df01= df01.rename(columns={'Unnamed: 2': 'Bank_Product_Name'})
-df01.drop(df01.columns[[0,1,3]], axis=1, inplace=True)
-df=df2[3:4]
-df01["Balance"]=df["Unnamed: 1"].values
-df01["Interest"]=df["Unnamed: 2"].values
-df01["Interest"]=(df01["Interest"]*100).astype(str)+'%'
-df01["AER"]=df01["Interest"]
+# df01=df2[0:1]
+# df01= df01.rename(columns={'Unnamed: 2': 'Bank_Product_Name'})
+# df01.drop(df01.columns[[0,1,3]], axis=1, inplace=True)
+# df=df2[3:4]
+# df01["Balance"]=df["Unnamed: 1"].values
+# df01["Interest"]=df["Unnamed: 2"].values
+# df01["Interest"]=(df01["Interest"]*100).astype(str)+'%'
+# df01["AER"]=df01["Interest"]
 
 
 df02=df2[5:6]
@@ -135,7 +135,7 @@ df02["Term in Months"]=df02["Term in Months"].apply(int)
 df02["Term in Months"]=(df02["Term in Months"]*12)
 df02["Bank_Product_Type"]="Term Deposits"
 
-frames_page3 = [df01,df02]
+frames_page3 = [df02]
 result_page3=pd.concat(frames_page3)
 result_page3['Bank_Product_Type'].fillna("Savings",inplace=True)
 
@@ -164,4 +164,11 @@ df_final["Bank_Type"]="Bank"
 df_final["Bank_Product"]="Deposits"
 df_final["Bank_Offer_Feature"]="Offline"
 df_final["Interest_Type"]="Variable"
+
+for index in range(len(result.index)):
+    #result['Bank_Product_Name'].iloc[index] = result['Bank_Product_Name'].iloc[index].replace("–", " - ")
+
+    if "Online" in df_final['Bank_Product_Name'].iloc[index]:
+        df_final["Bank_Offer_Feature"].iloc[index] = 'Online'
+
 df_final.to_csv(output_path+"Consolidate_Lloyds_Data_Deposit_{}.csv".format(now.strftime("%m_%d_%Y")), index=False )

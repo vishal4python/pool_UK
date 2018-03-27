@@ -53,9 +53,9 @@ Date,Bank_Native_Country,State,Bank_Name,Ticker,Bank_Local_Currency,Bank_Type,Ba
  2018-03-27,UK,London,The Co-operative Bank,Private,GBP,Bank,Mortgages,Mortgages,_YMF,2 Year Fixed Rate,5000,Offline,,Variable,1.79%,4.4%,,20%,Existing Customers ,Primary Residence,Principal + Interest,2.0
  2018-03-27,UK,London,The Co-operative Bank,Private,GBP,Bank,Mortgages,Mortgages,_YMF,2 Year Fixed Rate,5000,Offline,,Variable,1.89%,4.4%,,15%,Existing Customers ,Primary Residence,Principal + Interest,2.0
  2018-03-27,UK,London,The Co-operative Bank,Private,GBP,Bank,Mortgages,Mortgages,_YMF,2 Year Fixed Rate,5000,Offline,,Variable,2.29%,4.5%,,10%,Existing Customers ,Primary Residence,Principal + Interest,2.0
- 2018-03-27,UK,London,The Co-operative Bank,Private,GBP,Bank,Mortgages,Mortgages,_YMF,Lifetime Tracker,5000,Offline,,Variable,2.99%,3.3%,,60%,Existing Customers ,Primary Residence,Principal + Interest,
- 2018-03-27,UK,London,The Co-operative Bank,Private,GBP,Bank,Mortgages,Mortgages,_YMF,Lifetime Tracker,5000,Offline,,Variable,3.14%,3.3%,,70%,Existing Customers ,Primary Residence,Principal + Interest,
- 2018-03-27,UK,London,The Co-operative Bank,Private,GBP,Bank,Mortgages,Mortgages,_YMF,Lifetime Tracker,5000,Offline,,Variable,3.29%,3.5%,,75%,Existing Customers ,Primary Residence,Principal + Interest,
+ 2018-03-27,UK,London,The Co-operative Bank,Private,GBP,Bank,Mortgages,Mortgages,_YMF,Lifetime Tracker,5000,Offline,,Variable,2.99%,3.3%,,40%,Existing Customers ,Primary Residence,Principal + Interest,
+ 2018-03-27,UK,London,The Co-operative Bank,Private,GBP,Bank,Mortgages,Mortgages,_YMF,Lifetime Tracker,5000,Offline,,Variable,3.14%,3.3%,,30%,Existing Customers ,Primary Residence,Principal + Interest,
+ 2018-03-27,UK,London,The Co-operative Bank,Private,GBP,Bank,Mortgages,Mortgages,_YMF,Lifetime Tracker,5000,Offline,,Variable,3.29%,3.5%,,25%,Existing Customers ,Primary Residence,Principal + Interest,
  2018-03-27,UK,London,Bank of Ireland,BIRG,GBP,Bank,Mortgages,Mortgages,30YMV,1 Year Fixed LTV <=60%,,Offline,30.0,Variable,3.000%,3.900%,"72,000 ",20%,New Purchase,Primary Residence,Principal + Interest,1.0
  2018-03-27,UK,London,Bank of Ireland,BIRG,GBP,Bank,Mortgages,Mortgages,30YMV,2 Year Fixed LTV <=60%,,Offline,30.0,Variable,3.000%,3.800%,"72,000 ",20%,New Purchase,Primary Residence,Principal + Interest,2.0
  2018-03-27,UK,London,Bank of Ireland,BIRG,GBP,Bank,Mortgages,Mortgages,30YMV,3 Year Fixed LTV <=60%,,Offline,30.0,Variable,3.000%,3.700%,"72,000 ",20%,New Purchase,Primary Residence,Principal + Interest,3.0

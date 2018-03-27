@@ -7,6 +7,9 @@ import re
 import pandas as pd
 from maks_lib import output_path
 import numpy as np
+import warnings
+
+warnings.simplefilter(action='ignore')
 today = datetime.datetime.now()
 path = output_path+"Consolidate_ CoOp_Data_Deposits_"+str(today.strftime('%Y_%m_%d'))+'.csv'
 # path = "Consolidate_COOB_Data_Deposits_"+str(today.strftime('%Y_%m_%d'))+'.csv'
@@ -200,6 +203,10 @@ df.loc[:,"Bank_Local_Currency"] = "GBP"
 df.loc[:,"Bank_Type"] = "Bank"
 df.loc[:,"Bank_Product"] = "Deposits"
 df['Bank_Product_Code'] = np.nan
+#df['Bank_Product_Type'] = df['Bank_Product_Name'].apply(lambda x:'Savings' if 'isa' in x.lower() else x)
+for idx in range(len(df.index)):
+    if 'isa' in str(df['Bank_Product_Name'].iloc[idx]).lower():
+        df['Bank_Product_Type'].iloc[idx] = "Savings"
 df = df[order]
 df.to_csv(path, index=False)
 # print(df)

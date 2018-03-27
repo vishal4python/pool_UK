@@ -105,7 +105,7 @@ df_mortgage["Min_Loan_Amount"] = df_mortgage["Min_Loan_Amount"].str.replace(",",
 
 
 for idx in range(len(df_mortgage.index)):
-    if df_mortgage['Mortgage_Down_Payment'].iloc[idx] ==  df_mortgage['Fixed_Rate_Term'].iloc[idx]:
+    if df_mortgage['Term (Y)'].iloc[idx] ==  df_mortgage['Fixed_Rate_Term'].iloc[idx]:
          df_mortgage['Interest_Type'].iloc[idx] = "Fixed"
     else:
          df_mortgage['Interest_Type'].iloc[idx] = "Variable"

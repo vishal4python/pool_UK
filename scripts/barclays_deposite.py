@@ -130,7 +130,7 @@ if __name__ == '__main__':
     data['Date'] = now.strftime("%Y-%m-%d")
     data['Bank_Native_Country'] = 'UK'
     data['State'] = 'London'
-    data['Bank_Name'] = 'Barclays Bank'
+    data['Bank_Name'] = 'Barclays'
     data['Bank_Local_Currency'] = 'GBP'
     data['Bank_Type'] = 'Bank'
     data['Bank_Product'] = 'Deposits'

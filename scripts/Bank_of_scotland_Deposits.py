@@ -84,9 +84,9 @@ for tr in trs:
         if not found:
             print('tds[3]==', tds[0])
 
-
-            data_table.append([tds[0].text,gross, aer, year, tds[3].text,products[count],None])
-            count = count+1
+            if ('Monthly Saver') not in tds[0].text :
+                data_table.append([tds[0].text,gross, aer, year, tds[3].text,products[count],None])
+                count = count+1
     # print(len(tds))
     # print(tds[0].text)
     # print(tds[1].text)

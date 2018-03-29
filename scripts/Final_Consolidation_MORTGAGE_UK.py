@@ -99,7 +99,7 @@ for idx in range(len(df_mortgage.index)):
 
 
 df_mortgage["Min_Loan_Amount"] = df_mortgage["Min_Loan_Amount"].str.replace(",","")
-
+df_mortgage["Mortgage_Loan_Amt"] = df_mortgage["Mortgage_Loan_Amt"].str.replace(",","")
 
 # In[14]:
 

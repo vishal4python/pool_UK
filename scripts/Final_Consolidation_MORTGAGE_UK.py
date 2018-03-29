@@ -114,4 +114,4 @@ for idx in range(len(df_mortgage.index)):
 # In[13]:
 
 
-df_mortgage.to_csv(output_path+"UK\\" + "UK_Mortgage_Data_{}.csv".format(now.strftime("%m_%d_%Y")), index=False )
+df_mortgage.to_csv(output_path+"UK\\" + "UK_Mortgage_Data_{}.csv".format(now.strftime("%Y_%m_%d")), index=False )

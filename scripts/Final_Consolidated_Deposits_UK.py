@@ -133,5 +133,5 @@ df_deposit["Maxm_Balance"] = df_deposit["Maxm_Balance"].str.replace(",", "")
 # In[46]:
 
 
-df_deposit.to_csv(output_path + "UK\\" + "UK_Deposits_Data_{}.csv".format(now.strftime("%m_%d_%Y")), index=False)
+df_deposit.to_csv(output_path + "UK\\" + "UK_Deposits_Data_{}.csv".format(now.strftime("%Y_%m_%d")), index=False)
 

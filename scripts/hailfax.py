@@ -37,7 +37,7 @@ df.drop(df.columns[[4,5,6]], axis=1, inplace=True)
 s = df['Interest Rate & AER']
 df['Interest'] = s.str.extract('(\d[.][0-9]{2,}%)',expand=True)
 df['AER'] = df['Interest']
-df['Term in Months'] = s.str.extract('(\d\d? year|\d\d? )',expand=True).replace("1 year","12")
+df['Term in Months'] = s.str.extract('(\d\d? year|\d\d? )',expand=True).replace("1 year","12").replace("2 year","24").replace("5 year","60")
 df.drop(df.columns[[1]], axis=1, inplace=True)
 df['Balance'] = df['Balance'].str.extract('(£[0-9]+,[0-9]+|£[0-9]+\sto\s£[0-9]+|£[0-9]+)',expand=True)
 

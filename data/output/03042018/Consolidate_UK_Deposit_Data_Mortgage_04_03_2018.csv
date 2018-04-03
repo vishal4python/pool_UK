@@ -1,0 +1,13 @@
+Date,Bank_Native_Country,State,Bank_Name,Bank_Local_Currency,Bank_Type,Bank_Product,Bank_Product_Type,Bank_Product_Code,Bank_Product_Name,Min_Loan_Amount,Bank_Offer_Feature,Term (Y),Interest_Type,Interest,APRC,Mortgage_Loan_Amt,Mortgage_Down_Payment,Mortgage_Category,Mortgage_Reason,Mortgage_Pymt_Mode,Source
+ 2018-04-03,UK,London,Santander Bank,GBP,Bank,Mortgages,Mortgages,,Santander UK 2 Year Fixed Mortgage,,Offline,2,Fixed,1.29%,3.30%,,20%,New Purchase,Primary Residence,Principal + Interest,uk.deposits.org
+ 2018-04-03,UK,London,Halifax,GBP,Bank,Mortgages,Mortgages,,Halifax 2 Year Fixed Rate Mortgage ,,Offline,2,Fixed,1.54%,3.80%,,20%,New Purchase,Primary Residence,Principal + Interest,uk.deposits.org
+ 2018-04-03,UK,London,Barclays,GBP,Bank,Mortgages,Mortgages,,Barclays Wealth 2 Year Fixed Rate Mortgage,,Offline,2,Fixed,1.59%,3.70%,,20%,New Purchase,Primary Residence,Principal + Interest,uk.deposits.org
+ 2018-04-03,UK,London,Bank of Scotland,GBP,Bank,Mortgages,Mortgages,,Bank of Scotland 2 Year Fixed Rate Mortgage ,,Offline,2,Fixed,1.64%,3.60%,,20%,New Purchase,Primary Residence,Principal + Interest,uk.deposits.org
+ 2018-04-03,UK,London,The Co-operative Bank,GBP,Bank,Mortgages,Mortgages,,The Co-operative Bank 2 Year Fixed Mortgage,,Offline,2,Fixed,1.69%,4.10%,,20%,New Purchase,Primary Residence,Principal + Interest,uk.deposits.org
+ 2018-04-03,UK,London,HSBC,GBP,Bank,Mortgages,Mortgages,,HSBC UK 2 Year Fixed Mortgage,,Offline,2,Fixed,1.84%,3.70%,,20%,New Purchase,Primary Residence,Principal + Interest,uk.deposits.org
+ 2018-04-03,UK,London,Barclays,GBP,Bank,Mortgages,Mortgages,,Barclays Fixed Rate Mortgage,,Offline,,Fixed,1.85%,3.70%,,20%,New Purchase,Primary Residence,Principal + Interest,uk.deposits.org
+ 2018-04-03,UK,London,Metro Bank,GBP,Bank,Mortgages,Mortgages,,Metro Bank UK 5 Year Fixed Mortgage,,Offline,5,Fixed,2.14%,3.30%,,20%,New Purchase,Primary Residence,Principal + Interest,uk.deposits.org
+ 2018-04-03,UK,London,Clydesdale Bank,GBP,Bank,Mortgages,Mortgages,,Clydesdale Bank 2 Year Fixed Rate Mortgage,,Offline,2,Fixed,2.49%,4.60%,,20%,New Purchase,Primary Residence,Principal + Interest,uk.deposits.org
+ 2018-04-03,UK,London,Lloyds Bank,GBP,Bank,Mortgages,Mortgages,,Lloyds TSB 5 Year Fixed Mortgage,,Offline,5,Fixed,2.64%,3.50%,,20%,New Purchase,Primary Residence,Principal + Interest,uk.deposits.org
+ 2018-04-03,UK,London,Royal Bank Of Scotland,GBP,Bank,Mortgages,Mortgages,,Royal Bank of Scotland 2 Year Fixed Mortgage,,Offline,2,Fixed,2.68%,2.68%,,20%,New Purchase,Primary Residence,Principal + Interest,uk.deposits.org
+ 2018-04-03,UK,London,NatWest,GBP,Bank,Mortgages,Mortgages,,NatWest 2 Year Fixed Mortgage,,Offline,2,Fixed,2.68%,2.68%,,20%,New Purchase,Primary Residence,Principal + Interest,uk.deposits.org

@@ -99,8 +99,9 @@ for idx in range(len(df_mortgage.index)):
 
 
 df_mortgage["Min_Loan_Amount"] = df_mortgage["Min_Loan_Amount"].str.replace(",","")
-df_mortgage["Mortgage_Loan_Amt"] = df_mortgage["Mortgage_Loan_Amt"].str.replace(",","")
-
+for idx in range(len(df_mortgage.index)):
+    df_mortgage["Mortgage_Loan_Amt"].iloc[idx] = str(df_mortgage["Mortgage_Loan_Amt"].iloc[idx]).replace(",","")
+df_mortgage["Mortgage_Loan_Amt"] = df_mortgage["Mortgage_Loan_Amt"].str.replace("nan", "")
 # In[14]:
 
 

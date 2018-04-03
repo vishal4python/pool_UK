@@ -1,0 +1,228 @@
+Date,Bank_Native_Country,State,Bank_Name,Ticker,Bank_Local_Currency,Bank_Type,Bank_Product,Bank_Product_Type,Bank_Product_Code,Bank_Product_Name,Minm_Balance,Maxm_Balance,Bank_Offer_Feature,Term_in_Months,Interest_Type,Interest,APY,Source
+ 2018-04-03,US,New York,ALLY,ALLY,USD,Bank,Deposits,Savings,_MSBV,Online Savings,,,Online,,Variable,,1.45%,Bank Website
+ 2018-04-03,US,New York,ALLY,ALLY,USD,Bank,Deposits,Savings,_MSBV,Money Market,,5000,Online,,Variable,,0.90%,Bank Website
+ 2018-04-03,US,New York,ALLY,ALLY,USD,Bank,Deposits,Savings,_MSBV,Money Market,5000,,Online,,Variable,,0.90%,Bank Website
+ 2018-04-03,US,New York,ALLY,ALLY,USD,Bank,Deposits,Savings,_MSBV,Money Market,25000,,Online,,Variable,,1.00%,Bank Website
+ 2018-04-03,US,New York,ALLY,ALLY,USD,Bank,Deposits,CD,6MCDF,High Yield CDs_6 month,,5000,Online,6,Fixed,,1.50%,Bank Website
+ 2018-04-03,US,New York,ALLY,ALLY,USD,Bank,Deposits,CD,12MCDF,High Yield CDs_12 month,,5000,Online,12,Fixed,,1.75%,Bank Website
+ 2018-04-03,US,New York,ALLY,ALLY,USD,Bank,Deposits,CD,36MCDF,High Yield CDs_3 year,,5000,Online,36,Fixed,,1.85%,Bank Website
+ 2018-04-03,US,New York,ALLY,ALLY,USD,Bank,Deposits,CD,6MCDF,High Yield CDs_6 month,5000,24999,Online,6,Fixed,,1.60%,Bank Website
+ 2018-04-03,US,New York,ALLY,ALLY,USD,Bank,Deposits,CD,12MCDF,High Yield CDs_12 month,5000,24999,Online,12,Fixed,,1.85%,Bank Website
+ 2018-04-03,US,New York,ALLY,ALLY,USD,Bank,Deposits,CD,36MCDF,High Yield CDs_3 year,5000,24999,Online,36,Fixed,,2.00%,Bank Website
+ 2018-04-03,US,New York,ALLY,ALLY,USD,Bank,Deposits,CD,6MCDF,High Yield CDs_6 month,25000,,Online,6,Fixed,,1.75%,Bank Website
+ 2018-04-03,US,New York,ALLY,ALLY,USD,Bank,Deposits,CD,12MCDF,High Yield CDs_12 month,25000,,Online,12,Fixed,,2.00%,Bank Website
+ 2018-04-03,US,New York,ALLY,ALLY,USD,Bank,Deposits,CD,36MCDF,High Yield CDs_3 year,25000,,Online,36,Fixed,,2.10%,Bank Website
+ 2018-04-03,US,New York,ALLY,ALLY,USD,Bank,Deposits,Checking,_MCCV,Interest Checking Account,,15000,Online,,Variable,,0.10%,Bank Website
+ 2018-04-03,US,New York,ALLY,ALLY,USD,Bank,Deposits,Checking,_MCCV,Interest Checking Account,15000,,Online,,Variable,,0.60%,Bank Website
+ 2018-04-03,US,New York,BANK OF AMERICA CORP,BAC,USD,Bank,Deposits,Savings,_MSBV,Rewards Savings/Minor Savings,,2500,Offline,,Variable,0.03%,0.03%,Bank Website
+ 2018-04-03,US,New York,BANK OF AMERICA CORP,BAC,USD,Bank,Deposits,Savings,_MSBV,Rewards Savings/Minor Savings,2500,,Offline,,Variable,0.03%,0.03%,Bank Website
+ 2018-04-03,US,New York,BANK OF AMERICA CORP,BAC,USD,Bank,Deposits,Checking,_MCCV,Bank of America Interest Checking,,50000,Offline,,Variable,0.01%,0.01%,Bank Website
+ 2018-04-03,US,New York,BANK OF AMERICA CORP,BAC,USD,Bank,Deposits,Checking,_MCCV,Bank of America Interest Checking,50000,99999,Offline,,Variable,0.02%,0.02%,Bank Website
+ 2018-04-03,US,New York,BANK OF AMERICA CORP,BAC,USD,Bank,Deposits,Checking,_MCCV,Bank of America Interest Checking,100000,,Offline,,Variable,0.02%,0.02%,Bank Website
+ 2018-04-03,US,New York,BANK OF AMERICA CORP,BAC,USD,Bank,Deposits,CD,6MCDF,06 - 11 Months,,10000,Offline,6,Fixed,0.03%,0.03%,Bank Website
+ 2018-04-03,US,New York,BANK OF AMERICA CORP,BAC,USD,Bank,Deposits,CD,12MCDF,12 - 17 Months,,10000,Offline,12,Fixed,0.05%,0.05%,Bank Website
+ 2018-04-03,US,New York,BANK OF AMERICA CORP,BAC,USD,Bank,Deposits,CD,36MCDF,36 - 47 Months,,10000,Offline,36,Fixed,0.55%,0.55%,Bank Website
+ 2018-04-03,US,New York,CAPITAL ONE,COF,USD,Bank,Deposits,Savings,_MSBV,360 Money Market,,10000,Online,,Variable,0.85%,0.85%,Bank Website
+ 2018-04-03,US,New York,CAPITAL ONE,COF,USD,Bank,Deposits,Savings,_MSBV,360 Money Market,10000,,Online,,Variable,1.49%,1.50%,Bank Website
+ 2018-04-03,US,New York,CAPITAL ONE,COF,USD,Bank,Deposits,Savings,_MSBV,360 Savings,0,,Online,,Variable,1.00%,1.00%,Bank Website
+ 2018-04-03,US,New York,CAPITAL ONE,COF,USD,Bank,Deposits,Savings,_MSBV,360 IRA Savings Traditional,0,,Online,,Variable,1.00%,1.00%,Bank Website
+ 2018-04-03,US,New York,CAPITAL ONE,COF,USD,Bank,Deposits,CD,6MCDF,360 CDs 6 months,0,1000000,Online,6,Fixed,0.40%,0.40%,Bank Website
+ 2018-04-03,US,New York,CAPITAL ONE,COF,USD,Bank,Deposits,CD,12MCDF,360 CDs 12 months,,,Online,12,Fixed,2.03%,2.05%,Bank Website
+ 2018-04-03,US,New York,CAPITAL ONE,COF,USD,Bank,Deposits,CD,36MCDF,360 CDs 36 months,,,Online,36,Fixed,2.28%,2.30%,Bank Website
+ 2018-04-03,US,New York,CITIGROUP INC,C,USD,Bank,Deposits,Checking,_MCCV,Interest Checking Account,,25000,Offline,,Variable,0.01%,0.01%,Bank Website
+ 2018-04-03,US,New York,CITIGROUP INC,C,USD,Bank,Deposits,Checking,_MCCV,Interest Checking Account,25000,49999,Offline,,Variable,0.01%,0.01%,Bank Website
+ 2018-04-03,US,New York,CITIGROUP INC,C,USD,Bank,Deposits,Checking,_MCCV,Interest Checking Account,50000,,Offline,,Variable,0.01%,0.01%,Bank Website
+ 2018-04-03,US,New York,CITIGROUP INC,C,USD,Bank,Deposits,Savings,_MSBV,Citibank Account Package1,,10000,Offline,,Variable,0.04%,0.04%,Bank Website
+ 2018-04-03,US,New York,CITIGROUP INC,C,USD,Bank,Deposits,Savings,_MSBV,Citibank Account Package1,10000,24999,Offline,,Variable,0.04%,0.04%,Bank Website
+ 2018-04-03,US,New York,CITIGROUP INC,C,USD,Bank,Deposits,Savings,_MSBV,Citibank Account Package1,25000,49999,Offline,,Variable,0.08%,0.08%,Bank Website
+ 2018-04-03,US,New York,CITIGROUP INC,C,USD,Bank,Deposits,Savings,_MSBV,Citibank Account Package1,50000,99999,Offline,,Variable,0.08%,0.08%,Bank Website
+ 2018-04-03,US,New York,CITIGROUP INC,C,USD,Bank,Deposits,Savings,_MSBV,Citibank Account Package1,100000,499999,Offline,,Variable,0.10%,0.10%,Bank Website
+ 2018-04-03,US,New York,CITIGROUP INC,C,USD,Bank,Deposits,Savings,_MSBV,Citibank Account Package1,500000,999999,Offline,,Variable,0.13%,0.13%,Bank Website
+ 2018-04-03,US,New York,CITIGROUP INC,C,USD,Bank,Deposits,Savings,_MSBV,Citibank Account Package1,1000000,,Offline,,Variable,0.13%,0.13%,Bank Website
+ 2018-04-03,US,New York,CITIGROUP INC,C,USD,Bank,Deposits,Savings,_MSBV,Basic Banking Package,,10000,Offline,,Variable,0.04%,0.04%,Bank Website
+ 2018-04-03,US,New York,CITIGROUP INC,C,USD,Bank,Deposits,Savings,_MSBV,Basic Banking Package,10000,24999,Offline,,Variable,0.04%,0.04%,Bank Website
+ 2018-04-03,US,New York,CITIGROUP INC,C,USD,Bank,Deposits,Savings,_MSBV,Basic Banking Package,25000,49999,Offline,,Variable,0.06%,0.06%,Bank Website
+ 2018-04-03,US,New York,CITIGROUP INC,C,USD,Bank,Deposits,Savings,_MSBV,Basic Banking Package,50000,99999,Offline,,Variable,0.06%,0.06%,Bank Website
+ 2018-04-03,US,New York,CITIGROUP INC,C,USD,Bank,Deposits,Savings,_MSBV,Basic Banking Package,100000,499999,Offline,,Variable,0.06%,0.06%,Bank Website
+ 2018-04-03,US,New York,CITIGROUP INC,C,USD,Bank,Deposits,Savings,_MSBV,Basic Banking Package,500000,999999,Offline,,Variable,0.06%,0.06%,Bank Website
+ 2018-04-03,US,New York,CITIGROUP INC,C,USD,Bank,Deposits,Savings,_MSBV,Basic Banking Package,1000000,,Offline,,Variable,0.06%,0.06%,Bank Website
+ 2018-04-03,US,New York,CITIGROUP INC,C,USD,Bank,Deposits,Savings,_MSBV,Access Account Package,,10000,Offline,,Variable,0.04%,0.04%,Bank Website
+ 2018-04-03,US,New York,CITIGROUP INC,C,USD,Bank,Deposits,Savings,_MSBV,Access Account Package,10000,24999,Offline,,Variable,0.04%,0.04%,Bank Website
+ 2018-04-03,US,New York,CITIGROUP INC,C,USD,Bank,Deposits,Savings,_MSBV,Access Account Package,25000,49999,Offline,,Variable,0.06%,0.06%,Bank Website
+ 2018-04-03,US,New York,CITIGROUP INC,C,USD,Bank,Deposits,Savings,_MSBV,Access Account Package,50000,99999,Offline,,Variable,0.06%,0.06%,Bank Website
+ 2018-04-03,US,New York,CITIGROUP INC,C,USD,Bank,Deposits,Savings,_MSBV,Access Account Package,100000,499999,Offline,,Variable,0.06%,0.06%,Bank Website
+ 2018-04-03,US,New York,CITIGROUP INC,C,USD,Bank,Deposits,Savings,_MSBV,Access Account Package,500000,999999,Offline,,Variable,0.06%,0.06%,Bank Website
+ 2018-04-03,US,New York,CITIGROUP INC,C,USD,Bank,Deposits,Savings,_MSBV,Access Account Package,1000000,,Offline,,Variable,0.06%,0.06%,Bank Website
+ 2018-04-03,US,New York,CITIGROUP INC,C,USD,Bank,Deposits,CD,6MCDF,6 months,,10000,Offline,6,Fixed,0.07%,0.07%,Bank Website
+ 2018-04-03,US,New York,CITIGROUP INC,C,USD,Bank,Deposits,CD,6MCDF,6 months,10000,24999,Offline,6,Fixed,0.07%,0.07%,Bank Website
+ 2018-04-03,US,New York,CITIGROUP INC,C,USD,Bank,Deposits,CD,6MCDF,6 months,25000,49999,Offline,6,Fixed,0.07%,0.07%,Bank Website
+ 2018-04-03,US,New York,CITIGROUP INC,C,USD,Bank,Deposits,CD,6MCDF,6 months,50000,99999,Offline,6,Fixed,0.07%,0.07%,Bank Website
+ 2018-04-03,US,New York,CITIGROUP INC,C,USD,Bank,Deposits,CD,6MCDF,6 months,100000,499999,Offline,6,Fixed,0.07%,0.07%,Bank Website
+ 2018-04-03,US,New York,CITIGROUP INC,C,USD,Bank,Deposits,CD,6MCDF,6 months,500000,999999,Offline,6,Fixed,0.07%,0.07%,Bank Website
+ 2018-04-03,US,New York,CITIGROUP INC,C,USD,Bank,Deposits,CD,6MCDF,6 months,1000000,,Offline,6,Fixed,0.07%,0.07%,Bank Website
+ 2018-04-03,US,New York,CITIGROUP INC,C,USD,Bank,Deposits,CD,12MCDF,1 year,,10000,Offline,12,Fixed,0.25%,0.25%,Bank Website
+ 2018-04-03,US,New York,CITIGROUP INC,C,USD,Bank,Deposits,CD,12MCDF,1 year,10000,24999,Offline,12,Fixed,0.25%,0.25%,Bank Website
+ 2018-04-03,US,New York,CITIGROUP INC,C,USD,Bank,Deposits,CD,12MCDF,1 year,25000,49999,Offline,12,Fixed,0.25%,0.25%,Bank Website
+ 2018-04-03,US,New York,CITIGROUP INC,C,USD,Bank,Deposits,CD,12MCDF,1 year,50000,99999,Offline,12,Fixed,0.25%,0.25%,Bank Website
+ 2018-04-03,US,New York,CITIGROUP INC,C,USD,Bank,Deposits,CD,12MCDF,1 year,100000,499999,Offline,12,Fixed,0.25%,0.25%,Bank Website
+ 2018-04-03,US,New York,CITIGROUP INC,C,USD,Bank,Deposits,CD,12MCDF,1 year,500000,999999,Offline,12,Fixed,0.25%,0.25%,Bank Website
+ 2018-04-03,US,New York,CITIGROUP INC,C,USD,Bank,Deposits,CD,12MCDF,1 year,1000000,,Offline,12,Fixed,0.25%,0.25%,Bank Website
+ 2018-04-03,US,New York,CITIGROUP INC,C,USD,Bank,Deposits,CD,36MCDF,3 years,,10000,Offline,36,Fixed,0.70%,0.70%,Bank Website
+ 2018-04-03,US,New York,CITIGROUP INC,C,USD,Bank,Deposits,CD,36MCDF,3 years,10000,24999,Offline,36,Fixed,0.70%,0.70%,Bank Website
+ 2018-04-03,US,New York,CITIGROUP INC,C,USD,Bank,Deposits,CD,36MCDF,3 years,25000,49999,Offline,36,Fixed,0.70%,0.70%,Bank Website
+ 2018-04-03,US,New York,CITIGROUP INC,C,USD,Bank,Deposits,CD,36MCDF,3 years,50000,99999,Offline,36,Fixed,0.70%,0.70%,Bank Website
+ 2018-04-03,US,New York,CITIGROUP INC,C,USD,Bank,Deposits,CD,36MCDF,3 years,100000,499999,Offline,36,Fixed,0.70%,0.70%,Bank Website
+ 2018-04-03,US,New York,CITIGROUP INC,C,USD,Bank,Deposits,CD,36MCDF,3 years,500000,999999,Offline,36,Fixed,0.70%,0.70%,Bank Website
+ 2018-04-03,US,New York,CITIGROUP INC,C,USD,Bank,Deposits,CD,36MCDF,3 years,1000000,,Offline,36,Fixed,0.70%,0.70%,Bank Website
+ 2018-04-03,US,New York,JP MORGAN CHASE & Co.,JPM,USD,Bank,Deposits,Checking,_MCCV,Chase Premier Plus Checking SM,0,4999,Offline,,Variable,0.01%,0.01%,Bank Website
+ 2018-04-03,US,New York,JP MORGAN CHASE & Co.,JPM,USD,Bank,Deposits,Checking,_MCCV,Chase Premier Plus Checking SM,5000,9999,Offline,,Variable,0.01%,0.01%,Bank Website
+ 2018-04-03,US,New York,JP MORGAN CHASE & Co.,JPM,USD,Bank,Deposits,Checking,_MCCV,Chase Premier Plus Checking SM,10000,24999,Offline,,Variable,0.01%,0.01%,Bank Website
+ 2018-04-03,US,New York,JP MORGAN CHASE & Co.,JPM,USD,Bank,Deposits,Checking,_MCCV,Chase Premier Plus Checking SM,25000,,Offline,,Variable,0.01%,0.01%,Bank Website
+ 2018-04-03,US,New York,JP MORGAN CHASE & Co.,JPM,USD,Bank,Deposits,Savings,_MSBV,Chase Savings SM,,,Offline,,Variable,0.01%,0.01%,Bank Website
+ 2018-04-03,US,New York,PNC FINANCIAL SERVICES GROUP INC,PNC,USD,Bank,Deposits,Checking,_MCCV,Performance Interest Checking,10000,49999,offline,,Variable,0.01%,0.01%,Bank Website
+ 2018-04-03,US,New York,PNC FINANCIAL SERVICES GROUP INC,PNC,USD,Bank,Deposits,Checking,_MCCV,Performance Interest Checking,50000,99999,offline,,Variable,0.01%,0.01%,Bank Website
+ 2018-04-03,US,New York,PNC FINANCIAL SERVICES GROUP INC,PNC,USD,Bank,Deposits,Checking,_MCCV,Performance Interest Checking,100000,,offline,,Variable,0.01%,0.01%,Bank Website
+ 2018-04-03,US,New York,PNC FINANCIAL SERVICES GROUP INC,PNC,USD,Bank,Deposits,Checking,_MCCV,Performance Select Interest Checking,2000,9999,offline,,Variable,0.01%,0.01%,Bank Website
+ 2018-04-03,US,New York,PNC FINANCIAL SERVICES GROUP INC,PNC,USD,Bank,Deposits,Checking,_MCCV,Performance Select Interest Checking,10000,49999,offline,,Variable,0.01%,0.01%,Bank Website
+ 2018-04-03,US,New York,PNC FINANCIAL SERVICES GROUP INC,PNC,USD,Bank,Deposits,Checking,_MCCV,Performance Select Interest Checking,50000,99999,offline,,Variable,0.01%,0.01%,Bank Website
+ 2018-04-03,US,New York,PNC FINANCIAL SERVICES GROUP INC,PNC,USD,Bank,Deposits,Checking,_MCCV,Performance Select Interest Checking,100000,,offline,,Variable,0.01%,0.01%,Bank Website
+ 2018-04-03,US,New York,PNC FINANCIAL SERVICES GROUP INC,PNC,USD,Bank,Deposits,Savings,_MSBV,Standard Rates,1,2499,offline,,Variable,0.01%,0.01%,Bank Website
+ 2018-04-03,US,New York,PNC FINANCIAL SERVICES GROUP INC,PNC,USD,Bank,Deposits,Savings,_MSBV,Standard Rates,2500,,offline,,Variable,0.01%,0.01%,Bank Website
+ 2018-04-03,US,New York,PNC FINANCIAL SERVICES GROUP INC,PNC,USD,Bank,Deposits,Savings,_MSBV,'S' is for Savings,1,499,offline,,Variable,0.01%,0.01%,Bank Website
+ 2018-04-03,US,New York,PNC FINANCIAL SERVICES GROUP INC,PNC,USD,Bank,Deposits,Savings,_MSBV,'S' is for Savings,500,1499,offline,,Variable,0.01%,0.01%,Bank Website
+ 2018-04-03,US,New York,PNC FINANCIAL SERVICES GROUP INC,PNC,USD,Bank,Deposits,Savings,_MSBV,'S' is for Savings,1500,,offline,,Variable,0.01%,0.01%,Bank Website
+ 2018-04-03,US,New York,PNC FINANCIAL SERVICES GROUP INC,PNC,USD,Bank,Deposits,Savings,_MSBV,Premiere Money Market Account,1,9999,offline,,Variable,0.03%,0.03%,Bank Website
+ 2018-04-03,US,New York,PNC FINANCIAL SERVICES GROUP INC,PNC,USD,Bank,Deposits,Savings,_MSBV,Premiere Money Market Account,10000,24999,offline,,Variable,0.09%,0.09%,Bank Website
+ 2018-04-03,US,New York,PNC FINANCIAL SERVICES GROUP INC,PNC,USD,Bank,Deposits,Savings,_MSBV,Premiere Money Market Account,25000,49999,offline,,Variable,0.11%,0.11%,Bank Website
+ 2018-04-03,US,New York,PNC FINANCIAL SERVICES GROUP INC,PNC,USD,Bank,Deposits,Savings,_MSBV,Premiere Money Market Account,50000,99999,offline,,Variable,0.13%,0.13%,Bank Website
+ 2018-04-03,US,New York,PNC FINANCIAL SERVICES GROUP INC,PNC,USD,Bank,Deposits,Savings,_MSBV,Premiere Money Market Account,100000,249999,offline,,Variable,0.15%,0.15%,Bank Website
+ 2018-04-03,US,New York,PNC FINANCIAL SERVICES GROUP INC,PNC,USD,Bank,Deposits,Savings,_MSBV,Premiere Money Market Account,250000,499999,offline,,Variable,0.15%,0.15%,Bank Website
+ 2018-04-03,US,New York,PNC FINANCIAL SERVICES GROUP INC,PNC,USD,Bank,Deposits,Savings,_MSBV,Premiere Money Market Account,500000,999999,offline,,Variable,0.17%,0.17%,Bank Website
+ 2018-04-03,US,New York,PNC FINANCIAL SERVICES GROUP INC,PNC,USD,Bank,Deposits,Savings,_MSBV,Premiere Money Market Account,1000000,,offline,,Variable,0.17%,0.17%,Bank Website
+ 2018-04-03,US,New York,PNC FINANCIAL SERVICES GROUP INC,PNC,USD,Bank,Deposits,CD,6MCDF,Fixed Rate Certificate of Deposit,1,999,offline,6,Fixed,0.04%,0.04%,Bank Website
+ 2018-04-03,US,New York,PNC FINANCIAL SERVICES GROUP INC,PNC,USD,Bank,Deposits,CD,6MCDF,Fixed Rate Certificate of Deposit,1000,9999,offline,6,Fixed,0.06%,0.06%,Bank Website
+ 2018-04-03,US,New York,PNC FINANCIAL SERVICES GROUP INC,PNC,USD,Bank,Deposits,CD,6MCDF,Fixed Rate Certificate of Deposit,10000,24999,offline,6,Fixed,0.08%,0.08%,Bank Website
+ 2018-04-03,US,New York,PNC FINANCIAL SERVICES GROUP INC,PNC,USD,Bank,Deposits,CD,6MCDF,Fixed Rate Certificate of Deposit,25000,99999,offline,6,Fixed,0.10%,0.10%,Bank Website
+ 2018-04-03,US,New York,PNC FINANCIAL SERVICES GROUP INC,PNC,USD,Bank,Deposits,CD,6MCDF,Fixed Rate Certificate of Deposit,100000,499999,offline,6,Fixed,0.12%,0.12%,Bank Website
+ 2018-04-03,US,New York,PNC FINANCIAL SERVICES GROUP INC,PNC,USD,Bank,Deposits,CD,6MCDF,Fixed Rate Certificate of Deposit,500000,,offline,6,Fixed,0.14%,0.14%,Bank Website
+ 2018-04-03,US,New York,PNC FINANCIAL SERVICES GROUP INC,PNC,USD,Bank,Deposits,CD,12MCDF,Fixed Rate Certificate of Deposit,1,999,offline,12,Fixed,0.04%,0.04%,Bank Website
+ 2018-04-03,US,New York,PNC FINANCIAL SERVICES GROUP INC,PNC,USD,Bank,Deposits,CD,12MCDF,Fixed Rate Certificate of Deposit,1000,9999,offline,12,Fixed,0.15%,0.15%,Bank Website
+ 2018-04-03,US,New York,PNC FINANCIAL SERVICES GROUP INC,PNC,USD,Bank,Deposits,CD,12MCDF,Fixed Rate Certificate of Deposit,10000,24999,offline,12,Fixed,0.18%,0.18%,Bank Website
+ 2018-04-03,US,New York,PNC FINANCIAL SERVICES GROUP INC,PNC,USD,Bank,Deposits,CD,12MCDF,Fixed Rate Certificate of Deposit,25000,99999,offline,12,Fixed,0.20%,0.20%,Bank Website
+ 2018-04-03,US,New York,PNC FINANCIAL SERVICES GROUP INC,PNC,USD,Bank,Deposits,CD,12MCDF,Fixed Rate Certificate of Deposit,100000,499999,offline,12,Fixed,0.22%,0.22%,Bank Website
+ 2018-04-03,US,New York,PNC FINANCIAL SERVICES GROUP INC,PNC,USD,Bank,Deposits,CD,12MCDF,Fixed Rate Certificate of Deposit,500000,,offline,12,Fixed,0.24%,0.24%,Bank Website
+ 2018-04-03,US,New York,PNC FINANCIAL SERVICES GROUP INC,PNC,USD,Bank,Deposits,CD,36MCDF,Fixed Rate Certificate of Deposit,1,999,offline,36,Fixed,0.04%,0.04%,Bank Website
+ 2018-04-03,US,New York,PNC FINANCIAL SERVICES GROUP INC,PNC,USD,Bank,Deposits,CD,36MCDF,Fixed Rate Certificate of Deposit,1000,9999,offline,36,Fixed,0.30%,0.30%,Bank Website
+ 2018-04-03,US,New York,PNC FINANCIAL SERVICES GROUP INC,PNC,USD,Bank,Deposits,CD,36MCDF,Fixed Rate Certificate of Deposit,10000,24999,offline,36,Fixed,0.35%,0.35%,Bank Website
+ 2018-04-03,US,New York,PNC FINANCIAL SERVICES GROUP INC,PNC,USD,Bank,Deposits,CD,36MCDF,Fixed Rate Certificate of Deposit,25000,99999,offline,36,Fixed,0.40%,0.40%,Bank Website
+ 2018-04-03,US,New York,PNC FINANCIAL SERVICES GROUP INC,PNC,USD,Bank,Deposits,CD,36MCDF,Fixed Rate Certificate of Deposit,100000,499999,offline,36,Fixed,0.45%,0.45%,Bank Website
+ 2018-04-03,US,New York,PNC FINANCIAL SERVICES GROUP INC,PNC,USD,Bank,Deposits,CD,36MCDF,Fixed Rate Certificate of Deposit,500000,,offline,36,Fixed,0.50%,0.50%,Bank Website
+ 2018-04-03,US,New York,PNC FINANCIAL SERVICES GROUP INC,PNC,USD,Bank,Deposits,CD,12MCDF,Ready Access Certificate of Deposit,1000,,offline,12,Fixed,0.15%,0.15%,Bank Website
+ 2018-04-03,US,New York,SUNTRUST BANKS INC,STI,USD,Bank,Deposits,Savings,_MSBV,Essential Savings,0,,Offline,,Variable,,,Bank Website
+ 2018-04-03,US,New York,SUNTRUST BANKS INC,STI,USD,Bank,Deposits,Savings,_MSBV,Select Savings,1000,,Offline,,Variable,0.01%,0.01%,Bank Website
+ 2018-04-03,US,New York,SUNTRUST BANKS INC,STI,USD,Bank,Deposits,Savings,_MSBV,Select Savings,,2499,Offline,,Variable,,,Bank Website
+ 2018-04-03,US,New York,SUNTRUST BANKS INC,STI,USD,Bank,Deposits,Savings,_MSBV,Select Savings,2500,9999,Offline,,Variable,,,Bank Website
+ 2018-04-03,US,New York,SUNTRUST BANKS INC,STI,USD,Bank,Deposits,Savings,_MSBV,Select Savings,10000,24999,Offline,,Variable,,,Bank Website
+ 2018-04-03,US,New York,SUNTRUST BANKS INC,STI,USD,Bank,Deposits,Savings,_MSBV,Select Savings,25000,49999,Offline,,Variable,,,Bank Website
+ 2018-04-03,US,New York,SUNTRUST BANKS INC,STI,USD,Bank,Deposits,Savings,_MSBV,Select Savings,50000,99999,Offline,,Variable,,,Bank Website
+ 2018-04-03,US,New York,SUNTRUST BANKS INC,STI,USD,Bank,Deposits,Savings,_MSBV,Select Savings,100000,249999,Offline,,Variable,,,Bank Website
+ 2018-04-03,US,New York,SUNTRUST BANKS INC,STI,USD,Bank,Deposits,Savings,_MSBV,Select Savings,250000,499999,Offline,,Variable,,,Bank Website
+ 2018-04-03,US,New York,SUNTRUST BANKS INC,STI,USD,Bank,Deposits,Savings,_MSBV,Select Savings,500000,999999,Offline,,Variable,,,Bank Website
+ 2018-04-03,US,New York,SUNTRUST BANKS INC,STI,USD,Bank,Deposits,Savings,_MSBV,Select Savings,1,,Offline,,Variable,,,Bank Website
+ 2018-04-03,US,New York,SUNTRUST BANKS INC,STI,USD,Bank,Deposits,Savings,_MSBV,Balanced Banking,3000,,Offline,,Variable,,,Bank Website
+ 2018-04-03,US,New York,SUNTRUST BANKS INC,STI,USD,Bank,Deposits,Checking,_MCCV,Essential Checking,500,,Offline,,Variable,,,Bank Website
+ 2018-04-03,US,New York,SUNTRUST BANKS INC,STI,USD,Bank,Deposits,Checking,_MCCV,Select Checking,,2499,Offline,,Variable,,0.01%,Bank Website
+ 2018-04-03,US,New York,SUNTRUST BANKS INC,STI,USD,Bank,Deposits,Checking,_MCCV,Select Checking,2500,9999,Offline,,Variable,,0.01%,Bank Website
+ 2018-04-03,US,New York,SUNTRUST BANKS INC,STI,USD,Bank,Deposits,Checking,_MCCV,Select Checking,10000,24999,Offline,,Variable,,0.01%,Bank Website
+ 2018-04-03,US,New York,SUNTRUST BANKS INC,STI,USD,Bank,Deposits,Checking,_MCCV,Select Checking,25000,,Offline,,Variable,,0.01%,Bank Website
+ 2018-04-03,US,New York,SUNTRUST BANKS INC,STI,USD,Bank,Deposits,Checking,_MCCV,Signature Advantage Checking,,9999,Offline,,Variable,,0.01%,Bank Website
+ 2018-04-03,US,New York,SUNTRUST BANKS INC,STI,USD,Bank,Deposits,Checking,_MCCV,Signature Advantage Checking,10000,24999,Offline,,Variable,,0.01%,Bank Website
+ 2018-04-03,US,New York,SUNTRUST BANKS INC,STI,USD,Bank,Deposits,Checking,_MCCV,Signature Advantage Checking,25000,49999,Offline,,Variable,,0.01%,Bank Website
+ 2018-04-03,US,New York,SUNTRUST BANKS INC,STI,USD,Bank,Deposits,Checking,_MCCV,Signature Advantage Checking,50000,99999,Offline,,Variable,,0.01%,Bank Website
+ 2018-04-03,US,New York,SUNTRUST BANKS INC,STI,USD,Bank,Deposits,Checking,_MCCV,Signature Advantage Checking,100000,249999,Offline,,Variable,,0.01%,Bank Website
+ 2018-04-03,US,New York,SUNTRUST BANKS INC,STI,USD,Bank,Deposits,Checking,_MCCV,Signature Advantage Checking,250000,499999,Offline,,Variable,,0.01%,Bank Website
+ 2018-04-03,US,New York,SUNTRUST BANKS INC,STI,USD,Bank,Deposits,Checking,_MCCV,Signature Advantage Checking,500000,999999,Offline,,Variable,,0.01%,Bank Website
+ 2018-04-03,US,New York,SUNTRUST BANKS INC,STI,USD,Bank,Deposits,Checking,_MCCV,Signature Advantage Checking,1000000,1999999,Offline,,Variable,,0.01%,Bank Website
+ 2018-04-03,US,New York,SUNTRUST BANKS INC,STI,USD,Bank,Deposits,Checking,_MCCV,Signature Advantage Checking,2000000,,Offline,,Variable,,0.01%,Bank Website
+ 2018-04-03,US,New York,SUNTRUST BANKS INC,STI,USD,Bank,Deposits,Savings,_MSBV,Signature Advantage Brokerage,,9999,Offline,,Variable,,0.01%,Bank Website
+ 2018-04-03,US,New York,SUNTRUST BANKS INC,STI,USD,Bank,Deposits,Savings,_MSBV,Signature Advantage Brokerage,10000,24999,Offline,,Variable,,0.03%,Bank Website
+ 2018-04-03,US,New York,SUNTRUST BANKS INC,STI,USD,Bank,Deposits,Savings,_MSBV,Signature Advantage Brokerage,25000,49999,Offline,,Variable,,0.05%,Bank Website
+ 2018-04-03,US,New York,SUNTRUST BANKS INC,STI,USD,Bank,Deposits,Savings,_MSBV,Signature Advantage Brokerage,50000,99999,Offline,,Variable,,0.05%,Bank Website
+ 2018-04-03,US,New York,SUNTRUST BANKS INC,STI,USD,Bank,Deposits,Savings,_MSBV,Signature Advantage Brokerage,100000,249999,Offline,,Variable,,0.05%,Bank Website
+ 2018-04-03,US,New York,SUNTRUST BANKS INC,STI,USD,Bank,Deposits,Savings,_MSBV,Signature Advantage Brokerage,250000,499999,Offline,,Variable,,0.05%,Bank Website
+ 2018-04-03,US,New York,SUNTRUST BANKS INC,STI,USD,Bank,Deposits,Savings,_MSBV,Signature Advantage Brokerage,500000,999999,Offline,,Variable,,0.05%,Bank Website
+ 2018-04-03,US,New York,SUNTRUST BANKS INC,STI,USD,Bank,Deposits,Savings,_MSBV,Signature Advantage Brokerage,1000000,1999999,Offline,,Variable,,0.05%,Bank Website
+ 2018-04-03,US,New York,SUNTRUST BANKS INC,STI,USD,Bank,Deposits,Savings,_MSBV,Signature Advantage Brokerage,2000000,,Offline,,Variable,,0.05%,Bank Website
+ 2018-04-03,US,New York,SYNCHRONY,SYF,USD,Bank,Deposits,CD,6MCDF,CD_6-month,2000,,Online,6,Fixed,,1.00%,Bank Website
+ 2018-04-03,US,New York,SYNCHRONY,SYF,USD,Bank,Deposits,CD,12MCDF,CD_12-month,2000,,Online,12,Fixed,,2.05%,Bank Website
+ 2018-04-03,US,New York,SYNCHRONY,SYF,USD,Bank,Deposits,CD,36MCDF,CD_36-month,2000,,Online,36,Fixed,,2.25%,Bank Website
+ 2018-04-03,US,New York,SYNCHRONY,SYF,USD,Bank,Deposits,Savings,_MSBV,Money Market Rates and Terms,,4999,Online,,Variable,,1.05%,Bank Website
+ 2018-04-03,US,New York,SYNCHRONY,SYF,USD,Bank,Deposits,Savings,_MSBV,Money Market Rates and Terms,5000,24999,Online,,Variable,,1.05%,Bank Website
+ 2018-04-03,US,New York,SYNCHRONY,SYF,USD,Bank,Deposits,Savings,_MSBV,Money Market Rates and Terms,25000,,Online,,Variable,,1.05%,Bank Website
+ 2018-04-03,US,New York,SYNCHRONY,SYF,USD,Bank,Deposits,Savings,_MSBV,HYS Rates and Terms,,4999,Online,,Variable,,1.55%,Bank Website
+ 2018-04-03,US,New York,SYNCHRONY,SYF,USD,Bank,Deposits,Savings,_MSBV,HYS Rates and Terms,5000,24999,Online,,Variable,,1.55%,Bank Website
+ 2018-04-03,US,New York,SYNCHRONY,SYF,USD,Bank,Deposits,Savings,_MSBV,HYS Rates and Terms,25000,,Online,,Variable,,1.55%,Bank Website
+ 2018-04-03,US,New York,WELLS FARGO,WFC,USD,Bank,Deposits,Checking,_MCCV,Wells Fargo Everyday Checking,,,Offline,,Variable,,,Bank Website
+ 2018-04-03,US,New York,WELLS FARGO,WFC,USD,Bank,Deposits,Savings,_MSBV,Wells Fargo Way2Save,0,,Offline,,Variable,0.01%,0.01%,Bank Website
+ 2018-04-03,US,New York,WELLS FARGO,WFC,USD,Bank,Deposits,Savings,_MSBV,Platinum Savings - Standard Interest,0,99999,Offline,,Variable,0.03%,0.03%,Bank Website
+ 2018-04-03,US,New York,WELLS FARGO,WFC,USD,Bank,Deposits,Savings,_MSBV,Platinum Savings - Standard Interest,100000,,Offline,,Variable,0.05%,0.05%,Bank Website
+ 2018-04-03,US,New York,WELLS FARGO,WFC,USD,Bank,Deposits,CD,6MCDF,CD,0,4999,Offline,6,Fixed,0.05%,0.05%,Bank Website
+ 2018-04-03,US,New York,WELLS FARGO,WFC,USD,Bank,Deposits,CD,6MCDF,CD,5000,9999,Offline,6,Fixed,0.05%,0.05%,Bank Website
+ 2018-04-03,US,New York,WELLS FARGO,WFC,USD,Bank,Deposits,CD,6MCDF,CD,10000,24999,Offline,6,Fixed,0.05%,0.05%,Bank Website
+ 2018-04-03,US,New York,WELLS FARGO,WFC,USD,Bank,Deposits,CD,6MCDF,CD,25000,49999,Offline,6,Fixed,0.05%,0.05%,Bank Website
+ 2018-04-03,US,New York,WELLS FARGO,WFC,USD,Bank,Deposits,CD,6MCDF,CD,50000,99999,Offline,6,Fixed,0.05%,0.05%,Bank Website
+ 2018-04-03,US,New York,WELLS FARGO,WFC,USD,Bank,Deposits,CD,6MCDF,CD,100000,,Offline,6,Fixed,0.05%,0.05%,Bank Website
+ 2018-04-03,US,New York,WELLS FARGO,WFC,USD,Bank,Deposits,CD,12MCDF,CD,0,4999,Offline,12,Fixed,0.10%,0.10%,Bank Website
+ 2018-04-03,US,New York,WELLS FARGO,WFC,USD,Bank,Deposits,CD,12MCDF,CD,5000,9999,Offline,12,Fixed,0.10%,0.10%,Bank Website
+ 2018-04-03,US,New York,WELLS FARGO,WFC,USD,Bank,Deposits,CD,12MCDF,CD,10000,24999,Offline,12,Fixed,0.10%,0.10%,Bank Website
+ 2018-04-03,US,New York,WELLS FARGO,WFC,USD,Bank,Deposits,CD,12MCDF,CD,25000,49999,Offline,12,Fixed,0.10%,0.10%,Bank Website
+ 2018-04-03,US,New York,WELLS FARGO,WFC,USD,Bank,Deposits,CD,12MCDF,CD,50000,99999,Offline,12,Fixed,0.10%,0.10%,Bank Website
+ 2018-04-03,US,New York,WELLS FARGO,WFC,USD,Bank,Deposits,CD,12MCDF,CD,100000,,Offline,12,Fixed,0.10%,0.10%,Bank Website
+ 2018-04-03,US,New York,ALLY,ALLY,USD,Bank,Deposits,Savings,_MSBV,Savings,0,,Online,,Fixed,,1.45%,bankrate.com
+ 2018-04-03,US,New York,ALLY,ALLY,USD,Bank,Deposits,CD,36MCDF,CD,"25,000",,Online,36,Fixed,,2.10%,bankrate.com
+ 2018-04-03,US,New York,BANK OF AMERICA CORP,BAC,USD,Bank,Deposits,Savings,_MSBV,Savings,100,,Offline,,Fixed,,0.03%,bankrate.com
+ 2018-04-03,US,New York,BANK OF AMERICA CORP,BAC,USD,Bank,Deposits,CD,36MCDF,CD,"1,000",,Offline,36,Fixed,,0.55%,bankrate.com
+ 2018-04-03,US,New York,BANK OF AMERICA CORP,BAC,USD,Bank,Deposits,CD,12MCDF,CD,"1,000",,Offline,12,Fixed,,0.05%,bankrate.com
+ 2018-04-03,US,New York,BANK OF AMERICA CORP,BAC,USD,Bank,Deposits,Checking,_MCCV,Checkings,,,Offline,,Fixed,,0.01%,bankrate.com
+ 2018-04-03,US,New York,CAPITAL ONE,COF,USD,Bank,Deposits,CD,36MCDF,CD,0,,Online,36,Fixed,,2.30%,bankrate.com
+ 2018-04-03,US,New York,CAPITAL ONE,COF,USD,Bank,Deposits,CD,12MCDF,CD,0,,Online,12,Fixed,,2.05%,bankrate.com
+ 2018-04-03,US,New York,CITIGROUP INC,C,USD,Bank,Deposits,Savings,_MSBV,Moneymarket,100,,Offline,,Fixed,,0.04%,bankrate.com
+ 2018-04-03,US,New York,CITIGROUP INC,C,USD,Bank,Deposits,CD,36MCDF,CD,500,,Offline,36,Fixed,,0.70%,bankrate.com
+ 2018-04-03,US,New York,CITIGROUP INC,C,USD,Bank,Deposits,CD,12MCDF,CD,500,,Offline,12,Fixed,,0.25%,bankrate.com
+ 2018-04-03,US,New York,CITIGROUP INC,C,USD,Bank,Deposits,CD,6MCDF,CD,500,,Offline,6,Fixed,,0.07%,bankrate.com
+ 2018-04-03,US,New York,CITIGROUP INC,C,USD,Bank,Deposits,Checking,_MCCV,Checkings,,,Offline,,Fixed,,0.01%,bankrate.com
+ 2018-04-03,US,New York,JP MORGAN CHASE & Co.,JPM,USD,Bank,Deposits,Savings,_MSBV,Savings,25,,Offline,,Fixed,,0.01%,bankrate.com
+ 2018-04-03,US,New York,JP MORGAN CHASE & Co.,JPM,USD,Bank,Deposits,Checking,_MCCV,Checkings,,,Offline,,Fixed,,0.01%,bankrate.com
+ 2018-04-03,US,New York,SYNCHRONY,SYF,USD,Bank,Deposits,Savings,_MSBV,Savings,0,,Online,,Fixed,,1.55%,bankrate.com
+ 2018-04-03,US,New York,SYNCHRONY,SYF,USD,Bank,Deposits,CD,36MCDF,CD,"2,000",,Online,36,Fixed,,2.25%,bankrate.com
+ 2018-04-03,US,New York,SYNCHRONY,SYF,USD,Bank,Deposits,CD,12MCDF,CD,"2,000",,Online,12,Fixed,,2.05%,bankrate.com
+ 2018-04-03,US,New York,ALLY,ALLY,USD,Bank,Deposits,Savings,_MSBV,Online Savings Account,,,Online,,Fixed,,1.45%,DepositsAccount.com
+ 2018-04-03,US,New York,ALLY,ALLY,USD,Bank,Deposits,Checking,_MCCV,Interest Checking Account,15000,,Online,,Fixed,,0.60%,DepositsAccount.com
+ 2018-04-03,US,New York,BANK OF AMERICA CORP,BAC,USD,Bank,Deposits,Savings,_MSBV,Rewards Savings,,,Offline,,Fixed,,0.03%,DepositsAccount.com
+ 2018-04-03,US,New York,BANK OF AMERICA CORP,BAC,USD,Bank,Deposits,Checking,_MCCV,Bank of America Interest Checking,,,Offline,,Fixed,,0.01%,DepositsAccount.com
+ 2018-04-03,US,New York,CAPITAL ONE,COF,USD,Bank,Deposits,Savings,_MSBV,360 Savings Account,,,Offline,,Fixed,,1.00%,DepositsAccount.com
+ 2018-04-03,US,New York,CAPITAL ONE,COF,USD,Bank,Deposits,Checking,_MCCV,360 Checking,,,Offline,,Fixed,,0.20%,DepositsAccount.com
+ 2018-04-03,US,New York,JP MORGAN CHASE & Co.,JPM,USD,Bank,Deposits,Savings,_MSBV,Chase Premier Savings - Standard,,,Offline,,Fixed,,0.01%,DepositsAccount.com
+ 2018-04-03,US,New York,JP MORGAN CHASE & Co.,JPM,USD,Bank,Deposits,Checking,_MCCV,Chase Premier Platinum Checking,,,Offline,,Fixed,,0.01%,DepositsAccount.com
+ 2018-04-03,US,New York,PNC FINANCIAL SERVICES GROUP INC,PNC,USD,Bank,Deposits,Savings,_MSBV,Standard Savings,,,Offline,,Fixed,,0.01%,DepositsAccount.com
+ 2018-04-03,US,New York,PNC FINANCIAL SERVICES GROUP INC,PNC,USD,Bank,Deposits,Checking,_MCCV,Performance Interest Checking,2000,,Offline,,Fixed,,0.01%,DepositsAccount.com
+ 2018-04-03,US,New York,SUNTRUST BANKS INC,STI,USD,Bank,Deposits,Checking,_MCCV,Select Checking,,,Offline,,Fixed,,0.01%,DepositsAccount.com
+ 2018-04-03,US,New York,SYNCHRONY,SYF,USD,Bank,Deposits,Savings,_MSBV,High Yield Savings,,,Online,,Fixed,,1.55%,DepositsAccount.com
+ 2018-04-03,US,New York,WELLS FARGO,WFC,USD,Bank,Deposits,Savings,_MSBV,Platinum Savings - Standard Interest Rate,,,Offline,,Fixed,,0.01%,DepositsAccount.com
+ 2018-04-03,US,New York,WELLS FARGO,WFC,USD,Bank,Deposits,Checking,_MCCV,Preferred Checking,,,Offline,,Fixed,,0.01%,DepositsAccount.com
+ 2018-04-03,US,New York,ALLY,ALLY,USD,Bank,Deposits,CD,12MCDF,High Yield CD,25000,,Online,12,Fixed,,2.00%,nerdwallet.com
+ 2018-04-03,US,New York,ALLY,ALLY,USD,Bank,Deposits,CD,12MCDF,High Yield CD,5000,,Online,12,Fixed,,1.85%,nerdwallet.com
+ 2018-04-03,US,New York,ALLY,ALLY,USD,Bank,Deposits,CD,6MCDF,High Yield CD,25000,,Online,6,Fixed,,1.75%,nerdwallet.com
+ 2018-04-03,US,New York,ALLY,ALLY,USD,Bank,Deposits,CD,6MCDF,High Yield CD,5000,,Online,6,Fixed,,1.60%,nerdwallet.com
+ 2018-04-03,US,New York,ALLY,ALLY,USD,Bank,Deposits,CD,6MCDF,High Yield CD,1,,Online,6,Fixed,,1.50%,nerdwallet.com
+ 2018-04-03,US,New York,ALLY,ALLY,USD,Bank,Deposits,Checking,_MCCV,Interest Checking Account,,,Online,,Fixed,,,nerdwallet.com
+ 2018-04-03,US,New York,ALLY,ALLY,USD,Bank,Deposits,Savings,_MSBV,Online Savings Account,1,,Online,,Fixed,,1.45%,nerdwallet.com
+ 2018-04-03,US,New York,CAPITAL ONE,COF,USD,Bank,Deposits,CD,36MCDF,360 CD,1,,Offline,36,Fixed,,2.30%,nerdwallet.com
+ 2018-04-03,US,New York,CAPITAL ONE,COF,USD,Bank,Deposits,CD,12MCDF,360 CD,1,,Offline,12,Fixed,,2.05%,nerdwallet.com
+ 2018-04-03,US,New York,CAPITAL ONE,COF,USD,Bank,Deposits,Savings,_MSBV,360 Money Market Account,10000,,Online,,Fixed,,1.50%,nerdwallet.com
+ 2018-04-03,US,New York,CITIGROUP INC,C,USD,Bank,Deposits,Checking,_MCCV,Access Account,1500,,Offline,,Fixed,,,nerdwallet.com
+ 2018-04-03,US,New York,CITIGROUP INC,C,USD,Bank,Deposits,Checking,_MCCV,Basic Checking,0,,Offline,,Fixed,,,nerdwallet.com
+ 2018-04-03,US,New York,CITIGROUP INC,C,USD,Bank,Deposits,Checking,_MCCV,Priority Checking,50000,,Offline,,Fixed,,,nerdwallet.com
+ 2018-04-03,US,New York,SYNCHRONY,SYF,USD,Bank,Deposits,CD,36MCDF,Certificate of Deposit,2000,,Online,36,Fixed,,2.25%,nerdwallet.com
+ 2018-04-03,US,New York,SYNCHRONY,SYF,USD,Bank,Deposits,CD,12MCDF,Certificate of Deposit,2000,,Online,12,Fixed,,2.05%,nerdwallet.com
+ 2018-04-03,US,New York,SYNCHRONY,SYF,USD,Bank,Deposits,Savings,_MSBV,High Yield Savings Account,1,,Online,,Fixed,,1.55%,nerdwallet.com

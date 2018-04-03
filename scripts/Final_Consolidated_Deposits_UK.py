@@ -126,9 +126,9 @@ for idx in range(len(df_deposit.index)):
 
 # In[44]:
 
-
-df_deposit["Minm_Balance"] = df_deposit["Minm_Balance"].str.replace(",", "")
-df_deposit["Maxm_Balance"] = df_deposit["Maxm_Balance"].str.replace(",", "")
+for idx in range(len(df_deposit.index)):
+    df_deposit["Minm_Balance"].iloc[idx] = str(df_deposit["Minm_Balance"].iloc[idx]).replace(",", "")
+    df_deposit["Maxm_Balance"].iloc[idx] = str(df_deposit["Maxm_Balance"].iloc[idx]).replace(",", "")
 
 # In[46]:
 

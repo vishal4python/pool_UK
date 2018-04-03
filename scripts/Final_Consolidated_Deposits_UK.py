@@ -129,6 +129,7 @@ for idx in range(len(df_deposit.index)):
 for idx in range(len(df_deposit.index)):
     df_deposit["Minm_Balance"].iloc[idx] = str(df_deposit["Minm_Balance"].iloc[idx]).replace(",", "")
     df_deposit["Maxm_Balance"].iloc[idx] = str(df_deposit["Maxm_Balance"].iloc[idx]).replace(",", "")
+    df_deposit["Maxm_Balance"] = df_deposit["Maxm_Balance"].str.replace("nan", "")
 
 # In[46]:
 

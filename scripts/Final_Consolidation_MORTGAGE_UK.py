@@ -92,7 +92,7 @@ for idx in range(len(df_mortgage.index)):
         int_type = df_mortgage['Interest_Type'].iloc[idx][0]
     except TypeError:
         int_type = "_"
-    df_mortgage['Bank_Product_Code'].iloc[idx] = "{0}{1}{2}{3}".format(t,"Y", "M",int_type )
+    df_mortgage['Bank_Product_Code'].iloc[idx] = "{0}{1}{2}{3}".format("t","Y", "M",int_type )
 
 
 # In[10]:

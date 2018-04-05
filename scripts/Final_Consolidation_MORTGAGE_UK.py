@@ -110,8 +110,11 @@ for idx in range(len(df_mortgage.index)):
          df_mortgage['Interest_Type'].iloc[idx] = "Fixed"
     else:
          df_mortgage['Interest_Type'].iloc[idx] = "Variable"
-
-
+records_tobe_removed = []
+for idx in range(len(df_mortgage.index)):
+    if "Buy To Let" in str(df_mortgage['Bank_Product_Name'].iloc[idx]) or "Discount" in str(df_mortgage['Bank_Product_Name'].iloc[idx]) or "Cashback" in str(df_mortgage['Bank_Product_Name'].iloc[idx]):
+        records_tobe_removed.append(idx)
+df_mortgage.drop(records_tobe_removed, inplace=True)
 # In[13]:
 
 

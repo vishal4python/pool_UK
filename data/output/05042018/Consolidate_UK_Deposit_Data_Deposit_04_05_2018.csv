@@ -1,0 +1,14 @@
+Date,Bank_Native_Country,State,Bank_Name,Bank_Local_Currency,Bank_Type,Bank_Product,Bank_Product_Type,Bank_Product_Code,Bank_Product_Name,Balance,Bank_Offer_Feature,Term_in_Months,Interest_Type,Interest,APY,Source
+ 2018-04-05,UK,London,Lloyds Bank,GBP,Bank,Deposits,Savings,,Lloyds Junior Cash ISA,,Offline,,Fixed,2.50%,,uk.deposits.org
+ 2018-04-05,UK,London,Barclays,GBP,Bank,Deposits,Savings,,Barclays ISA,,Offline,,Fixed,0.65%,,uk.deposits.org
+ 2018-04-05,UK,London,HSBC,GBP,Bank,Deposits,Savings,,HSBC UK ISA ,,Offline,,Fixed,0.45% ,,uk.deposits.org
+ 2018-04-05,UK,London,Halifax,GBP,Bank,Deposits,Term Deposits,,Halifax 5 Year Fixed Rate Bond,,Offline,60.0,Fixed,1.80%,,uk.deposits.org
+ 2018-04-05,UK,London,Clydesdale Bank,GBP,Bank,Deposits,Term Deposits,,Clydesdale Bank 5 Year Term Deposit,,Offline,60.0,Fixed,1.55%,,uk.deposits.org
+ 2018-04-05,UK,London,Metro Bank,GBP,Bank,Deposits,Term Deposits,,Metro Bank UK 3 Year Fixed Term Savings,,Offline,36.0,Fixed,1.50%,,uk.deposits.org
+ 2018-04-05,UK,London,NatWest,GBP,Bank,Deposits,Term Deposits,,NatWest 2 Year Fixed Rate Bond,,Offline,24.0,Fixed,1.05%,,uk.deposits.org
+ 2018-04-05,UK,London,The Co-operative Bank,GBP,Bank,Deposits,Term Deposits,,The Co-operative Bank 3 Year Fixed Rate Bond,,Offline,36.0,Fixed,0.90%,,uk.deposits.org
+ 2018-04-05,UK,London,Barclays,GBP,Bank,Deposits,Term Deposits,,Barclays 1 Year Fixed Rate Bond,,Offline,12.0,Fixed,0.70%,,uk.deposits.org
+ 2018-04-05,UK,London,HSBC,GBP,Bank,Deposits,Term Deposits,,HSBC UK 3 Year Fixed Rate Bond,,Offline,36.0,Fixed,0.70%,,uk.deposits.org
+ 2018-04-05,UK,London,Santander Bank,GBP,Bank,Deposits,Term Deposits,,Santander UK 2 Year Fixed Rate Savings Bond,,Offline,24.0,Fixed,0.55%,,uk.deposits.org
+ 2018-04-05,UK,London,Bank of Scotland,GBP,Bank,Deposits,Term Deposits,,Bank of Scotland 2 Year Fixed Rate Bond,,Offline,24.0,Fixed,0.50%,,uk.deposits.org
+ 2018-04-05,UK,London,Lloyds Bank,GBP,Bank,Deposits,Term Deposits,,Lloyds TSB 1 Year Term Deposit,,Offline,12.0,Fixed,0.40%,,uk.deposits.org

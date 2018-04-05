@@ -27,7 +27,7 @@ all_deposite_files = [file for file in all_files if
 deposite_cols = ['Date', 'Bank_Native_Country', 'State', 'Bank_Name',
                  'Bank_Local_Currency', 'Bank_Type', 'Bank_Product', 'Bank_Product_Type',
                  'Bank_Product_Name', 'Balance', 'Bank_Offer_Feature',
-                 'Term in Months', 'Interest_Type', 'Interest', 'AER', 'Bank_Product_Code']
+                 'Term_in_Months', 'Interest_Type', 'Interest', 'AER', 'Bank_Product_Code']
 df_deposit = pd.DataFrame(columns=deposite_cols)
 
 for idx, file in enumerate(all_deposite_files):
@@ -42,7 +42,7 @@ for file in all_deposite_files:
     df_temp.columns = ['Date', 'Bank_Native_Country', 'State', 'Bank_Name',
                        'Bank_Local_Currency', 'Bank_Type', 'Bank_Product', 'Bank_Product_Type',
                        'Bank_Product_Name', 'Balance', 'Bank_Offer_Feature',
-                       'Term in Months', 'Interest_Type', 'Interest', 'AER', 'Bank_Product_Code']
+                       'Term_in_Months', 'Interest_Type', 'Interest', 'AER', 'Bank_Product_Code']
     df_deposit = pd.concat([df_deposit, df_temp])
 
 # In[35]:
@@ -102,7 +102,7 @@ result = pd.merge(df_deposit, df_ticker, how='left', on='Bank_Name')
 
 arranged_cols = ['Date', 'Bank_Native_Country', 'State', 'Bank_Name', 'Ticker',
                  'Bank_Local_Currency', 'Bank_Type', 'Bank_Product', 'Bank_Product_Type', 'Bank_Product_Code',
-                 'Bank_Product_Name', 'Minm_Balance', 'Maxm_Balance', 'Bank_Offer_Feature', 'Term in Months',
+                 'Bank_Product_Name', 'Minm_Balance', 'Maxm_Balance', 'Bank_Offer_Feature', 'Term_in_Months',
                  'Interest_Type', 'Interest', 'AER']
 df_deposit = result.reindex(columns=arranged_cols)
 df_deposit["Interest_Type"] = "Fixed"
@@ -118,7 +118,7 @@ for idx in range(len(df_deposit.index)):
     else:
         s = "CD"
     try:
-        t = int(df_deposit['Term in Months'].iloc[idx])
+        t = int(df_deposit['Term_in_Months'].iloc[idx])
     except ValueError:
         t = "_"
     df_deposit['Bank_Product_Code'].iloc[idx] = "{0}{1}{2}{3}".format(t, "M", s,
@@ -131,8 +131,9 @@ for idx in range(len(df_deposit.index)):
     df_deposit["Maxm_Balance"].iloc[idx] = str(df_deposit["Maxm_Balance"].iloc[idx]).replace(",", "")
     df_deposit["Maxm_Balance"] = df_deposit["Maxm_Balance"].str.replace("nan", "")
 
-# In[46]:
 
+# In[46]:
+df_deposit = df_deposit[((df_deposit.Bank_Product_Type == "Term Deposits") & (df_deposit.Term_in_Months.isin([6.0,12.0,24.0,36.0,0.0]))) |(df_deposit.Bank_Product_Type != "Term Deposits") ]
 
 df_deposit.to_csv(output_path + "UK\\" + "UK_Deposits_Data_{}.csv".format(now.strftime("%Y_%m_%d")), index=False)
 

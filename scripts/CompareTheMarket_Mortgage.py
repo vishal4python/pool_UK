@@ -5,6 +5,7 @@ import datetime
 today = datetime.datetime.now()
 from tabulate import tabulate
 import pandas as pd
+from maks_lib import output_path
 Excel_Table = []
 neededUkBanks = {'royal bank of scotland':'Royal Bank Of Scotland',
                  'natwest':'NatWest',
@@ -27,7 +28,7 @@ neededUkBanks = {'royal bank of scotland':'Royal Bank Of Scotland',
 
 table_headers = ['Bank_Name', 'Bank_Product_Name', 'Min_Loan_Amount', 'Bank_Offer_Feature', 'Term (Y)', 'Interest_Type', 'Interest', 'APRC', 'Mortgage_Loan_Amt']
 # Excel_Table.append(table_headers)
-path = 'Comparethemarket_Data_Mortgages_'+today.strftime('%m-%d-%Y')+'.csv'
+path = output_path+"Consolidate_CompareTheMarket_mortgage_"+str(today.strftime('%Y_%m_%d'))+'.csv'
 cases = [[90000, 72000],[270000, 216000], [450000, 360000]]
 terms = [10,15,25,30]
 for term in terms:

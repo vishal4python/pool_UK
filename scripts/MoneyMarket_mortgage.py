@@ -10,7 +10,7 @@ import datetime
 from maks_lib import output_path
 today  = datetime.datetime.now()
 startTime = time.time()
-path = output_path+"Consolidate_MoneyMarket_Data_Mortgage_"+str(today.strftime('%Y_%m_%d'))+'.csv'
+path = output_path+"Consolidate_MoneySuperMarket_Data_Mortgage_"+str(today.strftime('%Y_%m_%d'))+'.csv'
 today = datetime.datetime.now()
 browser = webdriver.Firefox()
 browser.maximize_window()
@@ -38,7 +38,7 @@ neededUkBanks = {'royal bank of scotland':'Royal Bank Of Scotland',
                  }
 
 table_headers = ['Bank_Name', 'Bank_Product_Name', 'Min_Loan_Amount', 'Bank_Offer_Feature', 'Term (Y)', 'Interest_Type', 'Interest', 'APRC', 'Mortgage_Loan_Amt', 'Mortgage_Down_Payment', 'Fixed_Rate_Term']
-Excel_Table.append(table_headers)
+# Excel_Table.append(table_headers)
 
 
 cases = [[90000, 72000], [270000, 216000], [450000, 360000]]
@@ -62,19 +62,22 @@ def pageData(pageId,start_page, pages,case):
                 Year = Bank['quote']['paymentSteps'][0]['numberOfPayments']
                 if Year!=0 or Year is not None:
                     Year = int(Year/12)
-                Balance = str(int(Bank['quote']['minBorrowingAmount'])) + '-' + str(int(Bank['quote']['maxBorrowingAmount']))
+                Balance = str(int(Bank['quote']['minBorrowingAmount'])) #+ '-' + str(int(Bank['quote']['maxBorrowingAmount']))
                 LTV = Bank['quote']['maxRMTGSLTV']
                 if LTV == 0:
                     LTV = Bank['quote'].get('maxFTBLTV') if Bank['quote'].get('maxFTBLTV') is not None else 0
 
                 APRC = Bank['quote']['aprc']
-                for k in neededUkBanks:
-                    if Bank_Name is not  None:
-                        if k in Bank_Name.lower().strip():
-                            a = [neededUkBanks[k], str(Year)+ 'Year Fixed', Balance, 'Offline', term, 'Interest_Type', str(Interest)+'%', str(APRC)+'%',
-                                 case[0]-case[1], LTV, Year]
-                            Excel_Table.append(a) #Appending data to table for making csv file
-                            break
+                if int(LTV) == 80:
+                    for k in neededUkBanks:
+                        if Bank_Name is not  None:
+                            if k in Bank_Name.lower().strip():
+                                if Bank['strapline'] is None:
+                                    a = [neededUkBanks[k], str(Year)+ 'Year Fixed', Balance, 'Offline', term, 'Fixed', str(Interest)+'%', str(APRC)+'%',
+                                         case[1], 100-int(LTV), Year]
+                                    Excel_Table.append(a) #Appending data to table for making csv file
+                                    break
+
             Result = dict_from_json['totalResults']
             print("Result=", Result, "No of offset", int(Result / 20)+1, 'page : ',i, 'pageId : ',pageId)
         except Exception as p:
@@ -108,13 +111,14 @@ df['Bank_Type']= 'Bank'
 df['Bank_Product'] = 'Mortgages'
 df['Bank_Product_Type'] = 'Mortgages'
 df['Bank_Product_Code'] = None
+df['Ticker'] = None
 df['Mortgage_Category'] = 'New Purchase'
 df['Mortgage_Reason'] = 'Primary Residence'
 df['Mortgage_Pymt_Mode'] = 'Principal + Interest'
 df['Source'] = 'moneysupermarket.com'
-order = ["Date", "Bank_Native_Country", "State", "Bank_Name", "Bank_Local_Currency", "Bank_Type", "Bank_Product", "Bank_Product_Type", "Bank_Product_Code", "Bank_Product_Name", "Min_Loan_Amount", "Bank_Offer_Feature", "Term (Y)", "Fixed_Rate_Term", "Interest_Type", "Interest", "APRC", "Mortgage_Loan_Amt", "Mortgage_Down_Payment", "Mortgage_Category", "Mortgage_Reason", "Mortgage_Pymt_Mode", "Source"]
+order = ["Date", "Bank_Native_Country", "State", "Bank_Name","Ticker", "Bank_Local_Currency", "Bank_Type", "Bank_Product", "Bank_Product_Type", "Bank_Product_Code", "Bank_Product_Name", "Min_Loan_Amount", "Bank_Offer_Feature", "Term (Y)", "Interest_Type", "Interest", "APRC", "Mortgage_Loan_Amt", "Mortgage_Down_Payment", "Mortgage_Category", "Mortgage_Reason", "Mortgage_Pymt_Mode", "Fixed_Rate_Term", "Source"]
 df = df[order]
 browser.close()
 df.to_csv(path, index=False)
 
-print(f'Execution completed in {time.time()-startTime} seconds')
+print('Execution completed in {time.time()-startTime} seconds')

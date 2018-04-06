@@ -43,11 +43,20 @@ def virgin_mortgage(property_value, deposit, term):
     panel = famResultsPanel = jsoup.find("div", attrs={"id":"famResultsPanel"})
     form_table = panel.find("form", attrs={"id":"mortgageform"})
     tbodys = form_table.find_all("tbody", attrs={"class":"table--fam-results fam__product"})
+
     for tbody in tbodys:
+        # print(tbody)
         tds = tbody.find_all("td")
         Bank_Product_Name = (tds[0].text)
         Fixed_Rate_Term = (tds[2].text)
         interest_rate = (tds[3].text).split("%")[0]+'%'
+        Balance = tds[6].text
+        print('Before', Balance)
+        Balance = re.findall('\d', Balance) if len(re.findall('\d',Balance))!=0 else None if Balance is not None else None
+        print('After', Balance)
+        if Balance is not None:
+            Bank_Product_Name = Bank_Product_Name.strip('\n') + ' with Fee'
+            print(Bank_Product_Name)
         aprc = (tds[5].text)
         years = re.findall('\d.*year', Fixed_Rate_Term)
         if len(years)>=1:

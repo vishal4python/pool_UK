@@ -64,7 +64,7 @@ dff.iloc[2:5,7] = "Fixed Term"
 dff.iloc[5:9,7] = "Savings"
 dff["Bank_Product_Type"] = dff.iloc[:,7].str.replace("Fixed Term","Term Deposits")
 dff["Balance"] = dff.iloc[:,9].str.replace("£","")
-
+dff=dff[:7]
 # Writing to CSV
 #dff.to_csv(output_path + "Halifax_Data_Deposit_{}.csv".format(now.strftime("%m_%d_%Y")), index=False)
 dff.to_csv(output_path + "Consolidate_Halifax_Data_Deposit_{}.csv".format(now.strftime("%m_%d_%Y")), index=False)

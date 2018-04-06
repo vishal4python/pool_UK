@@ -8,7 +8,7 @@ import datetime
 from maks_lib import output_path
 
 today = datetime.datetime.now()
-path = output_path + "Consolidate_UK_Deposit_Data_Mortgage_"+today.strftime("%m_%d_%Y")+".csv"
+path = output_path + "Consolidate_Agg_UK_Deposit_Data_Mortgage_"+today.strftime("%m_%d_%Y")+".csv"
 
 neededUkBanks = {'royal bank of scotland':'Royal Bank Of Scotland',
                  'natwest':'NatWest',
@@ -31,7 +31,7 @@ neededUkBanks = {'royal bank of scotland':'Royal Bank Of Scotland',
                  'virgin money plc.':'Virgin Money Plc.',
                  'virgin money':'Virgin Money Plc.'}
 
-table_headers = ['Bank_Name', 'Bank_Product_Name', 'Min_Loan_Amount', 'Bank_Offer_Feature', 'Term (Y)', 'Interest_Type', 'Interest', 'APRC', 'Mortgage_Loan_Amt']
+table_headers = ['Bank_Name', 'Bank_Product_Name', 'Min_Loan_Amount', 'Bank_Offer_Feature', 'Fixed_Rate_Term', 'Interest_Type', 'Interest', 'APRC', 'Mortgage_Loan_Amt']
 # Excel_Table.append(table_headers)
 headers = {"Accept": "text/html, */*; q=0.01",
 "Accept-Encoding": "gzip, deflate, br",
@@ -100,7 +100,8 @@ df["Mortgage_Pymt_Mode"] = "Principal + Interest"
 df["Bank_Product_Code"] = None
 df['Source'] = 'uk.deposits.org'
 df['Mortgage_Down_Payment'] = '20%'
+df['Term (Y)'] = None
 df['APRC'] = df['APRC'].apply(lambda x:re.sub('[^0-9%-.]','',str(x)))
-order = ["Date", "Bank_Native_Country", "State", "Bank_Name", "Bank_Local_Currency", "Bank_Type", "Bank_Product", "Bank_Product_Type", "Bank_Product_Code", "Bank_Product_Name", "Min_Loan_Amount", "Bank_Offer_Feature", "Term (Y)", "Interest_Type", "Interest", "APRC", "Mortgage_Loan_Amt", "Mortgage_Down_Payment", "Mortgage_Category", "Mortgage_Reason", "Mortgage_Pymt_Mode", "Source"]
+order = ["Date", "Bank_Native_Country", "State", "Bank_Name", "Bank_Local_Currency", "Bank_Type", "Bank_Product", "Bank_Product_Type", "Bank_Product_Code", "Bank_Product_Name", "Min_Loan_Amount", "Bank_Offer_Feature", "Term (Y)", "Interest_Type", "Interest", "APRC", "Mortgage_Loan_Amt", "Mortgage_Down_Payment", "Mortgage_Category", "Mortgage_Reason", "Mortgage_Pymt_Mode", "Fixed_Rate_Term", "Source"]
 df = df[order]
 df.to_csv(path, index=False)

@@ -107,7 +107,7 @@ df['Bank_Product_Code'] = None
 df['Interest_Type'] = 'Fixed'
 df['Source'] = 'uk.deposits.org'
 df['Balance'] = df['Balance'].apply(lambda x:re.sub('[^0-9,]','',str(x)) if len(re.sub('[^0-9,]','',str(x)))!=0 else None)
-order = ["Date", "Bank_Native_Country", "State", "Bank_Name", "Bank_Local_Currency", "Bank_Type", "Bank_Product", "Bank_Product_Type", "Bank_Product_Code", "Bank_Product_Name", "Balance", "Bank_Offer_Feature", "Term_in_Months", "Interest_Type", "Interest", "APY", "Source"]
+order = ["Date", "Bank_Native_Country", "State", "Bank_Name","Ticker", "Bank_Local_Currency", "Bank_Type", "Bank_Product", "Bank_Product_Type", "Bank_Product_Code", "Bank_Product_Name", "Balance", "Bank_Offer_Feature", "Term_in_Months", "Interest_Type", "Interest", "APY", "Source"]
 df = df[order]
 df.to_csv(path, index=False)
 print(tabulate(Excel_Table))

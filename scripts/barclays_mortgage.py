@@ -59,7 +59,7 @@ def barclays(properties, deposit, year):
         #print("Error",e)
         try:
             #alert = browser.switch_to_alert()
-            browser.find_element_by_xpath("/html/body/div[14]/div/div[1]/div/a[1]").click()
+            browser.find_element_by_xpath("/html/body/div[13]/div/div[1]/a").click()
             time.sleep(1)
             filform(properties, deposit, year)
         except Exception as e:

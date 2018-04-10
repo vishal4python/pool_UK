@@ -47,17 +47,19 @@ def virgin_mortgage(property_value, deposit, term):
     for tbody in tbodys:
         # print(tbody)
         tds = tbody.find_all("td")
-        Bank_Product_Name = (tds[0].text)
-        Fixed_Rate_Term = (tds[2].text)
-        interest_rate = (tds[3].text).split("%")[0]+'%'
-        Balance = tds[6].text
-        print('Before', Balance)
-        Balance = re.findall('\d', Balance) if len(re.findall('\d',Balance))!=0 else None if Balance is not None else None
-        print('After', Balance)
-        if Balance is not None:
-            Bank_Product_Name = Bank_Product_Name.strip('\n') + ' with Fee'
-            print(Bank_Product_Name)
-        aprc = (tds[5].text)
+        # print(tds)
+        Bank_Product_Name = (tds[1].text)
+        Fixed_Rate_Term = (tds[1].text)
+        print(Fixed_Rate_Term)
+        interest_rate = (tds[2].text).split("%")[0]+'%'
+        # Balance = tds[6].text
+        # print('Before', Balance)
+        # Balance = re.findall('\d', Balance) if len(re.findall('\d',Balance))!=0 else None if Balance is not None else None
+        # print('After', Balance)
+        # if Balance is not None:
+        #     Bank_Product_Name = Bank_Product_Name.strip('\n') + ' with Fee'
+        #     print(Bank_Product_Name)
+        aprc = (tds[3].text)
         years = re.findall('\d.*year', Fixed_Rate_Term)
         if len(years)>=1:
             years = re.sub('[^0-9.]','',years[0])
@@ -67,14 +69,16 @@ def virgin_mortgage(property_value, deposit, term):
             Interest_Type = "Fixed"
         else:
             Interest_Type = "Variable"
-        a = [Bank_Product_Name.strip('\n'), None, term, Interest_Type, re.sub('[^0-9.%]', '', interest_rate), re.sub('[^0-9.%]', '', aprc), int(property_value)-int(deposit),years]
+        a = [Bank_Product_Name.replace('\n',' ').strip('\n'), None, term, Interest_Type, re.sub('[^0-9.%]', '', interest_rate), re.sub('[^0-9.%]', '', aprc), int(property_value)-int(deposit),years]
         table.append(a)
-    # break
+
 terms = ["10","15","25","30"]
 case = [["90000", "18000"], ["270000", "54000"],["450000","90000"]]
 for term in terms:
     for ca in case:
         virgin_mortgage(ca[0],ca[1],term)
+
+
 print(tabulate(table))
 
 df = pd.DataFrame(table[1:], columns=table_headers)

@@ -13,7 +13,7 @@ path = output_path+'Consolidate_Barclays_Data_Mortgage_'+today.strftime('%m_%d_%
 # path = 'Consolidate_Barclays_Data_Mortgage.csv'
 Excel_Table = []
 jsonHeaders = {"Host":"www.barclays.co.uk","User-Agent":"Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0","Accept":"application/json, text/javascript, */*; q=0.01","Accept-Language":"en-US,en;q=0.5","Accept-Encoding":"gzip, deflate, br","Referer":"https://www.barclays.co.uk/mortgages/mortgage-calculator/","Content-Type":"application/json","currentState":"default_current_state","action":"default","X-Requested-With":"XMLHttpRequest","Content-Length":"201","Connection":"keep-alive"}
-table_headers = ['Bank_Product_Name', 'Min_Loan_Amount', 'Term (Y)', 'Interest_Type', 'Interest', 'APRC', 'Mortgage_Loan_Amt', 'Mortgage_Down_Payment']
+table_headers = ['Bank_Product_Name', 'Min_Loan_Amount', 'Term (Y)', 'Interest_Type', 'Interest', 'APRC', 'Mortgage_Loan_Amt']
 
 
 cases = [[90000, 18000], [270000, 54000], [450000, 90000]]
@@ -61,7 +61,7 @@ df['Bank_Type'] = 'Bank'
 df['Bank_Product'] = 'Mortgages'
 df['Bank_Product_Type'] = 'Mortgages'
 df['Bank_Offer_Feature'] = 'Offline'
-# df['Mortgage_Down_Payment'] = '20%'
+df['Mortgage_Down_Payment'] = '20%'
 df['Mortgage_Category'] = 'New Purchase'
 df['Mortgage_Reason'] = 'Primary Residence'
 df['Mortgage_Pymt_Mode'] = 'Principal + Interest'

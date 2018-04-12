@@ -5,6 +5,7 @@ import datetime
 today = datetime.datetime.now()
 from tabulate import tabulate
 import pandas as pd
+import re
 from maks_lib import output_path
 Excel_Table = []
 neededUkBanks = {'royal bank of scotland':'Royal Bank Of Scotland',
@@ -26,7 +27,7 @@ neededUkBanks = {'royal bank of scotland':'Royal Bank Of Scotland',
                  'virgin money plc.':'Virgin Money Plc.',
                  'virgin money':'Virgin Money Plc.'}
 
-table_headers = ['Bank_Name', 'Bank_Product_Name', 'Min_Loan_Amount', 'Bank_Offer_Feature', 'Term (Y)', 'Interest_Type', 'Interest', 'APRC', 'Mortgage_Loan_Amt']
+table_headers = ['Bank_Name', 'Bank_Product_Name', 'Min_Loan_Amount', 'Bank_Offer_Feature', 'Term (Y)', 'Interest_Type', 'Interest', 'APRC', 'Mortgage_Loan_Amt','Fixed_Rate_Term']
 # Excel_Table.append(table_headers)
 path = output_path+"Consolidate_CompareTheMarket_mortgage_"+str(today.strftime('%Y_%m_%d'))+'.csv'
 cases = [[90000, 72000],[270000, 216000], [450000, 360000]]
@@ -40,9 +41,18 @@ for term in terms:
             Bank_Product_Name = js['ProductName']
             Interest = js['InitialRate']
             APRC = js['Aprc']
-            if Bank_Name.lower().strip() in neededUkBanks:
-                a = [neededUkBanks[Bank_Name.lower().strip()], Bank_Product_Name, None, 'Offline', term, 'Fixed', str(Interest)+'%', str(APRC)+'%', case[1]]
-                Excel_Table.append(a)
+            check = js['RateType']
+            year = js['InitialPeriodDisplayText']
+            withFee = js['ArrangementFeeString']
+            withFee = ' With Fee' if float(re.sub('[^0-9.]','',withFee)) ==0 else ''
+            print(withFee)
+            year = re.sub('[^0-9]','',re.findall('\d.*Year',year,re.IGNORECASE)[0]) if len(re.findall('\d.*Year',year,re.IGNORECASE))!=0 else None
+            if 'discount' not in check.lower():
+                if Bank_Name.lower().strip() in neededUkBanks:
+                    print(js)
+                    a = [neededUkBanks[Bank_Name.lower().strip()], Bank_Product_Name+withFee, None, 'Offline', term, 'Fixed', str(Interest)+'%', str(APRC)+'%', case[1], year]
+                    Excel_Table.append(a)
+
 df = pd.DataFrame(Excel_Table, columns=table_headers)
 df['Date'] = ' '+today.strftime('%Y-%m-%d')
 df['Bank_Native_Country'] = 'UK'
@@ -58,7 +68,7 @@ df['Mortgage_Category'] = 'New Purchase'
 df['Mortgage_Reason'] = 'Primary Residence'
 df['Mortgage_Pymt_Mode'] = 'Principal + Interest'
 df['Source'] = 'comparethemarket.com'
-order = ["Date", "Bank_Native_Country", "State", "Bank_Name", "Bank_Local_Currency", "Bank_Type", "Bank_Product", "Bank_Product_Type", "Bank_Product_Code", "Bank_Product_Name", "Min_Loan_Amount", "Bank_Offer_Feature", "Term (Y)", "Interest_Type", "Interest", "APRC", "Mortgage_Loan_Amt", "Mortgage_Down_Payment", "Mortgage_Category", "Mortgage_Reason", "Mortgage_Pymt_Mode", "Source"]
+order = ["Date", "Bank_Native_Country", "State", "Bank_Name", "Bank_Local_Currency", "Bank_Type", "Bank_Product", "Bank_Product_Type", "Bank_Product_Code", "Bank_Product_Name", "Min_Loan_Amount", "Bank_Offer_Feature", "Term (Y)", "Interest_Type", "Interest", "APRC", "Mortgage_Loan_Amt", "Mortgage_Down_Payment", "Mortgage_Category", "Mortgage_Reason", "Mortgage_Pymt_Mode","Fixed_Rate_Term", "Source"]
 df = df[order]
 df.to_csv(path, index=False)
 print(tabulate(Excel_Table))

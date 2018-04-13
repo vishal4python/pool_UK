@@ -1,0 +1,168 @@
+Date,Bank_Native_Country,State,Bank_Name,Ticker,Bank_Local_Currency,Bank_Type,Bank_Product,Bank_Product_Type,Bank_Product_Code,Bank_Product_Name,Minm_Balance,Maxm_Balance,Bank_Offer_Feature,Term_in_Months,Interest_Type,Interest,AER,Source
+ 2018-04-03,UK,London,The Co-operative Bank,Private,GBP,Bank,Deposits,Term Deposits,12MCDF,Britannia 1yr Fixed Rate Bond,1000,,Offline,12,Fixed,0.65%,0.65%,Bank Website
+ 2018-04-03,UK,London,The Co-operative Bank,Private,GBP,Bank,Deposits,Term Deposits,24MCDF,Britannia 2yr Fixed Rate Bond,1000,,Offline,24,Fixed,0.75%,0.75%,Bank Website
+ 2018-04-03,UK,London,The Co-operative Bank,Private,GBP,Bank,Deposits,Term Deposits,36MCDF,Britannia 3yr Fixed Rate Bond,1000,,Offline,36,Fixed,0.90%,0.90%,Bank Website
+ 2018-04-03,UK,London,The Co-operative Bank,Private,GBP,Bank,Deposits,Savings,_MSBF,Britannia Fixed Rate Cash ISA - fixed until 05/04/2019,5000,,Offline,,Fixed,0.80%,0.80%,Bank Website
+ 2018-04-03,UK,London,The Co-operative Bank,Private,GBP,Bank,Deposits,Savings,_MSBF,Britannia Fixed Rate Cash ISA - fixed until 05/04/2020,5000,,Offline,,Fixed,0.90%,0.90%,Bank Website
+ 2018-04-03,UK,London,The Co-operative Bank,Private,GBP,Bank,Deposits,Savings,_MSBF,Britannia Select Access Saver 8,1,,Offline,,Fixed,0.60%,0.60%,Bank Website
+ 2018-04-03,UK,London,The Co-operative Bank,Private,GBP,Bank,Deposits,Savings,_MSBF,Britannia Select Access Saver 8,1,,Offline,,Fixed,0.10%,0.10%,Bank Website
+ 2018-04-03,UK,London,The Co-operative Bank,Private,GBP,Bank,Deposits,Savings,_MSBF,The Co-operative Bank Cash ISA,1,,Offline,,Fixed,0.46%,0.46%,Bank Website
+ 2018-04-03,UK,London,The Co-operative Bank,Private,GBP,Bank,Deposits,Savings,_MSBF,The Co-operative Bank The Co-operative Membership Savings,1,,Offline,,Fixed,0.25%,0.25%,Bank Website
+ 2018-04-03,UK,London,The Co-operative Bank,Private,GBP,Bank,Deposits,Savings,_MSBF,The Co-operative Bank Future Fund Account,5000,,Offline,,Fixed,0.34%,0.34%,Bank Website
+ 2018-04-03,UK,London,The Co-operative Bank,Private,GBP,Bank,Deposits,Savings,_MSBF,The Co-operative Bank Future Fund Account,1000,,Offline,,Fixed,0.34%,0.34%,Bank Website
+ 2018-04-03,UK,London,The Co-operative Bank,Private,GBP,Bank,Deposits,Savings,_MSBF,The Co-operative Bank Future Fund Account,1,,Offline,,Fixed,0.34%,0.34%,Bank Website
+ 2018-04-03,UK,London,The Co-operative Bank,Private,GBP,Bank,Deposits,Savings,_MSBF,The Co-operative Bank Online Cash ISA,1,,Online,,Fixed,0.56%,0.56%,Bank Website
+ 2018-04-03,UK,London,The Co-operative Bank,Private,GBP,Bank,Deposits,Savings,_MSBF,The Co-operative Bank Online Saver,1,,Online,,Fixed,0.56%,0.56%,Bank Website
+ 2018-04-03,UK,London,The Co-operative Bank,Private,GBP,Bank,Deposits,Savings,_MSBF,The Co-operative Bank Smart Saver,1,,Offline,,Fixed,0.34%,0.34%,Bank Website
+ 2018-04-03,UK,London,The Co-operative Bank,Private,GBP,Bank,Deposits,Current,_MCCF,Current Account,,,Offline,,Fixed,,,Bank Website
+ 2018-04-03,UK,London,The Co-operative Bank,Private,GBP,Bank,Deposits,Current,_MCCF,Cashminder,,,Offline,,Fixed,,,Bank Website
+ 2018-04-03,UK,London,Bank of Ireland,BIRG,GBP,Bank,Deposits,Savings,_MSBF,Regular savings balance,0,9999,Online,,Fixed,1.20%,1.20%,Bank Website
+ 2018-04-03,UK,London,Bank of Ireland,BIRG,GBP,Bank,Deposits,Savings,_MSBF,Lump sum balance,10000,,Online,,Fixed,0.25%,0.25%,Bank Website
+ 2018-04-03,UK,London,Bank of Ireland,BIRG,GBP,Bank,Deposits,Term Deposits,12MCDF,365 12 Month Fixed Term Deposit,5000,1000000,Online,12,Fixed,0.24%,0.25%,Bank Website
+ 2018-04-03,UK,London,Bank of Ireland,BIRG,GBP,Bank,Deposits,Savings,_MSBF,GoalSaver,1,15000,Offline,,Fixed,1.35%,1.35%,Bank Website
+ 2018-04-03,UK,London,Bank of Ireland,BIRG,GBP,Bank,Deposits,Savings,_MSBF,GoalSaver,15000,,Offline,,Fixed,0.25%,0.25%,Bank Website
+ 2018-04-03,UK,London,Bank of Ireland,BIRG,GBP,Bank,Deposits,Term Deposits,6MCDF,Term Deposits - Fixed Rates,5000,1000000,Offline,6,Fixed,0.04%,0.10%,Bank Website
+ 2018-04-03,UK,London,Bank of Ireland,BIRG,GBP,Bank,Deposits,Term Deposits,12MCDF,Term Deposits - Fixed Rates,5000,1000000,Offline,12,Fixed,0.19%,0.20%,Bank Website
+ 2018-04-03,UK,London,Bank of Ireland,BIRG,GBP,Bank,Deposits,Term Deposits,36MCDF,Term Deposits - Fixed Rates,5000,10000000,Offline,36,Fixed,1.19%,0.40%,Bank Website
+ 2018-04-03,UK,London,Bank of Ireland,BIRG,GBP,Bank,Deposits,Current,_MCCF, Personal and Business,1,,Offline,,Fixed,0.00%,0.00%,Bank Website
+ 2018-04-03,UK,London,Bank of Scotland,Private,GBP,Bank,Deposits,Savings,12MSBF,Access Saver,,,Offline,12,Fixed,0.20%,0.20%,Bank Website
+ 2018-04-03,UK,London,Bank of Scotland,Private,GBP,Bank,Deposits,Savings,12MSBF,Access Cash ISA,,,Offline,12,Fixed,0.35%,0.35%,Bank Website
+ 2018-04-03,UK,London,Bank of Scotland,Private,GBP,Bank,Deposits,Savings,24MSBF,Fixed Cash ISA,,,Offline,24,Fixed,0.50%,0.50%,Bank Website
+ 2018-04-03,UK,London,Bank of Scotland,Private,GBP,Bank,Deposits,Savings,12MSBF,Fixed Rate Bond,,,Offline,12,Fixed,0.40%,0.40%,Bank Website
+ 2018-04-03,UK,London,Bank of Scotland,Private,GBP,Bank,Deposits,Current,_MCCF,Classic Account,1,5000,Offline,,Fixed,1.98%,2%,Bank Website
+ 2018-04-03,UK,London,Barclays,BARC,GBP,Bank,Deposits,Savings,_MSBF,Everyday Saver,1,49999,Offline,,Fixed,0.20%,0.20%,Bank Website
+ 2018-04-03,UK,London,Barclays,BARC,GBP,Bank,Deposits,Savings,_MSBF,Everyday Saver,50000,10000000,Offline,,Fixed,0.25%,0.25%,Bank Website
+ 2018-04-03,UK,London,Barclays,BARC,GBP,Bank,Deposits,Savings,_MSBF,Instant Cash ISA,1,29999,Offline,,Fixed,0.55%,0.55%,Bank Website
+ 2018-04-03,UK,London,Barclays,BARC,GBP,Bank,Deposits,Savings,_MSBF,Instant Cash ISA,30000,99000,Offline,,Fixed,0.65%,0.65%,Bank Website
+ 2018-04-03,UK,London,Barclays,BARC,GBP,Bank,Deposits,Savings,_MSBF,Instant Cash ISA,100000,,Offline,,Fixed,0.75%,0.75%,Bank Website
+ 2018-04-03,UK,London,Barclays,BARC,GBP,Bank,Deposits,Savings,24MSBF,2-Year Flexible Cash ISA,1,1000000,Offline,24,Fixed,1.25%,1.25%,Bank Website
+ 2018-04-03,UK,London,Barclays,BARC,GBP,Bank,Deposits,Term Deposits,24MCDF,2-Year Flexible Bond,1,1000000,Offline,24,Fixed,1.00%,1.00%,Bank Website
+ 2018-04-03,UK,London,Barclays,BARC,GBP,Bank,Deposits,Term Deposits,12MCDF,1-Year Fixed-rate Bond,500,1000000,Offline,12,Fixed,0.90%,0.90%,Bank Website
+ 2018-04-03,UK,London,Barclays,BARC,GBP,Bank,Deposits,Current,_MCCF,Barclays Bank Account,,,Offline,,Fixed,,,Bank Website
+ 2018-04-03,UK,London,Barclays,BARC,GBP,Bank,Deposits,Current,_MCCF,Premier Current Accounts,,,Offline,,Fixed,,,Bank Website
+ 2018-04-03,UK,London,Clydesdale Bank,CYBG,GBP,Bank,Deposits,Savings,_MSBF,Signature Savings Account,100000,,Offline,,Fixed,0.50%,0.50%,Bank Website
+ 2018-04-03,UK,London,Clydesdale Bank,CYBG,GBP,Bank,Deposits,Savings,_MSBF,Signature Savings Account,50000,99999,Offline,,Fixed,0.30%,0.30%,Bank Website
+ 2018-04-03,UK,London,Clydesdale Bank,CYBG,GBP,Bank,Deposits,Savings,_MSBF,Signature Savings Account,25000,49999,Offline,,Fixed,0.10%,0.10%,Bank Website
+ 2018-04-03,UK,London,Clydesdale Bank,CYBG,GBP,Bank,Deposits,Savings,_MSBF,Signature Savings Account,0,24999,Offline,,Fixed,0.10%,0.10%,Bank Website
+ 2018-04-03,UK,London,Clydesdale Bank,CYBG,GBP,Bank,Deposits,Savings,_MSBF,Instant Savings Account,100000,,Offline,,Fixed,0.25%,0.25%,Bank Website
+ 2018-04-03,UK,London,Clydesdale Bank,CYBG,GBP,Bank,Deposits,Savings,_MSBF,Instant Savings Account,50000,99999,Offline,,Fixed,0.20%,0.20%,Bank Website
+ 2018-04-03,UK,London,Clydesdale Bank,CYBG,GBP,Bank,Deposits,Savings,_MSBF,Instant Savings Account,25000,49999,Offline,,Fixed,0.15%,0.15%,Bank Website
+ 2018-04-03,UK,London,Clydesdale Bank,CYBG,GBP,Bank,Deposits,Savings,_MSBF,Instant Savings Account,10000,24999,Offline,,Fixed,0.15%,0.15%,Bank Website
+ 2018-04-03,UK,London,Clydesdale Bank,CYBG,GBP,Bank,Deposits,Savings,_MSBF,Instant Savings Account,5000,9999,Offline,,Fixed,0.10%,0.10%,Bank Website
+ 2018-04-03,UK,London,Clydesdale Bank,CYBG,GBP,Bank,Deposits,Savings,_MSBF,Instant Savings Account,250,4999,Offline,,Fixed,0.10%,0.10%,Bank Website
+ 2018-04-03,UK,London,Clydesdale Bank,CYBG,GBP,Bank,Deposits,Savings,_MSBF,Instant Savings Account,1,249,Offline,,Fixed,0.10%,0.10%,Bank Website
+ 2018-04-03,UK,London,Clydesdale Bank,CYBG,GBP,Bank,Deposits,Term Deposits,6MCDF,6 months,2000,,Offline,6,Fixed,0.60%,0.60%,Bank Website
+ 2018-04-03,UK,London,Clydesdale Bank,CYBG,GBP,Bank,Deposits,Term Deposits,12MCDF,12 months,2000,,Offline,12,Fixed,0.90%,0.90%,Bank Website
+ 2018-04-03,UK,London,Clydesdale Bank,CYBG,GBP,Bank,Deposits,Term Deposits,24MCDF,24 months,2000,,Offline,24,Fixed,1.09%,1.10%,Bank Website
+ 2018-04-03,UK,London,Clydesdale Bank,CYBG,GBP,Bank,Deposits,Term Deposits,36MCDF,36 months,2000,,Offline,36,Fixed,1.39%,1.40%,Bank Website
+ 2018-04-03,UK,London,Clydesdale Bank,CYBG,GBP,Bank,Deposits,Current,_MCCF,Current Account,,2000,Offline,,Fixed,0.50%,0.50%,Bank Website
+ 2018-04-03,UK,London,Clydesdale Bank,CYBG,GBP,Bank,Deposits,Current,_MCCF,Current Account,2000,,Offline,,Fixed,0.00%,0.00%,Bank Website
+ 2018-04-03,UK,London,Halifax,Private,GBP,Bank,Deposits,Savings,12MSBF,ISA Saver Variable,1,,Offline,12,Fixed,0.35%,0.35%,Bank Website
+ 2018-04-03,UK,London,Halifax,Private,GBP,Bank,Deposits,Savings,12MSBF,Everyday Saver,1,,Offline,12,Fixed,0.20%,0.20%,Bank Website
+ 2018-04-03,UK,London,Halifax,Private,GBP,Bank,Deposits,Term Deposits,24MCDF,ISA Saver Fixed,500,,Offline,24,Fixed,1.00%,1.00%,Bank Website
+ 2018-04-03,UK,London,Halifax,Private,GBP,Bank,Deposits,Term Deposits,12MCDF,Fixed Saver,500,,Offline,12,Fixed,0.45%,0.45%,Bank Website
+ 2018-04-03,UK,London,Halifax,Private,GBP,Bank,Deposits,Savings,60MSBF,ISA Saver Fixed,500,,Offline,60,Fixed,2.25%,2.25%,Bank Website
+ 2018-04-03,UK,London,Halifax,Private,GBP,Bank,Deposits,Savings,12MSBF,ISA Saver Variable,1,,Offline,12,Fixed,0.35%,0.35%,Bank Website
+ 2018-04-03,UK,London,HSBC,HSBA,GBP,Bank,Deposits,Savings,_MSBF,Online Bonus Saver,50000,,Online,,Fixed,0.10%,0.10%,Bank Website
+ 2018-04-03,UK,London,HSBC,HSBA,GBP,Bank,Deposits,Savings,_MSBF,Online Bonus Saver,50000,,Online,,Fixed,0.10%,0.10%,Bank Website
+ 2018-04-03,UK,London,HSBC,HSBA,GBP,Bank,Deposits,Savings,_MSBF,Flexible Saver,nan,,Offline,,Fixed,0.05%,0.05%,Bank Website
+ 2018-04-03,UK,London,HSBC,HSBA,GBP,Bank,Deposits,Term Deposits,36MCDF,Fixed Rate Saver,2000,,Offline,36,Fixed,0.70%,0.70%,Bank Website
+ 2018-04-03,UK,London,HSBC,HSBA,GBP,Bank,Deposits,Term Deposits,36MCDF,Fixed Rate Saver,50000,,Offline,36,Fixed,0.70%,0.70%,Bank Website
+ 2018-04-03,UK,London,HSBC,HSBA,GBP,Bank,Deposits,Term Deposits,12MCDF,Fixed Rate Saver,2000,,Offline,12,Fixed,0.50%,0.50%,Bank Website
+ 2018-04-03,UK,London,HSBC,HSBA,GBP,Bank,Deposits,Term Deposits,12MCDF,Fixed Rate Saver,50000,,Offline,12,Fixed,0.60%,0.60%,Bank Website
+ 2018-04-03,UK,London,HSBC,HSBA,GBP,Bank,Deposits,Term Deposits,6MCDF,Fixed Rate Saver,2000,,Offline,6,Fixed,0.40%,0.40%,Bank Website
+ 2018-04-03,UK,London,HSBC,HSBA,GBP,Bank,Deposits,Term Deposits,6MCDF,Fixed Rate Saver,50000,,Offline,6,Fixed,0.40%,0.40%,Bank Website
+ 2018-04-03,UK,London,Lloyds Bank,LLOY,GBP,Bank,Deposits,Savings,_MSBF,Cash ISA Saver,1,,Offline,,Fixed,0.35%,0.35%,Bank Website
+ 2018-04-03,UK,London,Lloyds Bank,LLOY,GBP,Bank,Deposits,Savings,_MSBF,Club Lloyds Monthly Saver,1,,Offline,,Fixed,0.03%,0.03%,Bank Website
+ 2018-04-03,UK,London,Lloyds Bank,LLOY,GBP,Bank,Deposits,Savings,_MSBF,Club Lloyds Saver,1500,,Offline,,Fixed,0.35%,0.35%,Bank Website
+ 2018-04-03,UK,London,Lloyds Bank,LLOY,GBP,Bank,Deposits,Savings,_MSBF,Club Lloyds Saver,1,1499,Offline,,Fixed,0.20%,0.20%,Bank Website
+ 2018-04-03,UK,London,Lloyds Bank,LLOY,GBP,Bank,Deposits,Savings,_MSBF,Easy Saver,1,,Offline,,Fixed,0.20%,0.20%,Bank Website
+ 2018-04-03,UK,London,Lloyds Bank,LLOY,GBP,Bank,Deposits,Term Deposits,12MCDF,Fixed Bond  -  1 Year,2000,,Offline,12,Fixed,0.40%,0.40%,Bank Website
+ 2018-04-03,UK,London,Lloyds Bank,LLOY,GBP,Bank,Deposits,Term Deposits,24MCDF,Fixed Rate Cash ISA  -  2 Year,1,,Offline,24,Fixed,0.50%,0.50%,Bank Website
+ 2018-04-03,UK,London,Lloyds Bank,LLOY,GBP,Bank,Deposits,Term Deposits,12MCDF,Online Fixed Bond  -  1 Year,2000,,Online,12,Fixed,0.40%,0.40%,Bank Website
+ 2018-04-03,UK,London,Metro Bank,MTRO,GBP,Bank,Deposits,Savings,_MSBF,Instant Access Savings,1,,Offline,,Fixed,0.40%,0.40%,Bank Website
+ 2018-04-03,UK,London,Metro Bank,MTRO,GBP,Bank,Deposits,Savings,_MSBF,Instant access cash isa,1,,Offline,,Fixed,0.75%,0.75%,Bank Website
+ 2018-04-03,UK,London,Metro Bank,MTRO,GBP,Bank,Deposits,Savings,12MSBF,Fixed rate cash ISA,1,,Offline,12,Fixed,1.25%,1.25%,Bank Website
+ 2018-04-03,UK,London,Metro Bank,MTRO,GBP,Bank,Deposits,Savings,24MSBF,Fixed rate cash ISA,1,,Offline,24,Fixed,1.40%,1.40%,Bank Website
+ 2018-04-03,UK,London,Metro Bank,MTRO,GBP,Bank,Deposits,Savings,36MSBF,Fixed rate cash ISA,1,,Offline,36,Fixed,1.50%,1.50%,Bank Website
+ 2018-04-03,UK,London,Metro Bank,MTRO,GBP,Bank,Deposits,Savings,60MSBF,Fixed rate cash ISA,1,,Offline,60,Fixed,1.75%,1.75%,Bank Website
+ 2018-04-03,UK,London,Metro Bank,MTRO,GBP,Bank,Deposits,Savings,3MSBF,Fixed Term Savings,500,,Offline,3,Fixed,0.75%,0.75%,Bank Website
+ 2018-04-03,UK,London,Metro Bank,MTRO,GBP,Bank,Deposits,Savings,6MSBF,Fixed Term Savings,500,,Offline,6,Fixed,1.00%,1.00%,Bank Website
+ 2018-04-03,UK,London,Metro Bank,MTRO,GBP,Bank,Deposits,Savings,12MSBF,Fixed Term Savings,500,,Offline,12,Fixed,1.65%,1.65%,Bank Website
+ 2018-04-03,UK,London,Metro Bank,MTRO,GBP,Bank,Deposits,Savings,18MSBF,Fixed Term Savings,500,,Offline,18,Fixed,1.90%,1.90%,Bank Website
+ 2018-04-03,UK,London,Metro Bank,MTRO,GBP,Bank,Deposits,Savings,36MSBF,Fixed Term Savings,500,,Offline,36,Fixed,2.00%,2.00%,Bank Website
+ 2018-04-03,UK,London,Metro Bank,MTRO,GBP,Bank,Deposits,Current,_MCCF,Current Account,0,,Offline,,Fixed,,,Bank Website
+ 2018-04-03,UK,London,NatWest,NWBD,GBP,Bank,Deposits,Savings,_MSBF,Instant Saver,1,24999,Offline,,Fixed,0.10%,0.10%,Bank Website
+ 2018-04-03,UK,London,NatWest,NWBD,GBP,Bank,Deposits,Savings,_MSBF,Instant Saver,25000,999999,Offline,,Fixed,0.20%,0.20%,Bank Website
+ 2018-04-03,UK,London,NatWest,NWBD,GBP,Bank,Deposits,Savings,_MSBF,Instant Saver,10000000,,Offline,,Fixed,0.25%,0.25%,Bank Website
+ 2018-04-03,UK,London,NatWest,NWBD,GBP,Bank,Deposits,Savings,_MSBF,Savings Builder,1,,Offline,,Fixed,0.10%,0.10%,Bank Website
+ 2018-04-03,UK,London,NatWest,NWBD,GBP,Bank,Deposits,Savings,_MSBF,Savings Builder,1,5000,Offline,,Fixed,1.50%,1.50%,Bank Website
+ 2018-04-03,UK,London,NatWest,NWBD,GBP,Bank,Deposits,Savings,_MSBF,Savings Builder,5001,10000,Offline,,Fixed,1.00%,1.00%,Bank Website
+ 2018-04-03,UK,London,NatWest,NWBD,GBP,Bank,Deposits,Savings,_MSBF,Savings Builder,10000,,Offline,,Fixed,0.20%,0.20%,Bank Website
+ 2018-04-03,UK,London,NatWest,NWBD,GBP,Bank,Deposits,Savings,_MSBF,Savings Builder,1,,Offline,,Fixed,0.00%,0.00%,Bank Website
+ 2018-04-03,UK,London,NatWest,NWBD,GBP,Bank,Deposits,Savings,_MSBF,Savings Builder,1,5000,Offline,,Fixed,1.50%,1.50%,Bank Website
+ 2018-04-03,UK,London,NatWest,NWBD,GBP,Bank,Deposits,Savings,_MSBF,Savings Builder,5001,10000,Offline,,Fixed,1.00%,1.00%,Bank Website
+ 2018-04-03,UK,London,NatWest,NWBD,GBP,Bank,Deposits,Savings,_MSBF,Savings Builder,10000,,Offline,,Fixed,0.20%,0.20%,Bank Website
+ 2018-04-03,UK,London,NatWest,NWBD,GBP,Bank,Deposits,Savings,_MSBF,Premium Saver,1,,Offline,,Fixed,0.10%,0.10%,Bank Website
+ 2018-04-03,UK,London,NatWest,NWBD,GBP,Bank,Deposits,Savings,_MSBF,Premium Saver,1,24999,Offline,,Fixed,0.10%,0.10%,Bank Website
+ 2018-04-03,UK,London,NatWest,NWBD,GBP,Bank,Deposits,Savings,_MSBF,Premium Saver,25000,49999,Offline,,Fixed,0.50%,0.50%,Bank Website
+ 2018-04-03,UK,London,NatWest,NWBD,GBP,Bank,Deposits,Savings,_MSBF,Premium Saver,50000,1,Offline,,Fixed,0.75%,0.75%,Bank Website
+ 2018-04-03,UK,London,NatWest,NWBD,GBP,Bank,Deposits,Savings,_MSBF,Premium Saver,1,,Offline,,Fixed,0.10%,0.10%,Bank Website
+ 2018-04-03,UK,London,NatWest,NWBD,GBP,Bank,Deposits,Savings,_MSBF,Cash ISA,10000,,Offline,,Fixed,,0.10%,Bank Website
+ 2018-04-03,UK,London,NatWest,NWBD,GBP,Bank,Deposits,Savings,_MSBF,Cash ISA,10000,24999,Offline,,Fixed,,0.25%,Bank Website
+ 2018-04-03,UK,London,NatWest,NWBD,GBP,Bank,Deposits,Savings,_MSBF,Cash ISA,25000,49999,Offline,,Fixed,,0.50%,Bank Website
+ 2018-04-03,UK,London,NatWest,NWBD,GBP,Bank,Deposits,Savings,_MSBF,Cash ISA,50000,,Offline,,Fixed,,0.75%,Bank Website
+ 2018-04-03,UK,London,NatWest,NWBD,GBP,Bank,Deposits,Term Deposits,12MCDF,Fixed Rate ISA,1000,24999,Offline,12,Fixed,,1.00%,Bank Website
+ 2018-04-03,UK,London,NatWest,NWBD,GBP,Bank,Deposits,Term Deposits,12MCDF,Fixed Rate ISA,25000,,Offline,12,Fixed,,1.10%,Bank Website
+ 2018-04-03,UK,London,NatWest,NWBD,GBP,Bank,Deposits,Term Deposits,24MCDF,Fixed Rate ISA,1000,24999,Offline,24,Fixed,,1.15%,Bank Website
+ 2018-04-03,UK,London,NatWest,NWBD,GBP,Bank,Deposits,Term Deposits,24MCDF,Fixed Rate ISA,25000,,Offline,24,Fixed,,1.25%,Bank Website
+ 2018-04-03,UK,London,NatWest,NWBD,GBP,Bank,Deposits,Term Deposits,12MCDF,1 Year Fixed Rate,5000,49999,Offline,12,Fixed,,0.90%,Bank Website
+ 2018-04-03,UK,London,NatWest,NWBD,GBP,Bank,Deposits,Term Deposits,12MCDF,1 Year Fixed Rate,50000,500000,Offline,12,Fixed,,0.95%,Bank Website
+ 2018-04-03,UK,London,NatWest,NWBD,GBP,Bank,Deposits,Term Deposits,24MCDF,2 Year Fixed Rate,5000,49999,Offline,24,Fixed,1.00%,1.00%,Bank Website
+ 2018-04-03,UK,London,NatWest,NWBD,GBP,Bank,Deposits,Term Deposits,24MCDF,2 Year Fixed Rate,50000,500000,Offline,24,Fixed,1.05%,1.06%,Bank Website
+ 2018-04-03,UK,London,Royal Bank Of Scotland,RBS,GBP,Bank,Deposits,Savings,_MSBF,Instant Saver,1,24999,Offline,,Fixed,0.10%,0.10%,Bank Website
+ 2018-04-03,UK,London,Royal Bank Of Scotland,RBS,GBP,Bank,Deposits,Savings,_MSBF,Instant Saver,25000,99999,Offline,,Fixed,0.20%,0.20%,Bank Website
+ 2018-04-03,UK,London,Royal Bank Of Scotland,RBS,GBP,Bank,Deposits,Savings,_MSBF,Instant Saver,100000,,Offline,,Fixed,0.25%,0.25%,Bank Website
+ 2018-04-03,UK,London,Royal Bank Of Scotland,RBS,GBP,Bank,Deposits,Savings,_MSBF,Instant Access ISA,1,24999,Offline,,Fixed,0.25%,,Bank Website
+ 2018-04-03,UK,London,Royal Bank Of Scotland,RBS,GBP,Bank,Deposits,Savings,_MSBF,Instant Access ISA,25000,,Offline,,Fixed,0.75%,,Bank Website
+ 2018-04-03,UK,London,Royal Bank Of Scotland,RBS,GBP,Bank,Deposits,Term Deposits,12MCDF,Fixed Rate ISA 1 year fixed,1000,24999,Offline,12,Fixed,1.00%,,Bank Website
+ 2018-04-03,UK,London,Royal Bank Of Scotland,RBS,GBP,Bank,Deposits,Term Deposits,12MCDF,Fixed Rate ISA 1 year fixed,25000,,Offline,12,Fixed,1.10%,,Bank Website
+ 2018-04-03,UK,London,Royal Bank Of Scotland,RBS,GBP,Bank,Deposits,Term Deposits,24MCDF,Fixed Rate ISA 2 year fixed,1000,24999,Offline,24,Fixed,1.15%,,Bank Website
+ 2018-04-03,UK,London,Royal Bank Of Scotland,RBS,GBP,Bank,Deposits,Term Deposits,24MCDF,Fixed Rate ISA 2 year fixed,25000,,Offline,24,Fixed,1.25%,,Bank Website
+ 2018-04-03,UK,London,Royal Bank Of Scotland,RBS,GBP,Bank,Deposits,Term Deposits,12MCDF,Fixed Term Savings Account 1 year fixed,5000,49999,Offline,12,Fixed,0.90%,0.90%,Bank Website
+ 2018-04-03,UK,London,Royal Bank Of Scotland,RBS,GBP,Bank,Deposits,Term Deposits,12MCDF,Fixed Term Savings Account 1 year fixed,50000,500000,Offline,12,Fixed,0.95%,0.95%,Bank Website
+ 2018-04-03,UK,London,Royal Bank Of Scotland,RBS,GBP,Bank,Deposits,Term Deposits,24MCDF,Fixed Term Savings Account 2 year fixed,5000,49999,Offline,24,Fixed,1.00%,1.00%,Bank Website
+ 2018-04-03,UK,London,Royal Bank Of Scotland,RBS,GBP,Bank,Deposits,Term Deposits,24MCDF,Fixed Term Savings Account 2 year fixed,50000,500000,Offline,24,Fixed,1.05%,1.06%,Bank Website
+ 2018-04-03,UK,London,Royal Bank Of Scotland,RBS,GBP,Bank,Deposits,Current,_MCCF,An everyday bank account ,,,Offline,,Fixed,,,Bank Website
+ 2018-04-03,UK,London,Santander Bank,Private,GBP,Bank,Deposits,Savings,_MSBF,Regular eSaver,,,Online,,Fixed,3.00%,3.00%,Bank Website
+ 2018-04-03,UK,London,Santander Bank,Private,GBP,Bank,Deposits,Savings,_MSBF,eSaver,,,Online,,Fixed,0.15%,0.15%,Bank Website
+ 2018-04-03,UK,London,Santander Bank,Private,GBP,Bank,Deposits,Savings,_MSBF,Everyday Saver,,,Online,,Fixed,0.25%,0.25%,Bank Website
+ 2018-04-03,UK,London,Santander Bank,Private,GBP,Bank,Deposits,Savings,24MSBF,2 Year Fixed Rate ISA,500,,Online,24,Fixed,0.55%,0.55%,Bank Website
+ 2018-04-03,UK,London,Santander Bank,Private,GBP,Bank,Deposits,Savings,_MSBF,eISA,1,,Online,,Fixed,0.35%,0.35%,Bank Website
+ 2018-04-03,UK,London,Santander Bank,Private,GBP,Bank,Deposits,Savings,_MSBF,Easy ISA,40000,,Online,,Fixed,0.50%,0.50%,Bank Website
+ 2018-04-03,UK,London,Santander Bank,Private,GBP,Bank,Deposits,Savings,_MSBF,Easy ISA,1,39999,Online,,Fixed,0.10%,0.10%,Bank Website
+ 2018-04-03,UK,London,Santander Bank,Private,GBP,Bank,Deposits,Term Deposits,12MCDF,1 Year Fixed Rate Bond,500,,Offline,12,Fixed,0.50%,0.50%,Bank Website
+ 2018-04-03,UK,London,Santander Bank,Private,GBP,Bank,Deposits,Term Deposits,24MCDF,2 Year Fixed Rate Bond,500,,Offline,24,Fixed,0.55%,0.55%,Bank Website
+ 2018-04-03,UK,London,Santander Bank,Private,GBP,Bank,Deposits,Current,_MCCF,1|2|3 Current Account,20000,,Offline,,Fixed,1.49%,1.50%,Bank Website
+ 2018-04-03,UK,London,Santander Bank,Private,GBP,Bank,Deposits,Current,_MCCF,Select Current Account,20000,,Offline,,Fixed,1.49%,1.50%,Bank Website
+ 2018-04-03,UK,London,TSB,Private,GBP,Bank,Deposits,Savings,_MSBF,ISAs_Cash ISA Saver,1,,Online,,Fixed,0.50%,0.50%,Bank Website
+ 2018-04-03,UK,London,TSB,Private,GBP,Bank,Deposits,Term Deposits,24MCDF,ISAs_2 Year Fixed Rate Cash ISA,1,,Online,24,Fixed,1.00%,1.00%,Bank Website
+ 2018-04-03,UK,London,TSB,Private,GBP,Bank,Deposits,Savings,_MSBF,instant access savings accounts_eSavings,1,,Online,,Fixed,0.45%,0.45%,Bank Website
+ 2018-04-03,UK,London,TSB,Private,GBP,Bank,Deposits,Savings,_MSBF,instant access savings accounts_Easy Saver,1,,Online,,Fixed,0.40%,0.40%,Bank Website
+ 2018-04-03,UK,London,TSB,Private,GBP,Bank,Deposits,Savings,_MSBF,fixed term savings_Fixed Bond,2000,,Online,,Fixed,0.80%,0.80%,Bank Website
+ 2018-04-03,UK,London,TSB,Private,GBP,Bank,Deposits,Current,_MCCF,Classic Plus account,1500,,Online,,Fixed,2.96%,3%,Bank Website
+ 2018-04-03,UK,London,Virgin Money Plc.,VM,GBP,Bank,Deposits,Term Deposits,12MCDF,1 Year Fixed Rate Cash E-ISA Issue 319,20000,,Online,12,Fixed,1.30%,1.30%,Bank Website
+ 2018-04-03,UK,London,Virgin Money Plc.,VM,GBP,Bank,Deposits,Term Deposits,24MCDF,2 Year Fixed Rate Cash E-ISA Issue 318,20000,,Online,24,Fixed,1.56%,1.56%,Bank Website
+ 2018-04-03,UK,London,Virgin Money Plc.,VM,GBP,Bank,Deposits,Term Deposits,36MCDF,3 Year Fixed Rate Cash E-ISA Issue 320,20000,,Online,36,Fixed,1.85%,1.85%,Bank Website
+ 2018-04-03,UK,London,Virgin Money Plc.,VM,GBP,Bank,Deposits,Savings,_MSBF,Easy Access Cash E-ISA Issue 23,20000,,Online,,Fixed,1.16%,1.16%,Bank Website
+ 2018-04-03,UK,London,Virgin Money Plc.,VM,GBP,Bank,Deposits,Savings,_MSBF,Regular E-Saver Issue 10,250,,Online,,Fixed,2.25%,2.25%,Bank Website
+ 2018-04-03,UK,London,Virgin Money Plc.,VM,GBP,Bank,Deposits,Savings,_MSBF,Saving to Buy Issue 7,30000,,Online,,Fixed,0.75%,0.75%,Bank Website
+ 2018-04-03,UK,London,Virgin Money Plc.,VM,GBP,Bank,Deposits,Term Deposits,12MCDF,1 Year Fixed Rate E-Bond Issue 313,1000000,,Online,12,Fixed,1.25%,1.25%,Bank Website
+ 2018-04-03,UK,London,Virgin Money Plc.,VM,GBP,Bank,Deposits,Term Deposits,36MCDF,3 Year Fixed Rate E-Bond Issue 314,1000000,,Online,36,Fixed,1.50%,1.50%,Bank Website
+ 2018-04-03,UK,London,Virgin Money Plc.,VM,GBP,Bank,Deposits,Term Deposits,12MCDF,1 Year Fixed Rate Cash ISA Issue 353,20000,,Offline,12,Fixed,1.30%,1.30%,Bank Website
+ 2018-04-03,UK,London,Virgin Money Plc.,VM,GBP,Bank,Deposits,Term Deposits,24MCDF,2 Year Fixed Rate Cash ISA Issue 354,20000,,Offline,24,Fixed,1.56%,1.56%,Bank Website
+ 2018-04-03,UK,London,Virgin Money Plc.,VM,GBP,Bank,Deposits,Term Deposits,36MCDF,3 Year Fixed Rate Cash ISA Issue 355,20000,,Offline,36,Fixed,1.85%,1.85%,Bank Website
+ 2018-04-03,UK,London,Virgin Money Plc.,VM,GBP,Bank,Deposits,Savings,_MSBF,Regular Saver Issue 9,250,,Offline,,Fixed,2.25%,2.25%,Bank Website
+ 2018-04-03,UK,London,Virgin Money Plc.,VM,GBP,Bank,Deposits,Term Deposits,12MCDF,1 Year Fixed Rate Bond Issue 358,1000000,,Offline,12,Fixed,1.25%,1.25%,Bank Website
+ 2018-04-03,UK,London,Virgin Money Plc.,VM,GBP,Bank,Deposits,Term Deposits,36MCDF,3 Year Fixed Rate Bond Issue 359,1000000,,Offline,36,Fixed,1.50%,1.50%,Bank Website
+ 2018-04-03,UK,London,Virgin Money Plc.,VM,GBP,Bank,Deposits,Current,_MCCF,Essential Current Account,100000,,Offline,,Fixed,0.75%,0.75%,Bank Website

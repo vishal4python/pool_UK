@@ -166,8 +166,10 @@ headers = {"user-agent":"Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/53
 every_day = requests.get("https://www.beta.rbs.co.uk/personal/current_accounts_in_england_wales.html",headers=headers, verify=False)
 # print(every_day.content)
 every_day_jsoup = BeautifulSoup(every_day.content, 'lxml')
+# print(every_day_jsoup)
 everyDay = every_day_jsoup.find("div", attrs={"id":"everyday"}).find('h2').text
-table.append(['Current', everyDay, None, 'Offline', None, None, None, None])
+print('every_day',everyDay)
+table.append(['Current', everyDay.strip(), '', 'Offline', None, None, None, None])
 # print(tabulate(table))
 df = pd.DataFrame(table,columns=table_headers)
 def Change_bank_product_name(x):
@@ -195,4 +197,4 @@ df.loc[:, 'Bank_Product_Code'] = None
 order = ["Date", "Bank_Native_Country", "State", "Bank_Name", "Bank_Local_Currency", "Bank_Type", "Bank_Product", "Bank_Product_Type", "Bank_Product_Name", "Balance", "Bank_Offer_Feature", "Term in Months", "Interest_Type", "Interest", "AER", "Bank_Product_Code"]
 df = df[order]
 df.to_csv(locationPath, index=False)
-print(df)
+# print(df)

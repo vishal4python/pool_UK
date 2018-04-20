@@ -10,7 +10,7 @@ import datetime
 from maks_lib import output_path
 today  = datetime.datetime.now()
 startTime = time.time()
-path = output_path+"Consolidate_MoneySuperMarket_Data_Deposits_"+str(today.strftime('%Y_%m_%d'))+'.csv'
+path = output_path+"Aggregator_MoneySuperMarket_Data_Deposits_"+str(today.strftime('%Y_%m_%d'))+'.csv'
 Excel_table = []
 table_headers = ['Bank_Name', 'Bank_Product_Type', 'Bank_Product_Name', 'Balance', 'Bank_Offer_Feature',
                  'Term_in_Months', 'Interest', 'AER']
@@ -80,7 +80,11 @@ for url in urlList:
             for k in neededUkBanks:
                 if Bank_Name is not None:
                     if k in Bank_Name.lower().strip():
-                        a = [neededUkBanks[k], 'Savings', Bank_Product_Name, Balance.replace('\n',' ').replace('to','-'), 'Offline', None, AER, AER]
+                        if 'E-' in Bank_Product_Name:
+                            bank_offer_feature = 'Online'
+                        else:
+                            bank_offer_feature = 'Offline'
+                        a = [neededUkBanks[k], 'Savings', Bank_Product_Name, Balance.replace('\n',' ').replace('to','-'), bank_offer_feature, None, AER, AER]
                         Excel_table.append(a)
                         break
 
@@ -121,11 +125,15 @@ try:
             for k in neededUkBanks:
                 if Bank_Name is not None:
                     if k in Bank_Name.lower().strip():
+                        if 'E-' in Bank_Product_Name:
+                            bank_offer_feature = 'Online'
+                        else:
+                            bank_offer_feature = 'Offline'
                         # if 'isa' in Bank_Product_Name.lower():
                         #     account = 'Savings'
                         # else:
                         #     account = 'TermDeposits'
-                        a = [neededUkBanks[k], 'Term Deposits', Bank_Product_Name, Balance.replace('\n',' ').replace('to','-'), 'Offline', term1, AER, AER]
+                        a = [neededUkBanks[k], 'Term Deposits', Bank_Product_Name, Balance.replace('\n',' ').replace('to','-'), bank_offer_feature, term1, AER, AER]
                         Excel_table.append(a)
                         break
 
@@ -164,9 +172,14 @@ try:
             for k in neededUkBanks:
                 if Bank_Name is not None:
                     if k in Bank_Name.lower().strip():
-                        a = [neededUkBanks[k], 'Current', Bank_Product_Name, balance.replace('\n',' ').replace('and','-').replace('to','-') if balance is not None else None, 'Offline', None, AER, AER]
-                        Excel_table.append(a)
-                        break
+                        if 'E-' in Bank_Product_Name:
+                            bank_offer_feature = 'Online'
+                        else:
+                            bank_offer_feature = 'Offline'
+                        if '1|2|3 Student Current Account' not in Bank_Product_Name:
+                            a = [neededUkBanks[k], 'Current', Bank_Product_Name, balance.replace('\n',' ').replace('and','-').replace('to','-') if balance is not None else None, bank_offer_feature, None, AER, AER]
+                            Excel_table.append(a)
+                            break
 
 
 except Exception as x:
@@ -210,13 +223,13 @@ df['Bank_Native_Country'] = 'UK'
 df['State'] = 'London'
 df['Bank_Local_Currency'] = 'GBP'
 df['Bank_Type'] = 'Bank'
-df['Ticker'] = None
+# df['Ticker'] = None
 df['Bank_Product'] = 'Deposits'
 df['Bank_Product_Code'] = None
 df['Interest_Type'] = 'Fixed'
 df['Source'] = 'moneysupermarket.com'
 
-order = ["Date", "Bank_Native_Country", "State", "Bank_Name","Ticker", "Bank_Local_Currency", "Bank_Type", "Bank_Product",
+order = ["Date", "Bank_Native_Country", "State", "Bank_Name", "Bank_Local_Currency", "Bank_Type", "Bank_Product",
          "Bank_Product_Type", "Bank_Product_Code", "Bank_Product_Name", "Balance", "Bank_Offer_Feature",
          "Term_in_Months", "Interest_Type", "Interest", "AER", "Source"]
 df = df[order]

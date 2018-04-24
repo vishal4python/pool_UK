@@ -1,6 +1,5 @@
 '''
 Created on 14-Mar-2018
-
 @author: sairam
 '''
 import re
@@ -27,6 +26,10 @@ for case in cases:
     try:
         terms = [10,15,20,30]
         for term in terms:
+            try:
+                driver.find_element_by_xpath('//*[@id="overlay_content"]/a').click()
+            except:
+                pass
             driver.find_element_by_xpath('//*[@id="mortgageFinder_mortgage-term"]').clear()
             driver.find_element_by_xpath('//*[@id="mortgageFinder_mortgage-term"]').send_keys(term)
             driver.find_element_by_name("PropertyValue").clear()
@@ -41,9 +44,9 @@ for case in cases:
             time.sleep(5)
             # print(driver.page_source)
             jsoup = BeautifulSoup(driver.page_source,"lxml")
-    
+
             # driver.close()
-    
+
             result_table = jsoup.find("div", attrs={"class":"js-mortgage-result mortgage-result "})
             # print(table)
             trs = result_table.find_all("div", attrs={"class":re.compile('row')})
@@ -52,10 +55,10 @@ for case in cases:
                     # print(tr)
                     Bank_Product_Name = tr.find("td", attrs={"class":"desk--one-fifth"}).text
                     # print(Bank_Product_Name)
-    
+
                     Interest = tr.find("td", attrs={"class":"desk--one-tenth"}).text
                     # print(Interest)
-    
+
                     ltv = tr.find("td", attrs={"class":"desk--one-twelfth highlight"}).text
                     # print(ltv)
                     Min_Loan_Amount = tr.find_all("div", attrs={"class":"desk--one-whole mortgage-detail--row"})[6].find("div", attrs={"class":"desk--three-fifths mortgage-detail--value"}).text
@@ -82,7 +85,7 @@ for case in cases:
 
 print(tabulate(table))
 df = pd.DataFrame(table, columns=table_headers)
-df['Min_Loan_Amount'] = df['Min_Loan_Amount'].apply(lambda x : re.sub('[^0-9.]','',str(x))if len(re.sub('[^0-9.]','',str(x)))!=0 else None) 
+df['Min_Loan_Amount'] = df['Min_Loan_Amount'].apply(lambda x : re.sub('[^0-9.]','',str(x))if len(re.sub('[^0-9.]','',str(x)))!=0 else None)
 df["Date"] = today.strftime('%m-%d-%Y')
 df["Bank_Native_Country"] = "UK"
 df["State"] = "London"

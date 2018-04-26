@@ -80,7 +80,7 @@ for case in cases:
     except Exception as e:
         print(e)
 #         driver.close()
-        print("Web Driver Closed.")
+#         print("Web Driver Closed.")
     # break
 
 print(tabulate(table))

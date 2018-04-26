@@ -79,7 +79,7 @@ for case in cases:
                     pass
     except Exception as e:
         print(e)
-        driver.close()
+#         driver.close()
         print("Web Driver Closed.")
     # break
 

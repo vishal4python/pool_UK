@@ -7,31 +7,45 @@ import time
 from selenium import webdriver
 from bs4 import BeautifulSoup
 import pandas as pd
+from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
 import datetime
+from selenium.webdriver.support import expected_conditions as EC
+
 from maks_lib import output_path
 today = datetime.datetime.now()
 path = output_path+"Consolidate_Natwest_Data_Mortgage_"+str(today.strftime('%Y_%m_%d'))+'.csv'
 # path = "Consolidate_NatWest_Data_Mortgage_"+str(today.strftime('%Y_%m_%d'))+'.csv'
 driver = webdriver.Firefox()
+driver.maximize_window()
 from tabulate import tabulate
 table = []
 order = ["Date", "Bank_Native_Country", "State", "Bank_Name", "Bank_Local_Currency", "Bank_Type", "Bank_Product", "Bank_Product_Type", "Bank_Product_Name", "Min_Loan_Amount", "Bank_Offer_Feature", "Term (Y)", "Interest_Type", "Interest", "APRC", "Mortgage_Loan_Amt", "Mortgage_Down_Payment", "Mortgage_Category", "Mortgage_Reason", "Mortgage_Pymt_Mode", "Fixed_Rate_Term", "Bank_Product_Code"]
 table_headers = ["Bank_Product_Name", "Min_Loan_Amount", "Term (Y)", "Interest_Type", "Interest", "APRC", "Mortgage_Loan_Amt", "Fixed_Rate_Term", "Mortgage_Down_Payment"]
-driver.get("https://personal.natwest.com/personal/mortgages/mortgage-calculators/mortgage-rate-finder-mortgage-calculator-HMCIB-GaAIP.html?SC_MRF=NC_RFTB&adobe_mc_ref=https%25253A%25252F%25252Fpersonal.natwest.com%25252Fpersonal%25252Fmortgages%25252Ffirst-time-buyers.html&adobe_mc_sdid=SDID%25253D58C8026FAA090FBA-28CBD945A3F2B97C%25257CMCORGID%25253DC50417FE52CB33480A490D4C%25252540AdobeOrg%25257CTS%25253D1521116898")
+
 time.sleep(2)
 # driver.find_element_by_xpath('/html/body/div[5]/div/a').click()
 # driver.find_element_by_css_selector("#mortgageFinder_mortgage-term").send_keys("20")
 cases = [[90000,18000],[270000,54000], [450000,90000]]
 for case in cases:
     try:
+        driver.get("https://personal.natwest.com/personal/mortgages/mortgage-calculators/mortgage-rate-finder-mortgage-calculator-HMCIB-GaAIP.html?SC_MRF=NC_RFTB&adobe_mc_ref=https%25253A%25252F%25252Fpersonal.natwest.com%25252Fpersonal%25252Fmortgages%25252Ffirst-time-buyers.html&adobe_mc_sdid=SDID%25253D58C8026FAA090FBA-28CBD945A3F2B97C%25257CMCORGID%25253DC50417FE52CB33480A490D4C%25252540AdobeOrg%25257CTS%25253D1521116898")
         terms = [10,15,20,30]
         for term in terms:
             try:
                 driver.find_element_by_xpath('//*[@id="overlay_content"]/a').click()
             except:
                 pass
-            driver.find_element_by_xpath('//*[@id="mortgageFinder_mortgage-term"]').clear()
-            driver.find_element_by_xpath('//*[@id="mortgageFinder_mortgage-term"]').send_keys(term)
+            time.sleep(3)
+
+            # driver.find_element_by_name('mortgage-term').send_keys(10)
+            WebDriverWait(driver, 10000).until(EC.visibility_of_element_located((By.NAME, 'mortgage-term')))
+            date_element= driver.find_element_by_name('mortgage-term')
+            date_element.click()
+            date_element.send_keys(Keys.BACK_SPACE,Keys.BACK_SPACE)
+            date_element.send_keys(term)
+
             driver.find_element_by_name("PropertyValue").clear()
             driver.find_element_by_name("PropertyValue").send_keys(case[0])
             # time.sleep(2)
@@ -79,8 +93,6 @@ for case in cases:
                     pass
     except Exception as e:
         print(e)
-#         driver.close()
-#         print("Web Driver Closed.")
     # break
 
 print(tabulate(table))

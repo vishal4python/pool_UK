@@ -179,5 +179,5 @@ for idx in range(len(df_deposit.index)):
 df_deposit = df_deposit[((df_deposit.Bank_Product_Type == "Term Deposits") & (df_deposit.Term_in_Months.isin([6.0,12.0,24.0,36.0,0.0]))) |(df_deposit.Bank_Product_Type != "Term Deposits") ]
 
 df_deposit.to_csv(output_path + "UK\\" + "Aggregate_UK_Deposits_Data_{}.csv".format(now.strftime("%Y_%m_%d")), index=False)
-
+# Test
 

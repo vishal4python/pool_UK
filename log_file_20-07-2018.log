@@ -1,0 +1,69 @@
+
+Purpose     : Extract data from comparefirst
+        #####################     Change log   ###############################
+        ##------------------------------------------------------------------##
+        ##  Author              ##Date                ##Current Version     ##
+        ##------------------------------------------------------------------##
+        ## Moody's Analytics    ##11th July, 2018     ##V1.0                ##
+        ##------------------------------------------------------------------##
+        ######################################################################
+        Date              Version     Author      Description
+        11th July, 2018   v 1.0       Sairam      Data Extraction
+
+
+2018-07-20 16:22:51,019 - 302 - INFO      - Program Execution Started Time16:22:51.019536
+2018-07-20 16:22:51,181 - 308 - INFO      - Total Records 14
+2018-07-20 16:23:35,200 - 232 - INFO      - No of Banks found 12 for TL 20Y 45M
+2018-07-20 16:23:35,357 - 294 - INFO      - TL 20Y 45M completed successfully.
+2018-07-20 16:23:35,357 - 340 - INFO      - Success : {'Gender': 'Male', 'Age': 45, 'Year': 20, 'smoker': 'No', 'sheet_name': 'TL 20Y 45M', 'Coverage Term': '20Y', 'Sum Assured': 400000, 'Critical Illness Benefits': 'No', 'SI Feature': 'Level', 'Category': 'TL', 'Smoker?': 'No', 'Interest rate': nan, 'Policy term (years)': 20, 'Premium term': 20, 'Death cover?': 'Yes', 'Terminal illness?': 'Yes', 'TPD?': 'Yes', 'Critical illness?': 'No', 'Other benefits?': 'No', 'Par or Non-par?': 'Non-par', 'Renewability': 'No'}
+2018-07-20 16:24:07,234 - 232 - INFO      - No of Banks found 12 for TL 20Y 45F
+2018-07-20 16:24:07,391 - 294 - INFO      - TL 20Y 45F completed successfully.
+2018-07-20 16:24:07,391 - 340 - INFO      - Success : {'Gender': 'Female', 'Age': 45, 'Year': 20, 'smoker': 'No', 'sheet_name': 'TL 20Y 45F', 'Coverage Term': '20Y', 'Sum Assured': 400000, 'Critical Illness Benefits': 'No', 'SI Feature': 'Level', 'Category': 'TL', 'Smoker?': 'No', 'Interest rate': nan, 'Policy term (years)': 20, 'Premium term': 20, 'Death cover?': 'Yes', 'Terminal illness?': 'Yes', 'TPD?': 'Yes', 'Critical illness?': 'No', 'Other benefits?': 'No', 'Par or Non-par?': 'Non-par', 'Renewability': 'No'}
+2018-07-20 16:24:39,413 - 232 - INFO      - No of Banks found 12 for TL 5Y 45M
+2018-07-20 16:24:39,571 - 294 - INFO      - TL 5Y 45M completed successfully.
+2018-07-20 16:24:39,571 - 340 - INFO      - Success : {'Gender': 'Male', 'Age': 45, 'Year': 5, 'smoker': 'No', 'sheet_name': 'TL 5Y 45M', 'Coverage Term': '5Y', 'Sum Assured': 400000, 'Critical Illness Benefits': 'No', 'SI Feature': 'Level', 'Category': 'TL', 'Smoker?': 'No', 'Interest rate': nan, 'Policy term (years)': 5, 'Premium term': 5, 'Death cover?': 'Yes', 'Terminal illness?': 'Yes', 'TPD?': 'Yes', 'Critical illness?': 'No', 'Other benefits?': 'No', 'Par or Non-par?': 'Non-par', 'Renewability': 'every 5Y'}
+2018-07-20 16:25:14,554 - 232 - INFO      - No of Banks found 12 for TL 5Y 45F
+2018-07-20 16:25:14,737 - 294 - INFO      - TL 5Y 45F completed successfully.
+2018-07-20 16:25:14,737 - 340 - INFO      - Success : {'Gender': 'Female', 'Age': 45, 'Year': 5, 'smoker': 'No', 'sheet_name': 'TL 5Y 45F', 'Coverage Term': '5Y', 'Sum Assured': 400000, 'Critical Illness Benefits': 'No', 'SI Feature': 'Level', 'Category': 'TL', 'Smoker?': 'No', 'Interest rate': nan, 'Policy term (years)': 5, 'Premium term': 5, 'Death cover?': 'Yes', 'Terminal illness?': 'Yes', 'TPD?': 'Yes', 'Critical illness?': 'No', 'Other benefits?': 'No', 'Par or Non-par?': 'Non-par', 'Renewability': 'every 5Y'}
+2018-07-20 16:25:46,821 - 232 - INFO      - No of Banks found 12 for TL 20Y 30M
+2018-07-20 16:25:47,046 - 294 - INFO      - TL 20Y 30M completed successfully.
+2018-07-20 16:25:47,046 - 340 - INFO      - Success : {'Gender': 'Male', 'Age': 30, 'Year': 20, 'smoker': 'No', 'sheet_name': 'TL 20Y 30M', 'Coverage Term': '20Y', 'Sum Assured': 400000, 'Critical Illness Benefits': 'No', 'SI Feature': 'Level', 'Category': 'TL', 'Smoker?': 'No', 'Interest rate': nan, 'Policy term (years)': 20, 'Premium term': 20, 'Death cover?': 'Yes', 'Terminal illness?': 'Yes', 'TPD?': 'Yes', 'Critical illness?': 'No', 'Other benefits?': 'No', 'Par or Non-par?': 'Non-par', 'Renewability': 'No'}
+2018-07-20 16:26:18,842 - 232 - INFO      - No of Banks found 12 for TL 20Y 30F
+2018-07-20 16:26:19,039 - 294 - INFO      - TL 20Y 30F completed successfully.
+2018-07-20 16:26:19,039 - 340 - INFO      - Success : {'Gender': 'Female', 'Age': 30, 'Year': 20, 'smoker': 'No', 'sheet_name': 'TL 20Y 30F', 'Coverage Term': '20Y', 'Sum Assured': 400000, 'Critical Illness Benefits': 'No', 'SI Feature': 'Level', 'Category': 'TL', 'Smoker?': 'No', 'Interest rate': nan, 'Policy term (years)': 20, 'Premium term': 20, 'Death cover?': 'Yes', 'Terminal illness?': 'Yes', 'TPD?': 'Yes', 'Critical illness?': 'No', 'Other benefits?': 'No', 'Par or Non-par?': 'Non-par', 'Renewability': 'No'}
+2018-07-20 16:26:50,829 - 232 - INFO      - No of Banks found 4 for TL 20Y 45 M CI
+2018-07-20 16:26:50,919 - 294 - INFO      - TL 20Y 45 M CI completed successfully.
+2018-07-20 16:26:50,919 - 340 - INFO      - Success : {'Gender': 'Male', 'Age': 45, 'Year': 20, 'smoker': 'No', 'sheet_name': 'TL 20Y 45 M CI', 'Coverage Term': '20Y', 'Sum Assured': 400000, 'Critical Illness Benefits': 'Yes', 'SI Feature': 'Level', 'Category': 'TL', 'Smoker?': 'No', 'Interest rate': nan, 'Policy term (years)': 20, 'Premium term': 20, 'Death cover?': 'Yes', 'Terminal illness?': 'Yes', 'TPD?': 'Yes', 'Critical illness?': 'Yes', 'Other benefits?': 'No', 'Par or Non-par?': 'Non-par', 'Renewability': 'No'}
+2018-07-20 16:27:23,538 - 232 - INFO      - No of Banks found 11 for WL 25P 45M
+2018-07-20 16:27:23,705 - 294 - INFO      - WL 25P 45M completed successfully.
+2018-07-20 16:27:23,705 - 340 - INFO      - Success : {'Gender': 'Male', 'Age': 45, 'Year': 70, 'smoker': 'No', 'sheet_name': 'WL 25P 45M', 'Coverage Term': '25P', 'Sum Assured': 200000, 'Critical Illness Benefits': 'No', 'SI Feature': 'Level', 'Category': 'WL', 'Smoker?': 'No', 'Interest rate': '4.75%', 'Policy term (years)': 'Whole Life', 'Premium term': 25, 'Death cover?': 'Yes', 'Terminal illness?': 'Yes', 'TPD?': 'Yes', 'Critical illness?': 'No', 'Other benefits?': 'No', 'Par or Non-par?': 'Par', 'Renewability': 'na'}
+2018-07-20 16:27:56,411 - 232 - INFO      - No of Banks found 11 for WL 25P 45F(2)
+2018-07-20 16:27:56,573 - 294 - INFO      - WL 25P 45F(2) completed successfully.
+2018-07-20 16:27:56,573 - 340 - INFO      - Success : {'Gender': 'Male', 'Age': 45, 'Year': 70, 'smoker': 'No', 'sheet_name': 'WL 25P 45F(2)', 'Coverage Term': '25P(2)', 'Sum Assured': 200000, 'Critical Illness Benefits': 'No', 'SI Feature': 'Level', 'Category': 'WL', 'Smoker?': 'No', 'Interest rate': '4.75%', 'Policy term (years)': 'Whole Life', 'Premium term': 25, 'Death cover?': 'Yes', 'Terminal illness?': 'Yes', 'TPD?': 'Yes', 'Critical illness?': 'No', 'Other benefits?': 'No', 'Par or Non-par?': 'Par', 'Renewability': 'na'}
+2018-07-20 16:28:37,589 - 344 - WARNING   - Missed : {'Gender': 'Female', 'Age': 45, 'Year': 70, 'smoker': 'No', 'sheet_name': 'WL 25P 45F', 'Coverage Term': '25P', 'Sum Assured': 200000, 'Critical Illness Benefits': 'No', 'SI Feature': 'Level', 'Category': 'WL', 'Smoker?': 'No', 'Interest rate': '4.75%', 'Policy term (years)': 'Whole Life', 'Premium term': 25, 'Death cover?': 'Yes', 'Terminal illness?': 'Yes', 'TPD?': 'Yes', 'Critical illness?': 'No', 'Other benefits?': 'No', 'Par or Non-par?': 'Par', 'Renewability': 'na'}
+2018-07-20 16:28:37,589 - 345 - ERROR     - Error : Message: 
+
+2018-07-20 16:29:18,215 - 232 - INFO      - No of Banks found 11 for WL 25P 45F
+2018-07-20 16:29:18,395 - 294 - INFO      - WL 25P 45F completed successfully.
+2018-07-20 16:29:18,395 - 340 - INFO      - Success : {'Gender': 'Female', 'Age': 45, 'Year': 70, 'smoker': 'No', 'sheet_name': 'WL 25P 45F', 'Coverage Term': '25P', 'Sum Assured': 200000, 'Critical Illness Benefits': 'No', 'SI Feature': 'Level', 'Category': 'WL', 'Smoker?': 'No', 'Interest rate': '4.75%', 'Policy term (years)': 'Whole Life', 'Premium term': 25, 'Death cover?': 'Yes', 'Terminal illness?': 'Yes', 'TPD?': 'Yes', 'Critical illness?': 'No', 'Other benefits?': 'No', 'Par or Non-par?': 'Par', 'Renewability': 'na'}
+2018-07-20 16:29:51,101 - 232 - INFO      - No of Banks found 11 for WL 40P 30M
+2018-07-20 16:29:51,283 - 294 - INFO      - WL 40P 30M completed successfully.
+2018-07-20 16:29:51,283 - 340 - INFO      - Success : {'Gender': 'Male', 'Age': 30, 'Year': 70, 'smoker': 'No', 'sheet_name': 'WL 40P 30M', 'Coverage Term': '40P', 'Sum Assured': 200000, 'Critical Illness Benefits': 'No', 'SI Feature': 'Level', 'Category': 'WL', 'Smoker?': 'No', 'Interest rate': '4.75%', 'Policy term (years)': 'Whole Life', 'Premium term': 40, 'Death cover?': 'Yes', 'Terminal illness?': 'Yes', 'TPD?': 'Yes', 'Critical illness?': 'No', 'Other benefits?': 'No', 'Par or Non-par?': 'Par', 'Renewability': 'na'}
+2018-07-20 16:30:23,964 - 232 - INFO      - No of Banks found 11 for WL 40P30F
+2018-07-20 16:30:24,130 - 294 - INFO      - WL 40P30F completed successfully.
+2018-07-20 16:30:24,130 - 340 - INFO      - Success : {'Gender': 'Female', 'Age': 30, 'Year': 70, 'smoker': 'No', 'sheet_name': 'WL 40P30F', 'Coverage Term': '40P', 'Sum Assured': 200000, 'Critical Illness Benefits': 'No', 'SI Feature': 'Level', 'Category': 'WL', 'Smoker?': 'No', 'Interest rate': '4.75%', 'Policy term (years)': 'Whole Life', 'Premium term': 40, 'Death cover?': 'Yes', 'Terminal illness?': 'Yes', 'TPD?': 'Yes', 'Critical illness?': 'No', 'Other benefits?': 'No', 'Par or Non-par?': 'Par', 'Renewability': 'na'}
+2018-07-20 16:30:56,800 - 232 - INFO      - No of Banks found 11 for WL 40P 45M
+2018-07-20 16:30:56,964 - 294 - INFO      - WL 40P 45M completed successfully.
+2018-07-20 16:30:56,965 - 340 - INFO      - Success : {'Gender': 'Male', 'Age': 45, 'Year': 85, 'smoker': 'No', 'sheet_name': 'WL 40P 45M', 'Coverage Term': '40P', 'Sum Assured': 200000, 'Critical Illness Benefits': 'No', 'SI Feature': 'Level', 'Category': 'WL', 'Smoker?': 'No', 'Interest rate': '4.75%', 'Policy term (years)': 'Whole Life', 'Premium term': 40, 'Death cover?': 'Yes', 'Terminal illness?': 'Yes', 'TPD?': 'Yes', 'Critical illness?': 'No', 'Other benefits?': 'No', 'Par or Non-par?': 'Par', 'Renewability': 'na'}
+2018-07-20 16:31:29,475 - 232 - INFO      - No of Banks found 9 for WL 25P 45M CI
+2018-07-20 16:31:29,612 - 294 - INFO      - WL 25P 45M CI completed successfully.
+2018-07-20 16:31:29,612 - 340 - INFO      - Success : {'Gender': 'Male', 'Age': 45, 'Year': 70, 'smoker': 'No', 'sheet_name': 'WL 25P 45M CI', 'Coverage Term': '25P', 'Sum Assured': 200000, 'Critical Illness Benefits': 'Yes', 'SI Feature': 'Level', 'Category': 'WL', 'Smoker?': 'No', 'Interest rate': '4.75%', 'Policy term (years)': 'Whole Life', 'Premium term': 25, 'Death cover?': 'Yes', 'Terminal illness?': 'Yes', 'TPD?': 'Yes', 'Critical illness?': 'Yes', 'Other benefits?': 'No', 'Par or Non-par?': 'Par', 'Renewability': 'na'}
+2018-07-20 16:31:29,881 - 350 - INFO      - Scraping Completed Successfully. Data Moving to Excel File
+2018-07-20 16:31:29,881 - 352 - INFO      - Scraped Records 14
+2018-07-20 16:31:29,881 - 354 - INFO      - All Recods Scrapped Successfully
+2018-07-20 16:31:30,672 - 370 - INFO      - Data Moved to Excel file successfully done
+2018-07-20 16:31:30,672 - 372 - INFO      - Started Formating Excel File...
+2018-07-20 16:31:31,179 - 374 - INFO      - Excel File Formation Completed
+2018-07-20 16:31:31,179 - 376 - INFO      - Started File Coparison...
+2018-07-20 16:31:31,307 - 379 - INFO      - Comparison Done
+2018-07-20 16:31:31,307 - 382 - INFO      - Program Execution Completed. Time taken to complete is 8.671462643146516 Min
